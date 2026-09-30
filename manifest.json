@@ -1,0 +1,22 @@
+{
+  "name": "DAILY HERO & EIKEN STUDIO",
+  "short_name": "DailyHero",
+  "description": "長男専用 毎日の学習＆日課・英検ポータル",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "sns_brand_assets/profile_icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "sns_brand_assets/profile_icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

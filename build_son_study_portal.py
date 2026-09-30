@@ -109,6 +109,7 @@ def generate_portal_html():
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="DailyHero">
   <meta name="theme-color" content="#070b14">
+  <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="sns_brand_assets/profile_icon.jpg">
   
   <!-- Google Fonts & Lucide Icons -->
@@ -2051,7 +2052,14 @@ def generate_portal_html():
     }}
 
     function showPwaGuide() {{
-      alert('【📱 スマホのアプリ化（ショートカット作成方法）】\\n\\n1. iPhoneの場合 (Safari):\\n画面下の「共有ボタン（四角から上矢印）」をタップ ➔「ホーム画面に追加」を選択。\\n\\n2. Androidの場合 (Chrome):\\n画面右上の「︙（メニュー）」をタップ ➔「ホーム画面に追加」または「アプリをインストール」を選択。\\n\\nこれでホーム画面にアイコンが作成され、全画面アプリとして起動できます！');
+      alert('【📱 全端末対応：アプリ化（ホーム画面追加）方法】\\n\\n' +
+        '■ iPhone / iPad (Safari):\\n' +
+        '画面下（または右上）の「共有ボタン（四角から上矢印 ⎋）」をタップ ➔「ホーム画面に追加」を選択。\\n\\n' +
+        '■ Android / Androidタブレット (Chrome):\\n' +
+        '画面右上の「︙（メニュー）」をタップ ➔「アプリをインストール」または「ホーム画面に追加」を選択。\\n\\n' +
+        '■ Amazon Fireタブレット (Silkブラウザ):\\n' +
+        '画面右上の「︙（メニュー）」をタップ ➔「ホーム画面に追加」または「ブックマーク」から追加。\\n\\n' +
+        '※追加後は全画面の専用アプリとして高速起動します！');
     }}
 
     function showToast(msg) {{
