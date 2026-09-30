@@ -1,0 +1,6 @@
+{
+  "comment": "親のGoogle Driveに直接APIアップロードするための設定ファイルです。使用時はファイル名を google_drive_config.json に変更してください。",
+  "folder_id": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
+  "client_email": "YOUR_SERVICE_ACCOUNT_EMAIL@developer.gserviceaccount.com",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC...\n-----END PRIVATE KEY-----\n"
+}

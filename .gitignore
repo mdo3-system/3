@@ -24,3 +24,8 @@ gemini_veo3_images/
 # System files
 .DS_Store
 Thumbs.db
+
+# User data and private credentials
+data/
+uploads/
+config/google_drive_config.json

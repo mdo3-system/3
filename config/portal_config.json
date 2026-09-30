@@ -1,0 +1,5 @@
+{
+  "parentGoogleDriveFolderUrl": "https://drive.google.com/drive/folders/YOUR_PARENT_FOLDER_ID_HERE",
+  "defaultTargetGrade": "Grade_Pre2",
+  "allowDirectUpload": true
+}

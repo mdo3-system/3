@@ -809,7 +809,7 @@
                 <span style="color:var(--accent-cyan);"><i data-lucide="brain-circuit"></i></span>
                 <div>
                   <h4 style="font-size:0.95rem; font-weight:700;">✍️ 漢字検定 (準2級) 見開き2ページ (計4P)</h4>
-                  <p style="font-size:0.78rem; color:var(--text-muted);">やったページのスクショをDriveに保存 ＆ 10問テストに合格でクリア</p>
+                  <p style="font-size:0.78rem; color:var(--text-muted);">やったページの写真を提出 ＆ 10問テストに合格でクリア</p>
                 </div>
               </div>
               <span class="status-badge-chip pending" id="badge_kanji">テスト未合格</span>
@@ -817,13 +817,18 @@
 
             <div class="ai-test-box">
               <div class="drive-upload-bar">
-                <a href="https://drive.google.com" target="_blank" class="btn-drive">
-                  <i data-lucide="upload-cloud"></i> ① Google DriveにスクショUP
+                <label class="btn-drive" style="cursor:pointer;">
+                  <i data-lucide="camera"></i> ① 📷 ノート写真を提出
+                  <input type="file" accept="image/*" style="display:none;" onchange="uploadScreenshot('kanji', this)">
+                </label>
+                <a id="parentDriveLink_kanji" href="#" target="_blank" class="btn-secondary" style="font-size:0.75rem; padding:6px 10px; text-decoration:none;" onclick="openParentDriveFolder(event)">
+                  <i data-lucide="folder-open"></i> 📁 親のDrive提出先
                 </a>
                 <button class="btn-ai-test" onclick="startAiQuiz('kanji')">
                   <i data-lucide="sparkles"></i> ② Gemini 10問テストを開始
                 </button>
               </div>
+              <div id="upload_preview_kanji" style="display:none; font-size:0.75rem; color:var(--accent-green); margin-bottom:8px;"></div>
               <div class="quiz-container" id="quiz_box_kanji">
                 <div class="quiz-header">
                   <span style="font-weight:800; font-size:0.85rem; color:var(--accent-cyan);" id="quiz_progress_kanji">漢検 準2級 10問テスト (問 1/10)</span>
@@ -842,7 +847,7 @@
                 <span style="color:var(--accent-cyan);"><i data-lucide="brain-circuit"></i></span>
                 <div>
                   <h4 style="font-size:0.95rem; font-weight:700;">🎧 英語検定 (準2級) 単語帳 見開き2ページ</h4>
-                  <p style="font-size:0.78rem; color:var(--text-muted);">単語帳スクショをDrive保存 ＆ 英検準2級 10問テストに合格でクリア</p>
+                  <p style="font-size:0.78rem; color:var(--text-muted);">単語帳の写真を提出 ＆ 英検準2級 10問テストに合格でクリア</p>
                 </div>
               </div>
               <span class="status-badge-chip pending" id="badge_english">テスト未合格</span>
@@ -850,13 +855,18 @@
 
             <div class="ai-test-box">
               <div class="drive-upload-bar">
-                <a href="https://drive.google.com" target="_blank" class="btn-drive">
-                  <i data-lucide="upload-cloud"></i> ① Google DriveにスクショUP
+                <label class="btn-drive" style="cursor:pointer;">
+                  <i data-lucide="camera"></i> ① 📷 単語帳写真を提出
+                  <input type="file" accept="image/*" style="display:none;" onchange="uploadScreenshot('english', this)">
+                </label>
+                <a id="parentDriveLink_english" href="#" target="_blank" class="btn-secondary" style="font-size:0.75rem; padding:6px 10px; text-decoration:none;" onclick="openParentDriveFolder(event)">
+                  <i data-lucide="folder-open"></i> 📁 親のDrive提出先
                 </a>
                 <button class="btn-ai-test" onclick="startAiQuiz('english')">
                   <i data-lucide="sparkles"></i> ② Gemini 10問テストを開始
                 </button>
               </div>
+              <div id="upload_preview_english" style="display:none; font-size:0.75rem; color:var(--accent-green); margin-bottom:8px;"></div>
               <div class="quiz-container" id="quiz_box_english">
                 <div class="quiz-header">
                   <span style="font-weight:800; font-size:0.85rem; color:var(--accent-cyan);" id="quiz_progress_english">英検準2級 10問テスト (問 1/10)</span>
@@ -888,7 +898,7 @@
                 <span style="color:var(--accent-purple);"><i data-lucide="smartphone"></i></span>
                 <div>
                   <h4 style="font-size:0.95rem; font-weight:700;">➕ 追加教科 ① (スタサプ/進研/スマイル)</h4>
-                  <p style="font-size:0.78rem; color:var(--text-muted);">学習完了画面のスクショをUP ＆ 10問テスト合格で+￥100</p>
+                  <p style="font-size:0.78rem; color:var(--text-muted);">学習画面の写真を提出 ＆ 10問テスト合格で+￥100</p>
                 </div>
               </div>
               <span class="status-badge-chip pending" id="badge_extra1">テスト未合格</span>
@@ -896,8 +906,13 @@
             <div class="ai-test-box">
               <div class="drive-upload-bar">
                 <input type="text" id="extra1_subject_name" class="task-input-field" placeholder="教科名 (例: 数学・一次関数)" value="数学">
+                <label class="btn-drive" style="cursor:pointer;">
+                  <i data-lucide="camera"></i> 📷 写真提出
+                  <input type="file" accept="image/*" style="display:none;" onchange="uploadScreenshot('extra1', this)">
+                </label>
                 <button class="btn-ai-test" onclick="startAiQuiz('extra1')"><i data-lucide="sparkles"></i> 10問テスト開始</button>
               </div>
+              <div id="upload_preview_extra1" style="display:none; font-size:0.75rem; color:var(--accent-green); margin-bottom:8px;"></div>
               <div class="quiz-container" id="quiz_box_extra1">
                 <div class="quiz-header">
                   <span style="font-weight:800; font-size:0.85rem; color:var(--accent-cyan);" id="quiz_progress_extra1">追加教科① 10問テスト</span>
@@ -915,7 +930,7 @@
                 <span style="color:var(--accent-purple);"><i data-lucide="smartphone"></i></span>
                 <div>
                   <h4 style="font-size:0.95rem; font-weight:700;">➕ 追加教科 ② (スタサプ/進研/スマイル)</h4>
-                  <p style="font-size:0.78rem; color:var(--text-muted);">学習完了画面のスクショをUP ＆ 10問テスト合格で+￥100</p>
+                  <p style="font-size:0.78rem; color:var(--text-muted);">学習画面の写真を提出 ＆ 10問テスト合格で+￥100</p>
                 </div>
               </div>
               <span class="status-badge-chip pending" id="badge_extra2">テスト未合格</span>
@@ -923,8 +938,13 @@
             <div class="ai-test-box">
               <div class="drive-upload-bar">
                 <input type="text" id="extra2_subject_name" class="task-input-field" placeholder="教科名 (例: 理科・電流)" value="理科">
+                <label class="btn-drive" style="cursor:pointer;">
+                  <i data-lucide="camera"></i> 📷 写真提出
+                  <input type="file" accept="image/*" style="display:none;" onchange="uploadScreenshot('extra2', this)">
+                </label>
                 <button class="btn-ai-test" onclick="startAiQuiz('extra2')"><i data-lucide="sparkles"></i> 10問テスト開始</button>
               </div>
+              <div id="upload_preview_extra2" style="display:none; font-size:0.75rem; color:var(--accent-green); margin-bottom:8px;"></div>
               <div class="quiz-container" id="quiz_box_extra2">
                 <div class="quiz-header">
                   <span style="font-weight:800; font-size:0.85rem; color:var(--accent-cyan);" id="quiz_progress_extra2">追加教科② 10問テスト</span>
@@ -990,12 +1010,48 @@
     <!-- TAB 2: 英語動画プレイヤー (再生回数カウンター付き) -->
     <!-- ============================================================ -->
     <div id="tab-video" class="tab-pane">
+
+      <!-- Offline Video Download Manager -->
+      <div class="hero-card" style="border-color:rgba(56,189,248,0.3); background:rgba(7,11,20,0.85); padding:16px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <div style="font-size:0.88rem; font-weight:800; color:#fff; display:flex; align-items:center; gap:8px;">
+              <i data-lucide="download-cloud" style="color:var(--accent-cyan);"></i>
+              <span>📱 対象級の動画をスマホに保存 (通信量ゼロ・完全オフライン再生)</span>
+            </div>
+            <p style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;" id="offlineStatusText">
+              現在の対象級 (英検準2級) の動画・音声をスマホ端末内にキャッシュ保存します。次の級に進む際はワンタップで差し替え可能です。
+            </p>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <button class="btn-ai-test" id="btnDownloadGradeVideos" style="font-size:0.78rem; padding:8px 14px;" onclick="downloadTargetGradeVideos()">
+              <i data-lucide="download"></i> 現在の級を一括保存
+            </button>
+            <button class="btn-secondary" style="font-size:0.78rem; padding:8px 12px; color:var(--accent-gold);" onclick="clearTargetGradeVideos()">
+              <i data-lucide="refresh-cw"></i> 級の差し替え / クリア
+            </button>
+          </div>
+        </div>
+        <div id="downloadProgressBarContainer" style="display:none; margin-top:12px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--accent-cyan); font-weight:700; margin-bottom:4px;">
+            <span id="downloadProgressLabel">動画をキャッシュ中...</span>
+            <span id="downloadProgressPercent">0%</span>
+          </div>
+          <div style="width:100%; height:8px; background:rgba(255,255,255,0.1); border-radius:999px; overflow:hidden;">
+            <div id="downloadProgressBarFill" style="width:0%; height:100%; background:var(--accent-gradient); transition:width 0.2s;"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="hero-card">
         <div class="card-header">
           <div class="card-title">
             <span>🎬 イソップ寓話 全6級動画プレイヤー</span>
           </div>
-          <span class="status-badge-chip pass" id="videoPlayCountBadge">再生回数: 0回</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span class="status-badge-chip" id="offlinePlayingBadge" style="display:none; background:var(--accent-cyan); color:#070b14;">⚡ オフライン再生中</span>
+            <span class="status-badge-chip pass" id="videoPlayCountBadge">再生回数: 0回</span>
+          </div>
         </div>
 
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:14px; flex-wrap:wrap;">
@@ -1544,6 +1600,7 @@
       document.querySelectorAll('#videoGradeTabsBar .grade-chip').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
       updateStoryView();
+      checkOfflineStatus();
       document.getElementById('sonVideoPlayer').play();
     }
 
@@ -1641,20 +1698,219 @@
       document.getElementById('videoPlayCountBadge').innerText = `再生回数: ${counts[storyIdx]}回`;
     }
 
-    /* Persistence & PWA Guide */
-    function saveCurrentState() {
-      localStorage.setItem('son_task_state_v2', JSON.stringify(taskState));
+    /* ============================================================
+       Photo Upload & Parent Google Drive Integration
+    ============================================================ */
+    async function uploadScreenshot(subject, inputEl) {
+      if (!inputEl.files || inputEl.files.length === 0) return;
+      const file = inputEl.files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('subject', subject);
+
+      showToast('📤 写真をアップロード中...');
+      try {
+        const res = await fetch('api/upload_screenshot.php', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        if (data.status === 'success') {
+          taskState[subject + '_screenshot'] = data.fileUrl;
+          const prevEl = document.getElementById(`upload_preview_${subject}`);
+          if (prevEl) {
+            prevEl.style.display = 'block';
+            prevEl.innerHTML = `✅ 写真提出完了 (${data.uploadedAt}) <a href="${data.fileUrl}" target="_blank" style="color:var(--accent-cyan); margin-left:6px;">[確認]</a>`;
+          }
+          showToast('🎉 写真の提出が完了しました！');
+          saveCurrentState();
+        } else {
+          showToast('❌ アップロード失敗: ' + (data.message || 'エラー'));
+        }
+      } catch (err) {
+        console.warn('Upload API error, saving locally:', err);
+        showToast('⚠️ サーバー未接続（ローカル記録）');
+      }
     }
 
-    function loadSavedState() {
+    function openParentDriveFolder(e) {
+      if (e) e.preventDefault();
+      fetch('config/portal_config.json')
+        .then(r => r.json())
+        .then(cfg => {
+          const url = cfg.parentGoogleDriveFolderUrl || 'https://drive.google.com';
+          window.open(url, '_blank');
+        })
+        .catch(() => {
+          window.open('https://drive.google.com', '_blank');
+        });
+    }
+
+    /* ============================================================
+       Offline Video Cache Manager (Cache API)
+    ============================================================ */
+    const VIDEO_CACHE_NAME = 'son-eiken-videos-v1';
+
+    async function downloadTargetGradeVideos() {
+      const grade = currentVideoGrade || 'Grade_Pre2';
+      const container = document.getElementById('downloadProgressBarContainer');
+      const fill = document.getElementById('downloadProgressBarFill');
+      const label = document.getElementById('downloadProgressLabel');
+      const percentEl = document.getElementById('downloadProgressPercent');
+      const statusText = document.getElementById('offlineStatusText');
+
+      if (!('caches' in window)) {
+        alert('お使いのブラウザはオフライン保存に対応していません');
+        return;
+      }
+
+      container.style.display = 'block';
+      label.innerText = `【${GRADE_NAMES[grade] || grade}】の全動画をスマホに保存中...`;
+      showToast('📥 オフライン保存を開始しました');
+
+      try {
+        const cache = await caches.open(VIDEO_CACHE_NAME);
+        const total = ALL_STORIES.length;
+        let completed = 0;
+
+        for (let i = 0; i < total; i++) {
+          const s = ALL_STORIES[i];
+          const chStr = String(s.chapter).padStart(2, '0');
+          const videoUrl = `video_output/chapter${chStr}_${s.key}/chapter${chStr}_${grade}.mp4`;
+          const audioUrl = `video_output/chapter${chStr}_${s.key}/narration_${grade}.mp3`;
+
+          try {
+            await cache.add(videoUrl);
+            await cache.add(audioUrl);
+          } catch (e) {
+            // Ignore single missing video in dev
+          }
+
+          completed++;
+          const pct = Math.round((completed / total) * 100);
+          fill.style.width = `${pct}%`;
+          percentEl.innerText = `${pct}% (${completed}/${total}話)`;
+        }
+
+        localStorage.setItem('son_cached_grade', grade);
+        statusText.innerHTML = `✅ <strong>${GRADE_NAMES[grade] || grade}</strong> の全動画がスマホ内に保存済みです！(機内モードでも通信なしで再生可能)`;
+        showToast('🎉 対象級のオフライン保存が完了しました！');
+        checkOfflineStatus();
+      } catch (err) {
+        console.error('Cache error:', err);
+        showToast('保存中にエラーが発生しました');
+      }
+    }
+
+    async function clearTargetGradeVideos() {
+      if (!confirm('現在スマホに保存されている対象級の動画キャッシュを削除し、新しい級に差し替えますか？')) return;
+      if ('caches' in window) {
+        await caches.delete(VIDEO_CACHE_NAME);
+        localStorage.removeItem('son_cached_grade');
+        document.getElementById('offlineStatusText').innerText = 'キャッシュをクリアしました。新しい対象級を選択して保存してください。';
+        document.getElementById('downloadProgressBarContainer').style.display = 'none';
+        showToast('🗑️ 旧級のキャッシュをクリアしました');
+        checkOfflineStatus();
+      }
+    }
+
+    async function checkOfflineStatus() {
+      const cachedGrade = localStorage.getItem('son_cached_grade');
+      const badge = document.getElementById('offlinePlayingBadge');
+      if (cachedGrade && cachedGrade === currentVideoGrade) {
+        if (badge) badge.style.display = 'inline-block';
+      } else {
+        if (badge) badge.style.display = 'none';
+      }
+    }
+
+    /* ============================================================
+       Server-Backed Persistence & Multi-Device Sync
+    ============================================================ */
+    async function saveCurrentState() {
+      const payload = {
+        taskState: taskState,
+        slackingDays: slackingDays,
+        history: JSON.parse(localStorage.getItem('son_reward_history') || '[]'),
+        playCounts: JSON.parse(localStorage.getItem('son_play_counts') || '{}')
+      };
+
+      // Local fallback
+      localStorage.setItem('son_task_state_v2', JSON.stringify(taskState));
+      localStorage.setItem('son_slacking_days', slackingDays.toString());
+
+      try {
+        await fetch('api/sync.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (e) {
+        console.log('Offline: state saved to localStorage only');
+      }
+    }
+
+    async function loadSavedState() {
+      // 1. Try Loading from Server (Xserver)
+      try {
+        const res = await fetch('api/sync.php');
+        const json = await res.json();
+        if (json && json.taskState) {
+          taskState = Object.assign(taskState, json.taskState);
+          if (json.slackingDays !== undefined) {
+            slackingDays = json.slackingDays;
+            document.getElementById('slackingDaysSelect').value = slackingDays;
+            updatePenaltyMultiplier(slackingDays);
+          }
+          if (json.history) {
+            localStorage.setItem('son_reward_history', JSON.stringify(json.history));
+          }
+          if (json.playCounts) {
+            localStorage.setItem('son_play_counts', JSON.stringify(json.playCounts));
+          }
+          restoreFormUI();
+          return;
+        }
+      } catch (err) {
+        console.log('Server fetch failed, falling back to localStorage');
+      }
+
+      // 2. Fallback to LocalStorage
       const saved = localStorage.getItem('son_task_state_v2');
       if (saved) {
         try {
           taskState = JSON.parse(saved);
-          if (taskState.wake) document.getElementById('chk_wake').checked = true;
-          if (taskState.swing) document.getElementById('chk_swing').checked = true;
         } catch(e) {}
       }
+      const savedSlack = localStorage.getItem('son_slacking_days');
+      if (savedSlack) {
+        slackingDays = parseInt(savedSlack) || 0;
+        document.getElementById('slackingDaysSelect').value = slackingDays;
+        updatePenaltyMultiplier(slackingDays);
+      }
+      restoreFormUI();
+    }
+
+    function restoreFormUI() {
+      if (taskState.wake) document.getElementById('chk_wake').checked = true;
+      if (taskState.swing) document.getElementById('chk_swing').checked = true;
+      ['kanji', 'english', 'extra1', 'extra2'].forEach(sub => {
+        if (taskState[sub]) {
+          const b = document.getElementById(`badge_${sub}`);
+          if (b) {
+            b.className = 'status-badge-chip pass';
+            b.innerText = '合格 ⭕';
+          }
+        }
+        if (taskState[sub + '_screenshot']) {
+          const prevEl = document.getElementById(`upload_preview_${sub}`);
+          if (prevEl) {
+            prevEl.style.display = 'block';
+            prevEl.innerHTML = `✅ 写真提出済 <a href="${taskState[sub + '_screenshot']}" target="_blank" style="color:var(--accent-cyan); margin-left:6px;">[確認]</a>`;
+          }
+        }
+      });
+      calculateDailyReward();
     }
 
     function renderHistoryList() {
@@ -1713,6 +1969,7 @@
       }
       loadSavedState();
       calculateDailyReward();
+      checkOfflineStatus();
       lucide.createIcons();
     }
 
