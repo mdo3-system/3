@@ -687,21 +687,25 @@ def generate_portal_html():
     }}
 
     .btn-red-sheet {{
-      background: var(--red-sheet);
-      color: #fff;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--accent-cyan);
       font-weight: 800;
       font-size: 0.82rem;
       padding: 8px 14px;
       border-radius: var(--radius-md);
-      border: none;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 6px;
+      transition: all 0.2s;
     }}
 
     .btn-red-sheet.active {{
-      background: #475569;
+      background: #0284c7;
+      border-color: #38bdf8;
+      color: #ffffff;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
     }}
 
     .reader-text-body {{
@@ -711,7 +715,7 @@ def generate_portal_html():
       white-space: pre-wrap;
     }}
 
-    /* Red Mask Active on Vocab Table */
+    /* Blackout / Mask Mode on Vocab & Text */
     .vocab-table-container table {{
       width: 100%;
       border-collapse: collapse;
@@ -731,17 +735,36 @@ def generate_portal_html():
     }}
 
     .red-mask-active .vocab-red, .red-mask-active td:nth-child(2) {{
-      background: #d90429 !important;
-      color: #d90429 !important;
+      background: #0f172a !important;
+      color: #0f172a !important;
       user-select: none;
       border-radius: 4px;
       cursor: pointer;
+      position: relative;
+      transition: all 0.15s ease;
     }}
 
-    .red-mask-active .vocab-red:hover, .red-mask-active td:nth-child(2):hover,
-    .red-mask-active .vocab-red:active, .red-mask-active td:nth-child(2):active {{
-      background: transparent !important;
-      color: #d90429 !important;
+    .red-mask-active .vocab-red::after, .red-mask-active td:nth-child(2)::after {{
+      content: '⬛ 隠し中 (タップで表示)';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #64748b;
+      pointer-events: none;
+      white-space: nowrap;
+    }}
+
+    .red-mask-active .vocab-red.revealed, .red-mask-active td:nth-child(2).revealed {{
+      background: rgba(56, 189, 248, 0.12) !important;
+      color: #0f172a !important;
+      font-weight: 800;
+    }}
+
+    .red-mask-active .vocab-red.revealed::after, .red-mask-active td:nth-child(2).revealed::after {{
+      display: none;
     }}
 
     /* Toast */
@@ -1138,7 +1161,7 @@ def generate_portal_html():
           </button>
         </div>
         <button class="btn-red-sheet" id="redSheetButton" onclick="toggleRedSheetMode()">
-          <i data-lucide="eye-off"></i> 🔴 赤シート
+          <i data-lucide="eye-off"></i> 🕶️ 暗記マスク (黒塗り)
         </button>
       </div>
 
@@ -1148,7 +1171,7 @@ def generate_portal_html():
             <h3 class="reader-story-title" id="readerTitleText" style="font-size:1.2rem; font-weight:800; color:#0f172a;">Chapter 01: The Tortoise and the Hare</h3>
             <span style="font-size:0.8rem; color:#64748b;" id="readerGradeBadge">英検準2級 レベル</span>
           </div>
-          <span style="font-size:0.75rem; color:#d90429; font-weight:700;">※赤シートON時はタップで答えが表示されます</span>
+          <span style="font-size:0.75rem; color:var(--accent-cyan); font-weight:700;">※暗記マスクON時は各単語をタップで答えを表示/非表示できます</span>
         </div>
 
         <div class="reader-text-body" id="readerTextContent"></div>
@@ -1675,13 +1698,13 @@ def generate_portal_html():
       if (isRedSheetOn) {{
         container.classList.add('red-mask-active');
         btn.classList.add('active');
-        btn.innerHTML = '<i data-lucide="eye"></i> 🔴 赤シート ON中';
-        showToast('赤シートON！タップで答えが見えます');
+        btn.innerHTML = '<i data-lucide="eye"></i> 🕶️ 暗記マスク ON中';
+        showToast('🕶️ 暗記マスクON！タップで個別確認できます');
       }} else {{
         container.classList.remove('red-mask-active');
         btn.classList.remove('active');
-        btn.innerHTML = '<i data-lucide="eye-off"></i> 🔴 赤シート (自力テスト)';
-        showToast('赤シートを外しました');
+        btn.innerHTML = '<i data-lucide="eye-off"></i> 🕶️ 暗記マスク (黒塗り)';
+        showToast('暗記マスクを解除しました');
       }}
       lucide.createIcons();
     }}
@@ -1697,7 +1720,7 @@ def generate_portal_html():
         if (idx === 0) {{
           html += '<thead><tr>' + cells.map(c => `<th>${{c}}</th>`).join('') + '</tr></thead><tbody>';
         }} else {{
-          html += '<tr>' + cells.map((c, i) => `<td class="${{i === 1 ? 'vocab-red' : ''}}">${{c}}</td>`).join('') + '</tr>';
+          html += '<tr>' + cells.map((c, i) => `<td class="${{i === 1 ? 'vocab-red' : ''}}" onclick="this.classList.toggle('revealed')">${{c}}</td>`).join('') + '</tr>';
         }}
       }});
       html += '</tbody></table>';
