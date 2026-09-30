@@ -1,0 +1,1326 @@
+{
+  "stories": [
+    {
+      "chapter": 1,
+      "key": "tortoise_and_hare",
+      "titleEn": "The Tortoise and the Hare",
+      "titleJa": "ウサギとカメ",
+      "referenceImage": "images/vol1_tortoise_and_hare.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "The proud hare arrogantly mocks the slow tortoise, smiling confidently. The tortoise stands firm and patient on the dirt path.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a sunny forest hill with an oak tree and winding road. Characters: a proud, boasting hare, a calm, steady tortoise. Animation Action: The proud hare arrogantly mocks the slow tortoise, smiling confidently. The tortoise stands firm and patient on the dirt path. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The hare lies soundly asleep under the shade of a large oak tree. In the distance, the small tortoise steadily walks forward without stopping.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a sunny forest hill with an oak tree and winding road. Characters: a proud, boasting hare, a calm, steady tortoise. Animation Action: The hare lies soundly asleep under the shade of a large oak tree. In the distance, the small tortoise steadily walks forward without stopping. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The hare wakes up startled under a golden twilight sky and sprints in panic, while the tortoise crosses the finish line triumphantly.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a sunny forest hill with an oak tree and winding road. Characters: a proud, boasting hare, a calm, steady tortoise. Animation Action: The hare wakes up startled under a golden twilight sky and sprints in panic, while the tortoise crosses the finish line triumphantly. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "key": "boy_who_cried_wolf",
+      "titleEn": "The Boy Who Cried Wolf",
+      "titleJa": "オオカミ少年",
+      "referenceImage": "images/vol1_boy_who_cried_wolf.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "The young shepherd boy mischievously cups his hands and shouts toward the village, laughing as innocent white sheep graze peacefully around him.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a grassy hillside meadow overlooking a distant village. Characters: a bored shepherd boy, a flock of grazing sheep and a lurking wild wolf. Animation Action: The young shepherd boy mischievously cups his hands and shouts toward the village, laughing as innocent white sheep graze peacefully around him. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "A fierce gray wolf with glowing eyes emerges stealthily from the dark edge of the forest, scattering the frightened sheep across the hillside.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a grassy hillside meadow overlooking a distant village. Characters: a bored shepherd boy, a flock of grazing sheep and a lurking wild wolf. Animation Action: A fierce gray wolf with glowing eyes emerges stealthily from the dark edge of the forest, scattering the frightened sheep across the hillside. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The boy frantically cries and waves for help under stormy dark clouds, but no villagers come. The wolf prowls triumphantly in the shadows.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a grassy hillside meadow overlooking a distant village. Characters: a bored shepherd boy, a flock of grazing sheep and a lurking wild wolf. Animation Action: The boy frantically cries and waves for help under stormy dark clouds, but no villagers come. The wolf prowls triumphantly in the shadows. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "key": "north_wind_and_sun",
+      "titleEn": "The North Wind and the Sun",
+      "titleJa": "北風と太陽",
+      "referenceImage": "images/vol1_north_wind_and_sun.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "The fierce North Wind blows icy blasts with swirling autumn leaves, while the lone traveler tightly clutches his heavy gray cloak.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a country road beneath dramatic open skies. Characters: the fierce North Wind cloud and radiant golden Sun, a traveler wearing a heavy cloak. Animation Action: The fierce North Wind blows icy blasts with swirling autumn leaves, while the lone traveler tightly clutches his heavy gray cloak. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The gentle Sun emerges with warm golden rays shining down brightly, banishing the cold mist and bathing the countryside in warm light.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a country road beneath dramatic open skies. Characters: the fierce North Wind cloud and radiant golden Sun, a traveler wearing a heavy cloak. Animation Action: The gentle Sun emerges with warm golden rays shining down brightly, banishing the cold mist and bathing the countryside in warm light. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The warm, beaming sunshine causes the smiling traveler to gratefully unfasten and remove his heavy cloak, resting beside blooming wildflowers.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a country road beneath dramatic open skies. Characters: the fierce North Wind cloud and radiant golden Sun, a traveler wearing a heavy cloak. Animation Action: The warm, beaming sunshine causes the smiling traveler to gratefully unfasten and remove his heavy cloak, resting beside blooming wildflowers. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "key": "lion_and_mouse",
+      "titleEn": "The Lion and the Mouse",
+      "titleJa": "ライオンとネズミ",
+      "referenceImage": "images/vol1_lion_and_mouse.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "The majestic male lion holds a tiny trembling mouse under his massive paw, before smiling magnanimously and lifting his paw to let him go.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: the African savanna with acacia trees and tall grass. Characters: a mighty majestic lion, a tiny frightened brown mouse. Animation Action: The majestic male lion holds a tiny trembling mouse under his massive paw, before smiling magnanimously and lifting his paw to let him go. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The mighty lion is trapped helplessly inside heavy hunters' ropes, roaring in frustration beneath the savanna sunset.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: the African savanna with acacia trees and tall grass. Characters: a mighty majestic lion, a tiny frightened brown mouse. Animation Action: The mighty lion is trapped helplessly inside heavy hunters' ropes, roaring in frustration beneath the savanna sunset. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The tiny brave mouse rapidly gnaws through the thick rope fibers with sharp teeth, successfully freeing the grateful, bowing giant lion.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: the African savanna with acacia trees and tall grass. Characters: a mighty majestic lion, a tiny frightened brown mouse. Animation Action: The tiny brave mouse rapidly gnaws through the thick rope fibers with sharp teeth, successfully freeing the grateful, bowing giant lion. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "key": "ant_and_grasshopper",
+      "titleEn": "The Ant and the Grasshopper",
+      "titleJa": "アリとキリギリス",
+      "referenceImage": "images/vol1_ant_and_grasshopper.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "Under warm summer sunlight, tiny black ants carry heavy golden grain stalks into their anthill, while a joyful grasshopper plays his violin.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a lush green meadow transitioning into snowy winter. Characters: diligent worker ants, a carefree violin-playing grasshopper. Animation Action: Under warm summer sunlight, tiny black ants carry heavy golden grain stalks into their anthill, while a joyful grasshopper plays his violin. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "Cold autumn winds blow bare branches as shivering frost settles, and the grasshopper wanders with hunger looking for food.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a lush green meadow transitioning into snowy winter. Characters: diligent worker ants, a carefree violin-playing grasshopper. Animation Action: Cold autumn winds blow bare branches as shivering frost settles, and the grasshopper wanders with hunger looking for food. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "In a cozy, grain-filled warm underground shelter, the ants dine comfortably while the freezing, humble grasshopper knocks politely at the snowy door.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a lush green meadow transitioning into snowy winter. Characters: diligent worker ants, a carefree violin-playing grasshopper. Animation Action: In a cozy, grain-filled warm underground shelter, the ants dine comfortably while the freezing, humble grasshopper knocks politely at the snowy door. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "key": "fox_and_grapes",
+      "titleEn": "The Fox and the Grapes",
+      "titleJa": "キツネとブドウ",
+      "referenceImage": "images/vol1_fox_and_grapes.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A hungry red fox gazes upward with watering mouth at luscious bunches of dark purple grapes hanging high on a wooden arbor.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic vineyard with wooden trellises in golden afternoon light. Characters: a sly, hungry red fox, clusters of ripe, juicy purple grapes. Animation Action: A hungry red fox gazes upward with watering mouth at luscious bunches of dark purple grapes hanging high on a wooden arbor. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The nimble fox repeatedly leaps into the air with outstretched paws, barely missing the dangling grape clusters as sunlight filters through leaves.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic vineyard with wooden trellises in golden afternoon light. Characters: a sly, hungry red fox, clusters of ripe, juicy purple grapes. Animation Action: The nimble fox repeatedly leaps into the air with outstretched paws, barely missing the dangling grape clusters as sunlight filters through leaves. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The tired fox turns his head away with a disdainful pout, walking away through the vineyard while proudly declaring the grapes sour.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic vineyard with wooden trellises in golden afternoon light. Characters: a sly, hungry red fox, clusters of ripe, juicy purple grapes. Animation Action: The tired fox turns his head away with a disdainful pout, walking away through the vineyard while proudly declaring the grapes sour. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "key": "town_mouse_country_mouse",
+      "titleEn": "The Town Mouse and the Country Mouse",
+      "titleJa": "田舎のネズミと街のネズミ",
+      "referenceImage": "images/vol1_town_mouse_country_mouse.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "Two mouse friends share a humble meal of dry corn and acorns on a rustic wooden floor in a cozy country burrow.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a humble countryside burrow and an opulent grand mansion feast. Characters: a rustic country mouse, a fancy town mouse. Animation Action: Two mouse friends share a humble meal of dry corn and acorns on a rustic wooden floor in a cozy country burrow. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "In a lavish candlelit dining hall, the mice marvel at towering piles of gourmet cheese, rich pastries, and spilled wine.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a humble countryside burrow and an opulent grand mansion feast. Characters: a rustic country mouse, a fancy town mouse. Animation Action: In a lavish candlelit dining hall, the mice marvel at towering piles of gourmet cheese, rich pastries, and spilled wine. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "Suddenly a huge snarling cat leaps onto the luxurious table, sending the terrified country mouse scurrying safely back toward his peaceful countryside home.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a humble countryside burrow and an opulent grand mansion feast. Characters: a rustic country mouse, a fancy town mouse. Animation Action: Suddenly a huge snarling cat leaps onto the luxurious table, sending the terrified country mouse scurrying safely back toward his peaceful countryside home. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "key": "crow_and_pitcher",
+      "titleEn": "The Crow and the Pitcher",
+      "titleJa": "カラスと水つぼ",
+      "referenceImage": "images/vol1_crow_and_pitcher.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A thirsty black crow perches on the rim of a tall clay pitcher, peering curiously down at the water resting tantalizingly far below.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dry, parched garden courtyard with scattered pebbles. Characters: a clever black crow, a tall terracotta clay pitcher. Animation Action: A thirsty black crow perches on the rim of a tall clay pitcher, peering curiously down at the water resting tantalizingly far below. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The intelligent crow picks up smooth stone pebbles one by one in its sharp beak, carefully dropping them into the narrow neck of the jar.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dry, parched garden courtyard with scattered pebbles. Characters: a clever black crow, a tall terracotta clay pitcher. Animation Action: The intelligent crow picks up smooth stone pebbles one by one in its sharp beak, carefully dropping them into the narrow neck of the jar. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "As the water level steadily rises to the top of the vessel, the triumphant crow happily dips its beak to take a long, refreshing drink.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dry, parched garden courtyard with scattered pebbles. Characters: a clever black crow, a tall terracotta clay pitcher. Animation Action: As the water level steadily rises to the top of the vessel, the triumphant crow happily dips its beak to take a long, refreshing drink. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "key": "dog_and_his_shadow",
+      "titleEn": "The Dog and His Shadow",
+      "titleJa": "欲張りな犬",
+      "referenceImage": "images/vol1_dog_and_his_shadow.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A proud dog trotting across a wooden bridge holds a large, succulent bone in his mouth, looking down into the sparkling stream.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a narrow wooden footbridge over a crystal-clear brook. Characters: a greedy hound, a large juicy piece of meat and clear stream reflection. Animation Action: A proud dog trotting across a wooden bridge holds a large, succulent bone in his mouth, looking down into the sparkling stream. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The dog sees his own reflection in the calm water, greedily believing it is another dog carrying an even bigger piece of meat.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a narrow wooden footbridge over a crystal-clear brook. Characters: a greedy hound, a large juicy piece of meat and clear stream reflection. Animation Action: The dog sees his own reflection in the calm water, greedily believing it is another dog carrying an even bigger piece of meat. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The foolish dog snaps aggressively at the water; the bone drops from his jaws and splashes into the flowing current, sinking out of reach.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a narrow wooden footbridge over a crystal-clear brook. Characters: a greedy hound, a large juicy piece of meat and clear stream reflection. Animation Action: The foolish dog snaps aggressively at the water; the bone drops from his jaws and splashes into the flowing current, sinking out of reach. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "key": "milkmaid_and_her_pail",
+      "titleEn": "The Milkmaid and Her Pail",
+      "titleJa": "ミルク搾りの娘",
+      "referenceImage": "images/vol1_milkmaid_and_her_pail.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A graceful young country maid walks gracefully along a sunny path, balancing a full wooden pail of creamy milk atop her head.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming spring meadow path leading to market. Characters: a day-dreaming milkmaid in a rustic apron, a full wooden pail of fresh white milk. Animation Action: A graceful young country maid walks gracefully along a sunny path, balancing a full wooden pail of creamy milk atop her head. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "She gazes into the sky with an excited daydreaming expression, envisioning baskets of chicks, fancy dresses, and dancing at the village fair.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming spring meadow path leading to market. Characters: a day-dreaming milkmaid in a rustic apron, a full wooden pail of fresh white milk. Animation Action: She gazes into the sky with an excited daydreaming expression, envisioning baskets of chicks, fancy dresses, and dancing at the village fair. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "She tosses her head in proud imagination, causing the heavy pail to tip and splash all the white milk across the green grass.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming spring meadow path leading to market. Characters: a day-dreaming milkmaid in a rustic apron, a full wooden pail of fresh white milk. Animation Action: She tosses her head in proud imagination, causing the heavy pail to tip and splash all the white milk across the green grass. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "key": "honest_woodcutter",
+      "titleEn": "The Honest Woodcutter",
+      "titleJa": "金の斧と銀の斧",
+      "referenceImage": "images/vol1_honest_woodcutter.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A humble woodcutter weeps beside a deep river after accidentally dropping his old iron axe into the swirling water.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a mystical forest river pool shimmering in divine light. Characters: an honest woodcutter in peasant attire, the divine water spirit Hermes/Mercury. Animation Action: A humble woodcutter weeps beside a deep river after accidentally dropping his old iron axe into the swirling water. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "A glowing water deity emerges gracefully from the sparkling pool, presenting a glittering pure gold axe and a brilliant silver axe.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a mystical forest river pool shimmering in divine light. Characters: an honest woodcutter in peasant attire, the divine water spirit Hermes/Mercury. Animation Action: A glowing water deity emerges gracefully from the sparkling pool, presenting a glittering pure gold axe and a brilliant silver axe. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The modest woodman honestly claims only his plain iron axe, and the delighted deity rewards him with all three shining axes in glowing harmony.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a mystical forest river pool shimmering in divine light. Characters: an honest woodcutter in peasant attire, the divine water spirit Hermes/Mercury. Animation Action: The modest woodman honestly claims only his plain iron axe, and the delighted deity rewards him with all three shining axes in glowing harmony. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "key": "goose_golden_eggs",
+      "titleEn": "The Goose that Laid the Golden Eggs",
+      "titleJa": "金の卵を産むガチョウ",
+      "referenceImage": "images/vol1_goose_golden_eggs.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A humble farmer discovers a heavy, radiant golden egg inside the nest of his plump white goose, beaming with astonishment.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic farm cottage barn bathed in morning sun. Characters: a greedy farmer and his wife, a magical white goose and shining golden eggs. Animation Action: A humble farmer discovers a heavy, radiant golden egg inside the nest of his plump white goose, beaming with astonishment. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "Golden coins and luxury fill the cottage as the couple stares with mounting, feverish greed at the precious goose.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic farm cottage barn bathed in morning sun. Characters: a greedy farmer and his wife, a magical white goose and shining golden eggs. Animation Action: Golden coins and luxury fill the cottage as the couple stares with mounting, feverish greed at the precious goose. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The remorseful farmer stands empty-handed with an open knife in the barn, realizing his foolish greed has ended the golden miracle forever.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic farm cottage barn bathed in morning sun. Characters: a greedy farmer and his wife, a magical white goose and shining golden eggs. Animation Action: The remorseful farmer stands empty-handed with an open knife in the barn, realizing his foolish greed has ended the golden miracle forever. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "key": "wolf_in_sheeps_clothing",
+      "titleEn": "The Wolf in Sheep's Clothing",
+      "titleJa": "羊の皮をかぶった狼",
+      "referenceImage": "images/vol1_wolf_in_sheeps_clothing.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A cunning wolf carefully drapes a thick white wool fleece over his back, blending invisibly into the unsuspecting flock.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a misty hilltop pasture at sunset. Characters: a deceitful wolf wrapped in a white fleece, a flock of grazing sheep and the shepherd. Animation Action: A cunning wolf carefully drapes a thick white wool fleece over his back, blending invisibly into the unsuspecting flock. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The disguised predator grazes quietly among the lambs as twilight descends, creeping closer to the center of the fold.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a misty hilltop pasture at sunset. Characters: a deceitful wolf wrapped in a white fleece, a flock of grazing sheep and the shepherd. Animation Action: The disguised predator grazes quietly among the lambs as twilight descends, creeping closer to the center of the fold. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "Under the moonlight, the shepherd enters the pen to prepare the evening meal and unknowingly captures the hidden wolf in his disguise.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a misty hilltop pasture at sunset. Characters: a deceitful wolf wrapped in a white fleece, a flock of grazing sheep and the shepherd. Animation Action: Under the moonlight, the shepherd enters the pen to prepare the evening meal and unknowingly captures the hidden wolf in his disguise. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "key": "fox_and_stork",
+      "titleEn": "The Fox and the Stork",
+      "titleJa": "キツネとツル",
+      "referenceImage": "images/vol1_fox_and_stork.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "The mischievous fox serves delicious soup in a flat, shallow plate, laughing as the long-beaked stork cannot drink a single drop.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a cozy animal cottage dining room. Characters: a sly red fox, a tall, elegant long-beaked stork. Animation Action: The mischievous fox serves delicious soup in a flat, shallow plate, laughing as the long-beaked stork cannot drink a single drop. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The polite stork invites the fox to dinner, serving savory stew inside a tall, narrow-necked glass jar.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a cozy animal cottage dining room. Characters: a sly red fox, a tall, elegant long-beaked stork. Animation Action: The polite stork invites the fox to dinner, serving savory stew inside a tall, narrow-necked glass jar. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The elegant stork easily sips through the tall neck while the hungry fox fruitlessly licks the rim, receiving a taste of his own medicine.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a cozy animal cottage dining room. Characters: a sly red fox, a tall, elegant long-beaked stork. Animation Action: The elegant stork easily sips through the tall neck while the hungry fox fruitlessly licks the rim, receiving a taste of his own medicine. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 15,
+      "key": "frog_and_ox",
+      "titleEn": "The Frog and the Ox",
+      "titleJa": "カエルと牛",
+      "referenceImage": "images/vol1_frog_and_ox.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A little frog tells his father about a monstrous giant beast grazing in the meadow, pointing toward a colossal horned ox.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a muddy pond marsh with reeds and water lilies. Characters: an envious green frog father, a massive, calm meadow ox and tiny baby frogs. Animation Action: A little frog tells his father about a monstrous giant beast grazing in the meadow, pointing toward a colossal horned ox. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The proud father frog inhales deeply, puffing out his green skin like a balloon to match the enormous size of the ox.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a muddy pond marsh with reeds and water lilies. Characters: an envious green frog father, a massive, calm meadow ox and tiny baby frogs. Animation Action: The proud father frog inhales deeply, puffing out his green skin like a balloon to match the enormous size of the ox. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "Ignoring the warnings of his children, the stubborn frog puffs himself up even further until he pops harmlessly with an over-inflated gasp.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a muddy pond marsh with reeds and water lilies. Characters: an envious green frog father, a massive, calm meadow ox and tiny baby frogs. Animation Action: Ignoring the warnings of his children, the stubborn frog puffs himself up even further until he pops harmlessly with an over-inflated gasp. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 16,
+      "key": "bat_birds_beasts",
+      "titleEn": "The Bat, Birds, and Beasts",
+      "titleJa": "コウモリと鳥と獣",
+      "referenceImage": "images/vol1_bat_birds_beasts.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A great contest arises between feathered birds soaring in the sky and four-legged beasts gathered on the battlefield below.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dramatic battle clearing between sky and forest. Characters: an opportunistic black bat, armies of birds in the sky and beasts on the land. Animation Action: A great contest arises between feathered birds soaring in the sky and four-legged beasts gathered on the battlefield below. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The shifting bat flies to the winning side, showing his wings to the birds and his furry body and teeth to the beasts.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dramatic battle clearing between sky and forest. Characters: an opportunistic black bat, armies of birds in the sky and beasts on the land. Animation Action: The shifting bat flies to the winning side, showing his wings to the birds and his furry body and teeth to the beasts. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "When peace is declared, both birds and beasts shun the treacherous bat, banishing him to fly alone in dark nocturnal caves.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dramatic battle clearing between sky and forest. Characters: an opportunistic black bat, armies of birds in the sky and beasts on the land. Animation Action: When peace is declared, both birds and beasts shun the treacherous bat, banishing him to fly alone in dark nocturnal caves. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 17,
+      "key": "belling_the_cat",
+      "titleEn": "Belling the Cat",
+      "titleJa": "ネズミの会議",
+      "referenceImage": "images/vol1_belling_the_cat.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A council of concerned mice debate heatedly beneath the floorboards about how to detect the stealthy approaching cat.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dimly lit cellar corner beneath wooden floorboards. Characters: a gathering of mouse elders and a young mouse, a shiny golden bell and a prowling black cat. Animation Action: A council of concerned mice debate heatedly beneath the floorboards about how to detect the stealthy approaching cat. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "A proud young mouse proposes tying a bright brass bell around the cat's neck, receiving enthusiastic applause from the crowd.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dimly lit cellar corner beneath wooden floorboards. Characters: a gathering of mouse elders and a young mouse, a shiny golden bell and a prowling black cat. Animation Action: A proud young mouse proposes tying a bright brass bell around the cat's neck, receiving enthusiastic applause from the crowd. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "An old, wise mouse stands up with folded arms and quietly asks who will volunteer to hang the bell, leaving the room in dead silence.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dimly lit cellar corner beneath wooden floorboards. Characters: a gathering of mouse elders and a young mouse, a shiny golden bell and a prowling black cat. Animation Action: An old, wise mouse stands up with folded arms and quietly asks who will volunteer to hang the bell, leaving the room in dead silence. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 18,
+      "key": "bear_and_two_travelers",
+      "titleEn": "The Bear and the Travelers",
+      "titleJa": "旅人とクマ",
+      "referenceImage": "images/vol1_bear_and_two_travelers.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "Two friends strolling through a deep mountain forest suddenly freeze in horror as a colossal brown bear crashes through the trees.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dense ancient pine forest path. Characters: two traveling companions, a gigantic wild brown bear. Animation Action: Two friends strolling through a deep mountain forest suddenly freeze in horror as a colossal brown bear crashes through the trees. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "One traveler swiftly climbs high into a sturdy pine tree, leaving his abandoned companion to drop flat on the ground and hold his breath.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dense ancient pine forest path. Characters: two traveling companions, a gigantic wild brown bear. Animation Action: One traveler swiftly climbs high into a sturdy pine tree, leaving his abandoned companion to drop flat on the ground and hold his breath. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The huge bear sniffs closely at the motionless traveler's ear before ambling away peacefully, teaching a lasting lesson on true friendship.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dense ancient pine forest path. Characters: two traveling companions, a gigantic wild brown bear. Animation Action: The huge bear sniffs closely at the motionless traveler's ear before ambling away peacefully, teaching a lasting lesson on true friendship. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 19,
+      "key": "lions_share",
+      "titleEn": "The Lion's Share",
+      "titleJa": "獅子の分け前",
+      "referenceImage": "images/vol1_lions_share.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A lion, a wolf, a fox, and a jackal successfully bring down a large stag through a cooperative hunt on the rocky ridge.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rocky hunting plateau overlooking the wild plains. Characters: a dominant regal lion, his hunting partners: a fox, a wolf, and a jackal. Animation Action: A lion, a wolf, a fox, and a jackal successfully bring down a large stag through a cooperative hunt on the rocky ridge. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The stag is divided into four equal portions, and the fierce lion places his heavy paw firmly over the entire carcass.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rocky hunting plateau overlooking the wild plains. Characters: a dominant regal lion, his hunting partners: a fox, a wolf, and a jackal. Animation Action: The stag is divided into four equal portions, and the fierce lion places his heavy paw firmly over the entire carcass. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "The regal lion claims all four portions through royal right, strength, and defiance, leaving the intimidated partners with nothing.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rocky hunting plateau overlooking the wild plains. Characters: a dominant regal lion, his hunting partners: a fox, a wolf, and a jackal. Animation Action: The regal lion claims all four portions through royal right, strength, and defiance, leaving the intimidated partners with nothing. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    },
+    {
+      "chapter": 20,
+      "key": "frog_and_mouse",
+      "titleEn": "The Frog and the Mouse",
+      "titleJa": "ネズミとカエル",
+      "referenceImage": "images/vol1_frog_and_mouse.png",
+      "clips": [
+        {
+          "clipIndex": 1,
+          "sceneName": "Opening & Situation (起/導入)",
+          "durationSec": 20,
+          "action": "A playful frog ties his leg with a string to the foot of a curious field mouse to guide him across the marshland.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming pond shore beneath an open blue sky. Characters: a treacherous green frog and an innocent field mouse, a soaring predatory hawk/kite. Animation Action: A playful frog ties his leg with a string to the foot of a curious field mouse to guide him across the marshland. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 2,
+          "sceneName": "Development & Action (承/展開)",
+          "durationSec": 25,
+          "action": "The malicious frog dives into the deep pool, pulling the struggling, swimming mouse beneath the shimmering water surface.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming pond shore beneath an open blue sky. Characters: a treacherous green frog and an innocent field mouse, a soaring predatory hawk/kite. Animation Action: The malicious frog dives into the deep pool, pulling the struggling, swimming mouse beneath the shimmering water surface. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        },
+        {
+          "clipIndex": 3,
+          "sceneName": "Climax & Resolution (結/結末)",
+          "durationSec": 25,
+          "action": "A sharp-eyed hawk swoops down from above, seizing the floating mouse in its talons and carrying both bound creatures into the sky.",
+          "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming pond shore beneath an open blue sky. Characters: a treacherous green frog and an innocent field mouse, a soaring predatory hawk/kite. Animation Action: A sharp-eyed hawk swoops down from above, seizing the floating mouse in its talons and carrying both bound creatures into the sky. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": 1,
+      "day": 1,
+      "account": "Account 1",
+      "chapter": 1,
+      "titleEn": "The Tortoise and the Hare",
+      "titleJa": "ウサギとカメ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_tortoise_and_hare.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a sunny forest hill with an oak tree and winding road. Characters: a proud, boasting hare, a calm, steady tortoise. Animation Action: The proud hare arrogantly mocks the slow tortoise, smiling confidently. The tortoise stands firm and patient on the dirt path. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 2,
+      "day": 1,
+      "account": "Account 1",
+      "chapter": 1,
+      "titleEn": "The Tortoise and the Hare",
+      "titleJa": "ウサギとカメ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_tortoise_and_hare.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a sunny forest hill with an oak tree and winding road. Characters: a proud, boasting hare, a calm, steady tortoise. Animation Action: The hare lies soundly asleep under the shade of a large oak tree. In the distance, the small tortoise steadily walks forward without stopping. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 3,
+      "day": 1,
+      "account": "Account 1",
+      "chapter": 1,
+      "titleEn": "The Tortoise and the Hare",
+      "titleJa": "ウサギとカメ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_tortoise_and_hare.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a sunny forest hill with an oak tree and winding road. Characters: a proud, boasting hare, a calm, steady tortoise. Animation Action: The hare wakes up startled under a golden twilight sky and sprints in panic, while the tortoise crosses the finish line triumphantly. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 4,
+      "day": 1,
+      "account": "Account 2",
+      "chapter": 2,
+      "titleEn": "The Boy Who Cried Wolf",
+      "titleJa": "オオカミ少年",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_boy_who_cried_wolf.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a grassy hillside meadow overlooking a distant village. Characters: a bored shepherd boy, a flock of grazing sheep and a lurking wild wolf. Animation Action: The young shepherd boy mischievously cups his hands and shouts toward the village, laughing as innocent white sheep graze peacefully around him. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 5,
+      "day": 1,
+      "account": "Account 2",
+      "chapter": 2,
+      "titleEn": "The Boy Who Cried Wolf",
+      "titleJa": "オオカミ少年",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_boy_who_cried_wolf.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a grassy hillside meadow overlooking a distant village. Characters: a bored shepherd boy, a flock of grazing sheep and a lurking wild wolf. Animation Action: A fierce gray wolf with glowing eyes emerges stealthily from the dark edge of the forest, scattering the frightened sheep across the hillside. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 6,
+      "day": 1,
+      "account": "Account 2",
+      "chapter": 2,
+      "titleEn": "The Boy Who Cried Wolf",
+      "titleJa": "オオカミ少年",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_boy_who_cried_wolf.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a grassy hillside meadow overlooking a distant village. Characters: a bored shepherd boy, a flock of grazing sheep and a lurking wild wolf. Animation Action: The boy frantically cries and waves for help under stormy dark clouds, but no villagers come. The wolf prowls triumphantly in the shadows. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 7,
+      "day": 1,
+      "account": "Account 3",
+      "chapter": 3,
+      "titleEn": "The North Wind and the Sun",
+      "titleJa": "北風と太陽",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_north_wind_and_sun.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a country road beneath dramatic open skies. Characters: the fierce North Wind cloud and radiant golden Sun, a traveler wearing a heavy cloak. Animation Action: The fierce North Wind blows icy blasts with swirling autumn leaves, while the lone traveler tightly clutches his heavy gray cloak. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 8,
+      "day": 1,
+      "account": "Account 3",
+      "chapter": 3,
+      "titleEn": "The North Wind and the Sun",
+      "titleJa": "北風と太陽",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_north_wind_and_sun.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a country road beneath dramatic open skies. Characters: the fierce North Wind cloud and radiant golden Sun, a traveler wearing a heavy cloak. Animation Action: The gentle Sun emerges with warm golden rays shining down brightly, banishing the cold mist and bathing the countryside in warm light. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 9,
+      "day": 1,
+      "account": "Account 3",
+      "chapter": 3,
+      "titleEn": "The North Wind and the Sun",
+      "titleJa": "北風と太陽",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_north_wind_and_sun.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a country road beneath dramatic open skies. Characters: the fierce North Wind cloud and radiant golden Sun, a traveler wearing a heavy cloak. Animation Action: The warm, beaming sunshine causes the smiling traveler to gratefully unfasten and remove his heavy cloak, resting beside blooming wildflowers. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 10,
+      "day": 1,
+      "account": "Account 4",
+      "chapter": 4,
+      "titleEn": "The Lion and the Mouse",
+      "titleJa": "ライオンとネズミ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_lion_and_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: the African savanna with acacia trees and tall grass. Characters: a mighty majestic lion, a tiny frightened brown mouse. Animation Action: The majestic male lion holds a tiny trembling mouse under his massive paw, before smiling magnanimously and lifting his paw to let him go. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 11,
+      "day": 1,
+      "account": "Account 4",
+      "chapter": 4,
+      "titleEn": "The Lion and the Mouse",
+      "titleJa": "ライオンとネズミ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_lion_and_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: the African savanna with acacia trees and tall grass. Characters: a mighty majestic lion, a tiny frightened brown mouse. Animation Action: The mighty lion is trapped helplessly inside heavy hunters' ropes, roaring in frustration beneath the savanna sunset. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 12,
+      "day": 1,
+      "account": "Account 4",
+      "chapter": 4,
+      "titleEn": "The Lion and the Mouse",
+      "titleJa": "ライオンとネズミ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_lion_and_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: the African savanna with acacia trees and tall grass. Characters: a mighty majestic lion, a tiny frightened brown mouse. Animation Action: The tiny brave mouse rapidly gnaws through the thick rope fibers with sharp teeth, successfully freeing the grateful, bowing giant lion. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 13,
+      "day": 1,
+      "account": "Account 5",
+      "chapter": 5,
+      "titleEn": "The Ant and the Grasshopper",
+      "titleJa": "アリとキリギリス",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_ant_and_grasshopper.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a lush green meadow transitioning into snowy winter. Characters: diligent worker ants, a carefree violin-playing grasshopper. Animation Action: Under warm summer sunlight, tiny black ants carry heavy golden grain stalks into their anthill, while a joyful grasshopper plays his violin. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 14,
+      "day": 1,
+      "account": "Account 5",
+      "chapter": 5,
+      "titleEn": "The Ant and the Grasshopper",
+      "titleJa": "アリとキリギリス",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_ant_and_grasshopper.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a lush green meadow transitioning into snowy winter. Characters: diligent worker ants, a carefree violin-playing grasshopper. Animation Action: Cold autumn winds blow bare branches as shivering frost settles, and the grasshopper wanders with hunger looking for food. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 15,
+      "day": 1,
+      "account": "Account 5",
+      "chapter": 5,
+      "titleEn": "The Ant and the Grasshopper",
+      "titleJa": "アリとキリギリス",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_ant_and_grasshopper.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a lush green meadow transitioning into snowy winter. Characters: diligent worker ants, a carefree violin-playing grasshopper. Animation Action: In a cozy, grain-filled warm underground shelter, the ants dine comfortably while the freezing, humble grasshopper knocks politely at the snowy door. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 16,
+      "day": 2,
+      "account": "Account 1",
+      "chapter": 6,
+      "titleEn": "The Fox and the Grapes",
+      "titleJa": "キツネとブドウ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_fox_and_grapes.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic vineyard with wooden trellises in golden afternoon light. Characters: a sly, hungry red fox, clusters of ripe, juicy purple grapes. Animation Action: A hungry red fox gazes upward with watering mouth at luscious bunches of dark purple grapes hanging high on a wooden arbor. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 17,
+      "day": 2,
+      "account": "Account 1",
+      "chapter": 6,
+      "titleEn": "The Fox and the Grapes",
+      "titleJa": "キツネとブドウ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_fox_and_grapes.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic vineyard with wooden trellises in golden afternoon light. Characters: a sly, hungry red fox, clusters of ripe, juicy purple grapes. Animation Action: The nimble fox repeatedly leaps into the air with outstretched paws, barely missing the dangling grape clusters as sunlight filters through leaves. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 18,
+      "day": 2,
+      "account": "Account 1",
+      "chapter": 6,
+      "titleEn": "The Fox and the Grapes",
+      "titleJa": "キツネとブドウ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_fox_and_grapes.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic vineyard with wooden trellises in golden afternoon light. Characters: a sly, hungry red fox, clusters of ripe, juicy purple grapes. Animation Action: The tired fox turns his head away with a disdainful pout, walking away through the vineyard while proudly declaring the grapes sour. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 19,
+      "day": 2,
+      "account": "Account 2",
+      "chapter": 7,
+      "titleEn": "The Town Mouse and the Country Mouse",
+      "titleJa": "田舎のネズミと街のネズミ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_town_mouse_country_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a humble countryside burrow and an opulent grand mansion feast. Characters: a rustic country mouse, a fancy town mouse. Animation Action: Two mouse friends share a humble meal of dry corn and acorns on a rustic wooden floor in a cozy country burrow. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 20,
+      "day": 2,
+      "account": "Account 2",
+      "chapter": 7,
+      "titleEn": "The Town Mouse and the Country Mouse",
+      "titleJa": "田舎のネズミと街のネズミ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_town_mouse_country_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a humble countryside burrow and an opulent grand mansion feast. Characters: a rustic country mouse, a fancy town mouse. Animation Action: In a lavish candlelit dining hall, the mice marvel at towering piles of gourmet cheese, rich pastries, and spilled wine. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 21,
+      "day": 2,
+      "account": "Account 2",
+      "chapter": 7,
+      "titleEn": "The Town Mouse and the Country Mouse",
+      "titleJa": "田舎のネズミと街のネズミ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_town_mouse_country_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a humble countryside burrow and an opulent grand mansion feast. Characters: a rustic country mouse, a fancy town mouse. Animation Action: Suddenly a huge snarling cat leaps onto the luxurious table, sending the terrified country mouse scurrying safely back toward his peaceful countryside home. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 22,
+      "day": 2,
+      "account": "Account 3",
+      "chapter": 8,
+      "titleEn": "The Crow and the Pitcher",
+      "titleJa": "カラスと水つぼ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_crow_and_pitcher.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dry, parched garden courtyard with scattered pebbles. Characters: a clever black crow, a tall terracotta clay pitcher. Animation Action: A thirsty black crow perches on the rim of a tall clay pitcher, peering curiously down at the water resting tantalizingly far below. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 23,
+      "day": 2,
+      "account": "Account 3",
+      "chapter": 8,
+      "titleEn": "The Crow and the Pitcher",
+      "titleJa": "カラスと水つぼ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_crow_and_pitcher.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dry, parched garden courtyard with scattered pebbles. Characters: a clever black crow, a tall terracotta clay pitcher. Animation Action: The intelligent crow picks up smooth stone pebbles one by one in its sharp beak, carefully dropping them into the narrow neck of the jar. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 24,
+      "day": 2,
+      "account": "Account 3",
+      "chapter": 8,
+      "titleEn": "The Crow and the Pitcher",
+      "titleJa": "カラスと水つぼ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_crow_and_pitcher.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dry, parched garden courtyard with scattered pebbles. Characters: a clever black crow, a tall terracotta clay pitcher. Animation Action: As the water level steadily rises to the top of the vessel, the triumphant crow happily dips its beak to take a long, refreshing drink. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 25,
+      "day": 2,
+      "account": "Account 4",
+      "chapter": 9,
+      "titleEn": "The Dog and His Shadow",
+      "titleJa": "欲張りな犬",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_dog_and_his_shadow.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a narrow wooden footbridge over a crystal-clear brook. Characters: a greedy hound, a large juicy piece of meat and clear stream reflection. Animation Action: A proud dog trotting across a wooden bridge holds a large, succulent bone in his mouth, looking down into the sparkling stream. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 26,
+      "day": 2,
+      "account": "Account 4",
+      "chapter": 9,
+      "titleEn": "The Dog and His Shadow",
+      "titleJa": "欲張りな犬",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_dog_and_his_shadow.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a narrow wooden footbridge over a crystal-clear brook. Characters: a greedy hound, a large juicy piece of meat and clear stream reflection. Animation Action: The dog sees his own reflection in the calm water, greedily believing it is another dog carrying an even bigger piece of meat. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 27,
+      "day": 2,
+      "account": "Account 4",
+      "chapter": 9,
+      "titleEn": "The Dog and His Shadow",
+      "titleJa": "欲張りな犬",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_dog_and_his_shadow.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a narrow wooden footbridge over a crystal-clear brook. Characters: a greedy hound, a large juicy piece of meat and clear stream reflection. Animation Action: The foolish dog snaps aggressively at the water; the bone drops from his jaws and splashes into the flowing current, sinking out of reach. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 28,
+      "day": 2,
+      "account": "Account 5",
+      "chapter": 10,
+      "titleEn": "The Milkmaid and Her Pail",
+      "titleJa": "ミルク搾りの娘",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_milkmaid_and_her_pail.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming spring meadow path leading to market. Characters: a day-dreaming milkmaid in a rustic apron, a full wooden pail of fresh white milk. Animation Action: A graceful young country maid walks gracefully along a sunny path, balancing a full wooden pail of creamy milk atop her head. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 29,
+      "day": 2,
+      "account": "Account 5",
+      "chapter": 10,
+      "titleEn": "The Milkmaid and Her Pail",
+      "titleJa": "ミルク搾りの娘",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_milkmaid_and_her_pail.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming spring meadow path leading to market. Characters: a day-dreaming milkmaid in a rustic apron, a full wooden pail of fresh white milk. Animation Action: She gazes into the sky with an excited daydreaming expression, envisioning baskets of chicks, fancy dresses, and dancing at the village fair. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 30,
+      "day": 2,
+      "account": "Account 5",
+      "chapter": 10,
+      "titleEn": "The Milkmaid and Her Pail",
+      "titleJa": "ミルク搾りの娘",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_milkmaid_and_her_pail.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming spring meadow path leading to market. Characters: a day-dreaming milkmaid in a rustic apron, a full wooden pail of fresh white milk. Animation Action: She tosses her head in proud imagination, causing the heavy pail to tip and splash all the white milk across the green grass. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 31,
+      "day": 3,
+      "account": "Account 1",
+      "chapter": 11,
+      "titleEn": "The Honest Woodcutter",
+      "titleJa": "金の斧と銀の斧",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_honest_woodcutter.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a mystical forest river pool shimmering in divine light. Characters: an honest woodcutter in peasant attire, the divine water spirit Hermes/Mercury. Animation Action: A humble woodcutter weeps beside a deep river after accidentally dropping his old iron axe into the swirling water. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 32,
+      "day": 3,
+      "account": "Account 1",
+      "chapter": 11,
+      "titleEn": "The Honest Woodcutter",
+      "titleJa": "金の斧と銀の斧",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_honest_woodcutter.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a mystical forest river pool shimmering in divine light. Characters: an honest woodcutter in peasant attire, the divine water spirit Hermes/Mercury. Animation Action: A glowing water deity emerges gracefully from the sparkling pool, presenting a glittering pure gold axe and a brilliant silver axe. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 33,
+      "day": 3,
+      "account": "Account 1",
+      "chapter": 11,
+      "titleEn": "The Honest Woodcutter",
+      "titleJa": "金の斧と銀の斧",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_honest_woodcutter.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a mystical forest river pool shimmering in divine light. Characters: an honest woodcutter in peasant attire, the divine water spirit Hermes/Mercury. Animation Action: The modest woodman honestly claims only his plain iron axe, and the delighted deity rewards him with all three shining axes in glowing harmony. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 34,
+      "day": 3,
+      "account": "Account 2",
+      "chapter": 12,
+      "titleEn": "The Goose that Laid the Golden Eggs",
+      "titleJa": "金の卵を産むガチョウ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_goose_golden_eggs.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic farm cottage barn bathed in morning sun. Characters: a greedy farmer and his wife, a magical white goose and shining golden eggs. Animation Action: A humble farmer discovers a heavy, radiant golden egg inside the nest of his plump white goose, beaming with astonishment. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 35,
+      "day": 3,
+      "account": "Account 2",
+      "chapter": 12,
+      "titleEn": "The Goose that Laid the Golden Eggs",
+      "titleJa": "金の卵を産むガチョウ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_goose_golden_eggs.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic farm cottage barn bathed in morning sun. Characters: a greedy farmer and his wife, a magical white goose and shining golden eggs. Animation Action: Golden coins and luxury fill the cottage as the couple stares with mounting, feverish greed at the precious goose. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 36,
+      "day": 3,
+      "account": "Account 2",
+      "chapter": 12,
+      "titleEn": "The Goose that Laid the Golden Eggs",
+      "titleJa": "金の卵を産むガチョウ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_goose_golden_eggs.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rustic farm cottage barn bathed in morning sun. Characters: a greedy farmer and his wife, a magical white goose and shining golden eggs. Animation Action: The remorseful farmer stands empty-handed with an open knife in the barn, realizing his foolish greed has ended the golden miracle forever. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 37,
+      "day": 3,
+      "account": "Account 3",
+      "chapter": 13,
+      "titleEn": "The Wolf in Sheep's Clothing",
+      "titleJa": "羊の皮をかぶった狼",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_wolf_in_sheeps_clothing.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a misty hilltop pasture at sunset. Characters: a deceitful wolf wrapped in a white fleece, a flock of grazing sheep and the shepherd. Animation Action: A cunning wolf carefully drapes a thick white wool fleece over his back, blending invisibly into the unsuspecting flock. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 38,
+      "day": 3,
+      "account": "Account 3",
+      "chapter": 13,
+      "titleEn": "The Wolf in Sheep's Clothing",
+      "titleJa": "羊の皮をかぶった狼",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_wolf_in_sheeps_clothing.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a misty hilltop pasture at sunset. Characters: a deceitful wolf wrapped in a white fleece, a flock of grazing sheep and the shepherd. Animation Action: The disguised predator grazes quietly among the lambs as twilight descends, creeping closer to the center of the fold. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 39,
+      "day": 3,
+      "account": "Account 3",
+      "chapter": 13,
+      "titleEn": "The Wolf in Sheep's Clothing",
+      "titleJa": "羊の皮をかぶった狼",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_wolf_in_sheeps_clothing.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a misty hilltop pasture at sunset. Characters: a deceitful wolf wrapped in a white fleece, a flock of grazing sheep and the shepherd. Animation Action: Under the moonlight, the shepherd enters the pen to prepare the evening meal and unknowingly captures the hidden wolf in his disguise. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 40,
+      "day": 3,
+      "account": "Account 4",
+      "chapter": 14,
+      "titleEn": "The Fox and the Stork",
+      "titleJa": "キツネとツル",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_fox_and_stork.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a cozy animal cottage dining room. Characters: a sly red fox, a tall, elegant long-beaked stork. Animation Action: The mischievous fox serves delicious soup in a flat, shallow plate, laughing as the long-beaked stork cannot drink a single drop. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 41,
+      "day": 3,
+      "account": "Account 4",
+      "chapter": 14,
+      "titleEn": "The Fox and the Stork",
+      "titleJa": "キツネとツル",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_fox_and_stork.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a cozy animal cottage dining room. Characters: a sly red fox, a tall, elegant long-beaked stork. Animation Action: The polite stork invites the fox to dinner, serving savory stew inside a tall, narrow-necked glass jar. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 42,
+      "day": 3,
+      "account": "Account 4",
+      "chapter": 14,
+      "titleEn": "The Fox and the Stork",
+      "titleJa": "キツネとツル",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_fox_and_stork.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a cozy animal cottage dining room. Characters: a sly red fox, a tall, elegant long-beaked stork. Animation Action: The elegant stork easily sips through the tall neck while the hungry fox fruitlessly licks the rim, receiving a taste of his own medicine. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 43,
+      "day": 3,
+      "account": "Account 5",
+      "chapter": 15,
+      "titleEn": "The Frog and the Ox",
+      "titleJa": "カエルと牛",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_frog_and_ox.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a muddy pond marsh with reeds and water lilies. Characters: an envious green frog father, a massive, calm meadow ox and tiny baby frogs. Animation Action: A little frog tells his father about a monstrous giant beast grazing in the meadow, pointing toward a colossal horned ox. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 44,
+      "day": 3,
+      "account": "Account 5",
+      "chapter": 15,
+      "titleEn": "The Frog and the Ox",
+      "titleJa": "カエルと牛",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_frog_and_ox.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a muddy pond marsh with reeds and water lilies. Characters: an envious green frog father, a massive, calm meadow ox and tiny baby frogs. Animation Action: The proud father frog inhales deeply, puffing out his green skin like a balloon to match the enormous size of the ox. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 45,
+      "day": 3,
+      "account": "Account 5",
+      "chapter": 15,
+      "titleEn": "The Frog and the Ox",
+      "titleJa": "カエルと牛",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_frog_and_ox.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a muddy pond marsh with reeds and water lilies. Characters: an envious green frog father, a massive, calm meadow ox and tiny baby frogs. Animation Action: Ignoring the warnings of his children, the stubborn frog puffs himself up even further until he pops harmlessly with an over-inflated gasp. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 46,
+      "day": 4,
+      "account": "Account 1",
+      "chapter": 16,
+      "titleEn": "The Bat, Birds, and Beasts",
+      "titleJa": "コウモリと鳥と獣",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_bat_birds_beasts.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dramatic battle clearing between sky and forest. Characters: an opportunistic black bat, armies of birds in the sky and beasts on the land. Animation Action: A great contest arises between feathered birds soaring in the sky and four-legged beasts gathered on the battlefield below. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 47,
+      "day": 4,
+      "account": "Account 1",
+      "chapter": 16,
+      "titleEn": "The Bat, Birds, and Beasts",
+      "titleJa": "コウモリと鳥と獣",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_bat_birds_beasts.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dramatic battle clearing between sky and forest. Characters: an opportunistic black bat, armies of birds in the sky and beasts on the land. Animation Action: The shifting bat flies to the winning side, showing his wings to the birds and his furry body and teeth to the beasts. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 48,
+      "day": 4,
+      "account": "Account 1",
+      "chapter": 16,
+      "titleEn": "The Bat, Birds, and Beasts",
+      "titleJa": "コウモリと鳥と獣",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_bat_birds_beasts.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dramatic battle clearing between sky and forest. Characters: an opportunistic black bat, armies of birds in the sky and beasts on the land. Animation Action: When peace is declared, both birds and beasts shun the treacherous bat, banishing him to fly alone in dark nocturnal caves. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 49,
+      "day": 4,
+      "account": "Account 2",
+      "chapter": 17,
+      "titleEn": "Belling the Cat",
+      "titleJa": "ネズミの会議",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_belling_the_cat.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dimly lit cellar corner beneath wooden floorboards. Characters: a gathering of mouse elders and a young mouse, a shiny golden bell and a prowling black cat. Animation Action: A council of concerned mice debate heatedly beneath the floorboards about how to detect the stealthy approaching cat. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 50,
+      "day": 4,
+      "account": "Account 2",
+      "chapter": 17,
+      "titleEn": "Belling the Cat",
+      "titleJa": "ネズミの会議",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_belling_the_cat.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dimly lit cellar corner beneath wooden floorboards. Characters: a gathering of mouse elders and a young mouse, a shiny golden bell and a prowling black cat. Animation Action: A proud young mouse proposes tying a bright brass bell around the cat's neck, receiving enthusiastic applause from the crowd. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 51,
+      "day": 4,
+      "account": "Account 2",
+      "chapter": 17,
+      "titleEn": "Belling the Cat",
+      "titleJa": "ネズミの会議",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_belling_the_cat.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dimly lit cellar corner beneath wooden floorboards. Characters: a gathering of mouse elders and a young mouse, a shiny golden bell and a prowling black cat. Animation Action: An old, wise mouse stands up with folded arms and quietly asks who will volunteer to hang the bell, leaving the room in dead silence. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 52,
+      "day": 4,
+      "account": "Account 3",
+      "chapter": 18,
+      "titleEn": "The Bear and the Travelers",
+      "titleJa": "旅人とクマ",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_bear_and_two_travelers.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dense ancient pine forest path. Characters: two traveling companions, a gigantic wild brown bear. Animation Action: Two friends strolling through a deep mountain forest suddenly freeze in horror as a colossal brown bear crashes through the trees. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 53,
+      "day": 4,
+      "account": "Account 3",
+      "chapter": 18,
+      "titleEn": "The Bear and the Travelers",
+      "titleJa": "旅人とクマ",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_bear_and_two_travelers.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dense ancient pine forest path. Characters: two traveling companions, a gigantic wild brown bear. Animation Action: One traveler swiftly climbs high into a sturdy pine tree, leaving his abandoned companion to drop flat on the ground and hold his breath. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 54,
+      "day": 4,
+      "account": "Account 3",
+      "chapter": 18,
+      "titleEn": "The Bear and the Travelers",
+      "titleJa": "旅人とクマ",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_bear_and_two_travelers.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a dense ancient pine forest path. Characters: two traveling companions, a gigantic wild brown bear. Animation Action: The huge bear sniffs closely at the motionless traveler's ear before ambling away peacefully, teaching a lasting lesson on true friendship. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 55,
+      "day": 4,
+      "account": "Account 4",
+      "chapter": 19,
+      "titleEn": "The Lion's Share",
+      "titleJa": "獅子の分け前",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_lions_share.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rocky hunting plateau overlooking the wild plains. Characters: a dominant regal lion, his hunting partners: a fox, a wolf, and a jackal. Animation Action: A lion, a wolf, a fox, and a jackal successfully bring down a large stag through a cooperative hunt on the rocky ridge. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 56,
+      "day": 4,
+      "account": "Account 4",
+      "chapter": 19,
+      "titleEn": "The Lion's Share",
+      "titleJa": "獅子の分け前",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_lions_share.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rocky hunting plateau overlooking the wild plains. Characters: a dominant regal lion, his hunting partners: a fox, a wolf, and a jackal. Animation Action: The stag is divided into four equal portions, and the fierce lion places his heavy paw firmly over the entire carcass. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 57,
+      "day": 4,
+      "account": "Account 4",
+      "chapter": 19,
+      "titleEn": "The Lion's Share",
+      "titleJa": "獅子の分け前",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_lions_share.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a rocky hunting plateau overlooking the wild plains. Characters: a dominant regal lion, his hunting partners: a fox, a wolf, and a jackal. Animation Action: The regal lion claims all four portions through royal right, strength, and defiance, leaving the intimidated partners with nothing. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 58,
+      "day": 4,
+      "account": "Account 5",
+      "chapter": 20,
+      "titleEn": "The Frog and the Mouse",
+      "titleJa": "ネズミとカエル",
+      "clipIndex": 1,
+      "sceneName": "Opening & Situation (起/導入)",
+      "imagePath": "images/vol1_frog_and_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming pond shore beneath an open blue sky. Characters: a treacherous green frog and an innocent field mouse, a soaring predatory hawk/kite. Animation Action: A playful frog ties his leg with a string to the foot of a curious field mouse to guide him across the marshland. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 59,
+      "day": 4,
+      "account": "Account 5",
+      "chapter": 20,
+      "titleEn": "The Frog and the Mouse",
+      "titleJa": "ネズミとカエル",
+      "clipIndex": 2,
+      "sceneName": "Development & Action (承/展開)",
+      "imagePath": "images/vol1_frog_and_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming pond shore beneath an open blue sky. Characters: a treacherous green frog and an innocent field mouse, a soaring predatory hawk/kite. Animation Action: The malicious frog dives into the deep pool, pulling the struggling, swimming mouse beneath the shimmering water surface. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    },
+    {
+      "taskId": 60,
+      "day": 4,
+      "account": "Account 5",
+      "chapter": 20,
+      "titleEn": "The Frog and the Mouse",
+      "titleJa": "ネズミとカエル",
+      "clipIndex": 3,
+      "sceneName": "Climax & Resolution (結/結末)",
+      "imagePath": "images/vol1_frog_and_mouse.png",
+      "prompt": "Image-to-Video. Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. Scene: a blooming pond shore beneath an open blue sky. Characters: a treacherous green frog and an innocent field mouse, a soaring predatory hawk/kite. Animation Action: A sharp-eyed hawk swoops down from above, seizing the floating mouse in its talons and carrying both bound creatures into the sky. Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, and atmospheric light rays. Smooth slow camera movement. Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+    }
+  ]
+}

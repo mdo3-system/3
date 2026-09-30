@@ -1,0 +1,112 @@
+[
+  {
+    "Key": "wolf_and_crane",
+    "TitleEn": "The Wolf and the Crane",
+    "TitleJa": "オオカミとツル",
+    "Perry": "Perry 156",
+    "Moral": "Expect no reward from the wicked",
+    "Symbol": "[ BONE & BEAK ]",
+    "ColorTop": [35, 25, 20],
+    "ColorBottom": [80, 50, 40],
+    "Accent": [230, 126, 34]
+  },
+  {
+    "Key": "oak_and_reed",
+    "TitleEn": "The Oak and the Reed",
+    "TitleJa": "樫の木と葦",
+    "Perry": "Perry 70",
+    "Moral": "Better to bend than break",
+    "Symbol": "[ STORM & REED ]",
+    "ColorTop": [20, 35, 25],
+    "ColorBottom": [45, 80, 55],
+    "Accent": [46, 204, 113]
+  },
+  {
+    "Key": "horse_and_donkey",
+    "TitleEn": "The Horse and the Donkey",
+    "TitleJa": "馬とロバ",
+    "Perry": "Perry 181",
+    "Moral": "Help others lest their burden fall on you",
+    "Symbol": "[ LOAD & SADDLE ]",
+    "ColorTop": [30, 20, 15],
+    "ColorBottom": [70, 45, 30],
+    "Accent": [211, 84, 0]
+  },
+  {
+    "Key": "bundle_of_sticks",
+    "TitleEn": "The Bundle of Sticks",
+    "TitleJa": "農夫とその息子たち（束ねた棒）",
+    "Perry": "Perry 53",
+    "Moral": "Union gives strength",
+    "Symbol": "[ TIED STICKS ]",
+    "ColorTop": [35, 30, 15],
+    "ColorBottom": [85, 70, 30],
+    "Accent": [241, 196, 15]
+  },
+  {
+    "Key": "farmer_and_his_sons",
+    "TitleEn": "The Farmer and His Sons",
+    "TitleJa": "隠された財産（ブドウ畑の宝）",
+    "Perry": "Perry 42",
+    "Moral": "Diligent labor is the truest treasure",
+    "Symbol": "[ VINEYARD & SPADE ]",
+    "ColorTop": [25, 35, 20],
+    "ColorBottom": [55, 85, 45],
+    "Accent": [39, 174, 96]
+  },
+  {
+    "Key": "frogs_desiring_king",
+    "TitleEn": "The Frogs Desiring a King",
+    "TitleJa": "カエルたちの王様選び",
+    "Perry": "Perry 44",
+    "Moral": "Let well enough alone",
+    "Symbol": "[ LOG & STORK ]",
+    "ColorTop": [15, 30, 35],
+    "ColorBottom": [30, 70, 80],
+    "Accent": [26, 188, 156]
+  },
+  {
+    "Key": "monkey_and_fishermen",
+    "TitleEn": "The Monkey and the Fishermen",
+    "TitleJa": "猿と漁師",
+    "Perry": "Perry 203",
+    "Moral": "Do not meddle with what you do not understand",
+    "Symbol": "[ NET & TRAP ]",
+    "ColorTop": [20, 25, 45],
+    "ColorBottom": [40, 60, 105],
+    "Accent": [52, 152, 219]
+  },
+  {
+    "Key": "lion_in_love",
+    "TitleEn": "The Lion in Love",
+    "TitleJa": "恋するライオン",
+    "Perry": "Perry 140",
+    "Moral": "Surrender not your strength for blind affection",
+    "Symbol": "[ CLAWS & MAIDEN ]",
+    "ColorTop": [45, 20, 20],
+    "ColorBottom": [105, 45, 45],
+    "Accent": [231, 76, 60]
+  },
+  {
+    "Key": "farmer_and_viper",
+    "TitleEn": "The Farmer and the Viper",
+    "TitleJa": "蛇と農夫",
+    "Perry": "Perry 176",
+    "Moral": "Kindness is wasted upon the treacherous",
+    "Symbol": "[ VIPER & BOSOM ]",
+    "ColorTop": [25, 15, 35],
+    "ColorBottom": [60, 35, 80],
+    "Accent": [155, 89, 182]
+  },
+  {
+    "Key": "ass_and_lapdog",
+    "TitleEn": "The Ass and the Lapdog",
+    "TitleJa": "ロバと子犬",
+    "Perry": "Perry 91",
+    "Moral": "Do not mimic what is contrary to your nature",
+    "Symbol": "[ CUDGEL & LAP ]",
+    "ColorTop": [35, 25, 30],
+    "ColorBottom": [80, 55, 65],
+    "Accent": [244, 208, 111]
+  }
+]

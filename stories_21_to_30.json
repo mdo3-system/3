@@ -1,0 +1,112 @@
+[
+  {
+    "Key": "androcles_and_lion",
+    "TitleEn": "Androcles and the Lion",
+    "TitleJa": "アンドロクロスとライオン",
+    "Perry": "Perry 563",
+    "Moral": "Gratitude is the sign of noble souls",
+    "Symbol": "[ LION & THORN ]",
+    "ColorTop": [45, 25, 15],
+    "ColorBottom": [100, 60, 30],
+    "Accent": [244, 208, 111]
+  },
+  {
+    "Key": "fox_and_crow",
+    "TitleEn": "The Fox and the Crow",
+    "TitleJa": "キツネとカラス",
+    "Perry": "Perry 124",
+    "Moral": "Do not trust flatterers",
+    "Symbol": "[ CHEESE & FLATTERY ]",
+    "ColorTop": [35, 20, 10],
+    "ColorBottom": [85, 45, 20],
+    "Accent": [230, 126, 34]
+  },
+  {
+    "Key": "old_man_and_death",
+    "TitleEn": "The Old Man and Death",
+    "TitleJa": "木こりと死神",
+    "Perry": "Perry 60",
+    "Moral": "Life is always precious",
+    "Symbol": "[ WOOD & SCYTHE ]",
+    "ColorTop": [20, 20, 25],
+    "ColorBottom": [45, 45, 60],
+    "Accent": [189, 195, 199]
+  },
+  {
+    "Key": "eagle_and_jackdaw",
+    "TitleEn": "The Eagle and the Jackdaw",
+    "TitleJa": "鷲とカラス",
+    "Perry": "Perry 2",
+    "Moral": "Know your own limits",
+    "Symbol": "[ EAGLE & RAM ]",
+    "ColorTop": [15, 25, 40],
+    "ColorBottom": [35, 60, 95],
+    "Accent": [52, 152, 219]
+  },
+  {
+    "Key": "fox_and_mask",
+    "TitleEn": "The Fox and the Mask",
+    "TitleJa": "キツネと仮面",
+    "Perry": "Perry 27",
+    "Moral": "Outside show is a poor substitute for inner worth",
+    "Symbol": "[ TRAGIC MASK ]",
+    "ColorTop": [30, 15, 30],
+    "ColorBottom": [75, 35, 75],
+    "Accent": [155, 89, 182]
+  },
+  {
+    "Key": "stag_at_pool",
+    "TitleEn": "The Stag at the Pool",
+    "TitleJa": "鹿と池の影",
+    "Perry": "Perry 74",
+    "Moral": "Useful things are better than pretty decorations",
+    "Symbol": "[ ANTLERS & LEGS ]",
+    "ColorTop": [15, 30, 25],
+    "ColorBottom": [35, 70, 55],
+    "Accent": [46, 204, 113]
+  },
+  {
+    "Key": "frogs_and_sun",
+    "TitleEn": "The Frogs and the Sun",
+    "TitleJa": "太陽とカエルたちの結婚",
+    "Perry": "Perry 314",
+    "Moral": "Rejoice not at that which will increase your burdens",
+    "Symbol": "[ SUN & MARSH ]",
+    "ColorTop": [45, 30, 10],
+    "ColorBottom": [110, 70, 20],
+    "Accent": [241, 196, 15]
+  },
+  {
+    "Key": "ass_and_salt",
+    "TitleEn": "The Ass and the Load of Salt",
+    "TitleJa": "ロバと荷物",
+    "Perry": "Perry 180",
+    "Moral": "The same trick will not work twice",
+    "Symbol": "[ SALT & SPONGE ]",
+    "ColorTop": [10, 30, 45],
+    "ColorBottom": [25, 70, 105],
+    "Accent": [26, 188, 156]
+  },
+  {
+    "Key": "fox_and_woodman",
+    "TitleEn": "The Fox and the Woodman",
+    "TitleJa": "キツネと木こり",
+    "Perry": "Perry 22",
+    "Moral": "Actions speak louder than words",
+    "Symbol": "[ COTTAGE & HAND ]",
+    "ColorTop": [35, 25, 15],
+    "ColorBottom": [80, 55, 30],
+    "Accent": [211, 84, 0]
+  },
+  {
+    "Key": "wolf_and_lamb",
+    "TitleEn": "The Wolf and the Lamb",
+    "TitleJa": "オオカミと子羊",
+    "Perry": "Perry 155",
+    "Moral": "Any excuse will serve a tyrant",
+    "Symbol": "[ STREAM & TYRANT ]",
+    "ColorTop": [30, 15, 15],
+    "ColorBottom": [70, 30, 30],
+    "Accent": [231, 76, 60]
+  }
+]

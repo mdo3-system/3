@@ -1,0 +1,1277 @@
+const fs = require('fs');
+const path = require('path');
+
+const kindleDir = __dirname;
+
+// 全60話のストーリー定義
+const storiesBatches = {
+  1: {
+    range: '第1話〜第10話',
+    list: [
+      '1. The Tortoise and the Hare（ウサギとカメ）',
+      '2. The Boy Who Cried Wolf（オオカミ少年）',
+      '3. The North Wind and the Sun（北風と太陽）',
+      '4. The Lion and the Mouse（ライオンとネズミ）',
+      '5. The Ant and the Grasshopper（アリとキリギリス）',
+      '6. The Fox and the Grapes（キツネとブドウ）',
+      '7. The Town Mouse and the Country Mouse（田舎のネズミと街のネズミ）',
+      '8. The Crow and the Pitcher（カラスと水つぼ）',
+      '9. The Dog and His Shadow（欲張りな犬）',
+      '10. The Milkmaid and Her Pail（ミルク搾りの娘）'
+    ]
+  },
+  2: {
+    range: '第11話〜第20話',
+    list: [
+      '11. The Honest Woodcutter（金の斧と銀の斧）',
+      '12. The Goose that Laid the Golden Eggs（金の卵を産むガチョウ）',
+      '13. The Wolf in Sheep\'s Clothing（羊の皮をかぶった狼）',
+      '14. The Fox and the Stork（キツネとツル）',
+      '15. The Frog and the Ox（カエルと牛）',
+      '16. The Bat, Birds, and Beasts（コウモリと鳥と獣）',
+      '17. Belling the Cat（ネズミの会議）',
+      '18. The Bear and the Travelers（旅人とクマ）',
+      '19. The Lion\'s Share（獅子の分け前）',
+      '20. The Frog and the Mouse（ネズミとカエル）'
+    ]
+  },
+  3: {
+    range: '第21話〜第30話',
+    list: [
+      '21. Androcles and the Lion（アンドロクレスとライオン）',
+      '22. The Fox and the Crow（キツネとカラス）',
+      '23. The Old Man and Death（老人と死に神）',
+      '24. The Eagle and the Jackdaw（ワシとカラス）',
+      '25. The Fox and the Mask（キツネとお面）',
+      '26. The Stag at the Pool（シカと水たまり）',
+      '27. The Frogs and the Sun（カエルと太陽）',
+      '28. The Ass and the Salt（ロバと塩）',
+      '29. The Fox and the Woodman（キツネと木こり）',
+      '30. The Wolf and the Lamb（狼と子羊）'
+    ]
+  },
+  4: {
+    range: '第31話〜第40話',
+    list: [
+      '31. The Wolf and the Crane（狼とツル）',
+      '32. The Oak and the Reed（樫の木と葦）',
+      '33. The Horse and the Donkey（馬とロバ）',
+      '34. The Bundle of Sticks（結束の小枝 / 3本の矢の寓話）',
+      '35. The Farmer and His Sons（農夫とその息子たち）',
+      '36. The Frogs Desiring a King（王様を欲しがるカエルたち）',
+      '37. The Monkey and the Fishermen（サルと漁師）',
+      '38. The Lion in Love（恋するライオン）',
+      '39. The Farmer and the Viper（農夫と毒蛇）',
+      '40. The Ass and the Lapdog（ロバと愛玩犬）'
+    ]
+  },
+  5: {
+    range: '第41話〜第50話',
+    list: [
+      '41. The Old Hound（老犬と狩人）',
+      '42. The Wall and the Nail（壁と釘）',
+      '43. The Fox and the Hedgehog（キツネとハリネズミ）',
+      '44. The Wild Boar and the Fox（イノシシとキツネ）',
+      '45. The Astronomer（天文学者）',
+      '46. The Thief and the Dog（泥棒と番犬）',
+      '47. The Lion and the Dolphin（ライオンとイルカ）',
+      '48. The Dog and the Wolf（飼い犬と狼）',
+      '49. The Thief and His Mother（泥棒とその母親）',
+      '50. The Blind Man and the Whelp（盲人と子犬）'
+    ]
+  },
+  6: {
+    range: '第51話〜第60話',
+    list: [
+      '51. The Eagle and the Arrow（ワシと矢）',
+      '52. The Monkey as Judge（裁判官のサル）',
+      '53. The Miller, His Son, and Their Donkey（粉屋と息子とロバ）',
+      '54. The Bee and Zeus（蜂とゼウス）',
+      '55. The Pig, the Sheep, and the Goat（豚と羊とヤギ）',
+      '56. The Sick Raven（病気のカラス）',
+      '57. The Spider and the Swallow（クモとツバメ）',
+      '58. The Fisherman and the Flute（笛を吹く漁師）',
+      '59. The Bear and the Bees（クマと蜂）',
+      '60. The Traveler and Fortune（旅人と運命の女神）'
+    ]
+  }
+};
+
+const gradeDefs = {
+  eiken3: {
+    gradeName: '英検3級',
+    targetLevel: '4級 ➔ 3級対比学習',
+    badgeClass: 'badge-eiken3',
+    seriesTitle: '英検ステップアップ多読：イソップ寓話編',
+    seriesPhonetic: 'エイケン ステップアップ タドク イソップグウワヘン',
+    seriesRomaji: 'Eiken Step-Up Tadoku Aesop Fables',
+    keywords: ['英検3級', '英語多読', 'イソップ寓話', '英語学習', 'シャドーイング', 'やり直し英語', '英語絵本']
+  },
+  eikenPre2: {
+    gradeName: '英検準2級',
+    targetLevel: '3級 ➔ 準2級対比学習',
+    badgeClass: 'badge-eikenPre2',
+    seriesTitle: '英検準2級ステップアップ多読：イソップ寓話編',
+    seriesPhonetic: 'エイケン ジュンニキュウ ステップアップ タドク イソップグウワヘン',
+    seriesRomaji: 'Eiken Pre-2 Step-Up Tadoku Aesop Fables',
+    keywords: ['英検準2級', '高校英語', '英語多読', 'イソップ寓話', '構文読解', 'シャドーイング', '共通テスト英語']
+  },
+  eiken2: {
+    gradeName: '英検2級',
+    targetLevel: '準2級 ➔ 2級対比学習',
+    badgeClass: 'badge-eiken2',
+    seriesTitle: '英検2級ステップアップ多読：イソップ寓話編',
+    seriesPhonetic: 'エイケン ニキュウ ステップアップ タドク イソップグウワヘン',
+    seriesRomaji: 'Eiken Grade 2 Step-Up Tadoku Aesop Fables',
+    keywords: ['英検2級', '大学入試英語', '英語多読', 'イソップ寓話', '抽象語彙', 'ライティング対策', 'シャドーイング']
+  },
+  eikenPre1: {
+    gradeName: '英検準1級',
+    targetLevel: '2級 ➔ 準1級対比学習',
+    badgeClass: 'badge-eikenPre1',
+    seriesTitle: '英検準1級ステップアップ多読：イソップ寓話編',
+    seriesPhonetic: 'エイケン ジュンイッキュウ ステップアップ タドク イソップグウワヘン',
+    seriesRomaji: 'Eiken Pre-1 Step-Up Tadoku Aesop Fables',
+    keywords: ['英検準1級', '学術英語', '英語多読', 'イソップ寓話', '教養英語', 'アカデミック語彙', '難関大学英語']
+  }
+};
+
+const publishingOrder = [
+  // フェーズ1: 英検3級（全6巻）
+  { step: 1, gradeKey: 'eiken3', gradeVol: 1, batchNum: 1, isFirstBook: true },
+  { step: 2, gradeKey: 'eiken3', gradeVol: 2, batchNum: 2, isNextTarget: true },
+  { step: 3, gradeKey: 'eiken3', gradeVol: 3, batchNum: 3 },
+  { step: 4, gradeKey: 'eiken3', gradeVol: 4, batchNum: 4 },
+  { step: 5, gradeKey: 'eiken3', gradeVol: 5, batchNum: 5 },
+  { step: 6, gradeKey: 'eiken3', gradeVol: 6, batchNum: 6 },
+
+  // フェーズ2: 各級の第1巻
+  { step: 7, gradeKey: 'eikenPre2', gradeVol: 1, batchNum: 1 },
+  { step: 8, gradeKey: 'eiken2', gradeVol: 1, batchNum: 1 },
+  { step: 9, gradeKey: 'eikenPre1', gradeVol: 1, batchNum: 1 },
+
+  // フェーズ3: 各級の第2巻
+  { step: 10, gradeKey: 'eikenPre2', gradeVol: 2, batchNum: 2 },
+  { step: 11, gradeKey: 'eiken2', gradeVol: 2, batchNum: 2 },
+  { step: 12, gradeKey: 'eikenPre1', gradeVol: 2, batchNum: 2 },
+
+  // フェーズ4: 各級の第3巻
+  { step: 13, gradeKey: 'eikenPre2', gradeVol: 3, batchNum: 3 },
+  { step: 14, gradeKey: 'eiken2', gradeVol: 3, batchNum: 3 },
+  { step: 15, gradeKey: 'eikenPre1', gradeVol: 3, batchNum: 3 },
+
+  // フェーズ5: 各級の第4巻
+  { step: 16, gradeKey: 'eikenPre2', gradeVol: 4, batchNum: 4 },
+  { step: 17, gradeKey: 'eiken2', gradeVol: 4, batchNum: 4 },
+  { step: 18, gradeKey: 'eikenPre1', gradeVol: 4, batchNum: 4 },
+
+  // フェーズ6: 各級の第5巻
+  { step: 19, gradeKey: 'eikenPre2', gradeVol: 5, batchNum: 5 },
+  { step: 20, gradeKey: 'eiken2', gradeVol: 5, batchNum: 5 },
+  { step: 21, gradeKey: 'eikenPre1', gradeVol: 5, batchNum: 5 },
+
+  // フェーズ7: 各級の第6巻
+  { step: 22, gradeKey: 'eikenPre2', gradeVol: 6, batchNum: 6 },
+  { step: 23, gradeKey: 'eiken2', gradeVol: 6, batchNum: 6 },
+  { step: 24, gradeKey: 'eikenPre1', gradeVol: 6, batchNum: 6 }
+];
+
+function buildBooksData(platform) {
+  const isKobo = platform === 'kobo';
+  const readyBaseDir = isKobo ? 'kobo_upload_ready' : 'kdp_upload_ready';
+  const ext = isKobo ? 'epub' : 'zip';
+  const extName = isKobo ? 'EPUB' : 'ZIP';
+
+  return publishingOrder.map(item => {
+    const gDef = gradeDefs[item.gradeKey];
+    const stories = storiesBatches[item.batchNum];
+    const stepStr = String(item.step).padStart(2, '0');
+
+    const bookTitle = `${gDef.seriesTitle} 第${item.gradeVol}巻（${stories.range}）`;
+    const titlePhonetic = `${gDef.seriesPhonetic} ダイ${item.gradeVol}カン`;
+    const titleRomaji = `${gDef.seriesRomaji} Vol ${item.gradeVol}`;
+
+    const subtitle = `${gDef.targetLevel}で合格レベルの表現力を鍛える！名作10話対比多読`;
+    const subtitlePhonetic = 'タイヒガクシュウデ ゴウカクレベルノ ヒョウゲンリョクヲ キタエル';
+    const subtitleRomaji = 'Step-Up Learning Method with 10 Aesop Fables';
+
+    const readyFolderName = `${stepStr}_${gDef.gradeName}_第${item.gradeVol}巻`;
+    const msFileName = `原稿_${gDef.gradeName}_第${item.gradeVol}巻.${ext}`;
+    const coverFileName = `表紙_${gDef.gradeName}_第${item.gradeVol}巻.jpg`;
+
+    const fullPathMs = path.join(kindleDir, readyBaseDir, readyFolderName, msFileName);
+    const fullPathCover = path.join(kindleDir, readyBaseDir, readyFolderName, coverFileName);
+
+    const descriptionHtml = `<b>📚『${gDef.seriesTitle} 第${item.gradeVol}巻（${stories.range}）』へようこそ！</b><br><br><b>名作イソップ寓話（全10話）を読み比べるだけで、合格に必要な読解力・英作文力・表現力が劇的に向上する新感覚の多読教材！</b><br><br>本書は、誰もが知っているイソップ寓話を題材に、<b>【${gDef.targetLevel}】</b>を見比べながら楽しく読み進めることで、自然と合格に必要な表現力を身につけられるステップアップ多読本です。<br><br>--------------------------------------------------<br><b>【本書の4大特長】</b><br>--------------------------------------------------<br><b>① スモールステップで無理なくレベルアップ！</b><br>基礎レベルの英文とターゲット級の洗練された英文を対比しながら読み進めることで、難解な文法や語彙もスッと頭に入ります。<br><br><b>② 連続朗読・シャドーイングに完全最適化！</b><br>英文セクションは純英文で構成されているため、電子書籍リーダーの音声読み上げ機能（TTS）をONにするだけでネイティブ発音によるスムーズな連続朗読・シャドーイングが可能です。<br><br><b>③ 「そらんじたいキーフレーズ対比カード」で英作文・面接対策！</b><br>ライティングや面接でそのまま使える高得点フレーズの対比カードを収録。暗唱（そらんじる）することで表現の引き出しが増えます。<br><br><b>④ 丁寧な語彙・文法・出題傾向解説付き！</b><br>長文読解や英作文で頻出する最重要語彙・熟語・構文を分かりやすく解説。<br><br>--------------------------------------------------<br><b>【収録ストーリー（全10話）】</b><br>--------------------------------------------------<br>${stories.list.map(s => `${s}`).join('<br>')}<br><br><b>楽しく寓話を読みながら、ワンランク上の本物の英語力を手に入れましょう！</b>`;
+
+    return {
+      step: item.step,
+      stepStr,
+      gradeKey: item.gradeKey,
+      gradeName: gDef.gradeName,
+      badgeClass: gDef.badgeClass,
+      gradeVol: item.gradeVol,
+      range: stories.range,
+      targetLevel: gDef.targetLevel,
+      isFirstBook: !!item.isFirstBook,
+      isNextTarget: !!item.isNextTarget,
+      bookTitle,
+      titlePhonetic,
+      titleRomaji,
+      subtitle,
+      subtitlePhonetic,
+      subtitleRomaji,
+      seriesTitle: gDef.seriesTitle,
+      seriesVolNum: item.gradeVol,
+      seriesPhonetic: gDef.seriesPhonetic,
+      seriesRomaji: gDef.seriesRomaji,
+      keywords: gDef.keywords,
+      readyFolderName,
+      msFileName,
+      coverFileName,
+      fullPathMs,
+      fullPathCover,
+      descriptionHtml,
+      extName,
+      readyBaseDir
+    };
+  });
+}
+
+function generateDashboardHtml(platform) {
+  const isKobo = platform === 'kobo';
+  const booksData = buildBooksData(platform);
+  const booksJsonString = JSON.stringify(booksData);
+
+  const platformName = isKobo ? '楽天Kobo (KWL)' : 'Amazon KDP';
+  const storageKey = isKobo ? 'kobo_publishing_progress_v2' : 'kdp_publishing_progress_v2';
+  const otherPlatformUrl = isKobo ? 'kdp_publishing_dashboard.html' : 'kobo_publishing_dashboard.html';
+  const otherPlatformName = isKobo ? 'Amazon KDP ダッシュボード ➔' : '楽天Kobo ダッシュボード ➔';
+
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${platformName} 出版進捗管理 ＆ 全巻データコピペダッシュボード</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: ${isKobo ? '#f43f5e' : '#38bdf8'};
+      --primary-hover: ${isKobo ? '#e11d48' : '#0ea5e9'};
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --accent: ${isKobo ? '#fb7185' : '#818cf8'};
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+    }
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 20px;
+    }
+    .platform-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .platform-tab {
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .platform-tab.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+    .platform-tab.inactive {
+      background: #1e293b;
+      color: #94a3b8;
+      border: 1px solid #334155;
+    }
+    .platform-tab.inactive:hover {
+      background: #334155;
+      color: #fff;
+    }
+
+    h1 { font-size: 1.6rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 10px; }
+    .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
+
+    .schedule-control-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+    .schedule-next-badge {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(56, 189, 248, 0.2));
+      border: 1px solid var(--success);
+      color: #a7f3d0;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .alert-banner {
+      max-width: 1400px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(16, 185, 129, 0.15));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .alert-left { display: flex; align-items: center; gap: 14px; }
+    .alert-icon { font-size: 2.2rem; }
+    .alert-title { font-weight: 700; font-size: 1.1rem; color: #fff; }
+    .alert-desc { font-size: 0.9rem; color: #cbd5e1; margin-top: 4px; }
+    .alert-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .alert-btn:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+    .stats-card {
+      max-width: 1400px;
+      margin: 0 auto 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+    .stat-value { font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0; }
+    .progress-bar {
+      height: 8px;
+      background: #334155;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+    .progress-fill { height: 100%; background: var(--success); width: 0%; transition: width 0.3s; }
+
+    .cheatsheet-card {
+      max-width: 1400px;
+      margin: 0 auto 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .cheatsheet-header {
+      padding: 16px 20px;
+      background: #172033;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .cheatsheet-title { font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; font-size: 1.05rem; }
+    .cheatsheet-body {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      border-top: 1px solid var(--card-border);
+    }
+    .cheat-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .cheat-box-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      font-size: 0.95rem;
+    }
+    .cheat-list { list-style: none; }
+    .cheat-list li { margin-bottom: 10px; font-size: 0.85rem; }
+    .cheat-item-label { color: var(--text-muted); font-size: 0.8rem; }
+    .cheat-item-val { color: #fff; font-weight: 600; margin-top: 2px; }
+    .cheat-item-desc { color: #94a3b8; font-size: 0.75rem; margin-top: 2px; }
+    .cheat-warning { color: #f87171; font-weight: 700; font-size: 0.78rem; margin-top: 3px; }
+
+    .folder-info-card {
+      max-width: 1400px;
+      margin: 0 auto 24px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .folder-path {
+      background: #1e293b;
+      color: var(--primary);
+      font-family: monospace;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
+    .filter-tabs {
+      max-width: 1400px;
+      margin: 0 auto 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      background: #1e293b;
+      color: var(--text-muted);
+      border: 1px solid #334155;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .filter-tab:hover { background: #334155; color: #fff; }
+    .filter-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    .books-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 20px;
+    }
+
+    .book-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .book-card.published { border-color: rgba(16, 185, 129, 0.6); background: #132724; }
+    .book-card.pending { border-color: rgba(245, 158, 11, 0.6); background: #232219; }
+    .book-card.next-up { border: 2px solid var(--primary); box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .step-badge {
+      background: #0f172a;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .badge {
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .badge-eiken3 { background: #0284c7; }
+    .badge-eikenPre2 { background: #059669; }
+    .badge-eiken2 { background: #d97706; }
+    .badge-eikenPre1 { background: #7c3aed; }
+
+    .status-select {
+      background: #0f172a;
+      color: #fff;
+      border: 1px solid #475569;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .card-dates-container {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .date-badge-box {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+    }
+    .date-lbl { color: var(--text-muted); font-weight: 600; }
+    .date-input {
+      background: #1e293b;
+      color: #fff;
+      border: 1px solid #475569;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-family: inherit;
+    }
+
+    .book-title { font-size: 1.15rem; font-weight: 700; color: #fff; line-height: 1.4; }
+    .book-subtitle { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+    .file-step-guide {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .file-tree-path { font-family: monospace; font-size: 0.75rem; color: #38bdf8; word-break: break-all; margin: 4px 0 8px; }
+    .file-action-buttons { display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+
+    .slots-accordion {
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .slots-header {
+      background: #172033;
+      padding: 10px 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      user-select: none;
+    }
+    .slots-body {
+      padding: 12px 14px;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      background: #0f172a;
+      border-top: 1px solid var(--card-border);
+    }
+    .slot-row { display: flex; flex-direction: column; gap: 4px; }
+    .slot-label-bar { display: flex; justify-content: space-between; align-items: center; }
+    .slot-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+    .slot-val {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      word-break: break-all;
+    }
+
+    .copy-btn {
+      background: #334155;
+      color: #fff;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .copy-btn:hover { background: var(--primary); color: #fff; }
+    .copy-btn.copied { background: var(--success); color: #fff; }
+
+    .keywords-flex { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .kw-chip-btn {
+      background: #1e293b;
+      border: 1px solid #475569;
+      color: #e2e8f0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .kw-chip-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .kw-num { color: var(--text-muted); font-weight: 700; margin-right: 4px; }
+
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="toast">クリップボードにコピーしました！✓</div>
+
+  <div class="header-container">
+    <div>
+      <div class="platform-tabs">
+        <a href="kdp_publishing_dashboard.html" class="platform-tab ${!isKobo ? 'active' : 'inactive'}">📦 Amazon KDP</a>
+        <a href="kobo_publishing_dashboard.html" class="platform-tab ${isKobo ? 'active' : 'inactive'}">📚 楽天Kobo (KWL)</a>
+      </div>
+      <h1>${isKobo ? '📚' : '🚀'} ${platformName} 全24冊 出版進捗管理 ＆ ワンクリック入力ダッシュボード</h1>
+      <div class="subtitle">【出稿ロードマップ順】英検3級（全6巻） ➔ 他級の第1巻（準2・2・準1） ➔ 第2巻…の順序で完全固定</div>
+    </div>
+    <div class="schedule-control-bar">
+      <div>
+        <label style="font-size:0.8rem; color:var(--text-muted); display:block; margin-bottom:2px;">次回出稿の間隔:</label>
+        <select id="scheduleInterval" style="background:#0f172a; color:#fff; border:1px solid #475569; padding:6px 10px; border-radius:6px; font-weight:600;" onchange="updateAlerts()">
+          <option value="3">3日おき（ハイペース）</option>
+          <option value="5" selected>5日おき（推奨ペース）</option>
+          <option value="7">7日おき（1週間ペース）</option>
+          <option value="10">10日おき（2週間未満）</option>
+          <option value="14">14日おき（2週間ペース）</option>
+        </select>
+      </div>
+      <div class="schedule-next-badge" id="scheduleDateBadge">
+        次回出稿予定日：計算中...
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-banner" id="paceAlertBanner">
+    <div class="alert-left">
+      <div class="alert-icon">⏰</div>
+      <div>
+        <div class="alert-title" id="alertTitle">次回出稿推奨アラート</div>
+        <div class="alert-desc" id="alertDesc">進捗を計算中...</div>
+      </div>
+    </div>
+    <button class="alert-btn" id="nextActionBtn" onclick="scrollToNextBook()">次の本を出稿準備する ➔</button>
+  </div>
+
+  <!-- 出稿 必須設定チートシート（保存版） -->
+  <div class="cheatsheet-card">
+    <div class="cheatsheet-header" onclick="toggleAccordion('cheatsheet-body')">
+      <div class="cheatsheet-title">
+        <span>📌</span>
+        <span>【保存版】${platformName} 必須設定チートシート（迷わず即時完了！）</span>
+      </div>
+      <span style="font-size:0.85rem; color:var(--primary); font-weight:600;" id="cheatsheet-toggle-text">設定マニュアルを表示 ▼</span>
+    </div>
+    <div class="cheatsheet-body" id="cheatsheet-body" style="display:grid;">
+      ${isKobo ? `
+      <div class="cheat-box">
+        <div class="cheat-box-title">① 書籍の詳細 画面（作品の登録）</div>
+        <ul class="cheat-list">
+          <li>
+            <div class="cheat-item-label">言語（重要！）:</div>
+            <div class="cheat-item-val" style="color:#f43f5e; font-size:1rem;">「日本語 (Japanese)」を選択</div>
+            <div class="cheat-warning">⚠️「英語」にすると日本のKoboストアで洋書扱いになり検索されにくくなります！</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">著者名:</div>
+            <div class="cheat-item-val">「英語多読・英検対策研究会」または「著者名」</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">シリーズ名 / 巻数:</div>
+            <div class="cheat-item-val">「英検ステップアップ多読：イソップ寓話編」/ 各巻番号</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">出版社:</div>
+            <div class="cheat-item-val">Antigravity Publishing（または空欄/著者名）</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cheat-box">
+        <div class="cheat-box-title">② 原稿・表紙のアップロード 画面</div>
+        <ul class="cheat-list">
+          <li>
+            <div class="cheat-item-label">作品を入稿（EPUB）:</div>
+            <div class="cheat-item-val">原稿_〜.epub をアップロード（上限100MBクリア済み）</div>
+            <div class="cheat-item-desc">💡ダイアログの「ファイル名」欄に下の【フルパス】を貼れば一発選択！</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">表紙画像（JPEG）:</div>
+            <div class="cheat-item-val">表紙_〜.jpg をアップロード</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">ISBN:</div>
+            <div class="cheat-item-val">【空欄】でOK（Koboが自動で内部ISBNを付与）</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">デジタル著作権管理 (DRM):</div>
+            <div class="cheat-item-val">「はい」または「いいえ」（推奨：DRM適用）</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cheat-box">
+        <div class="cheat-box-title">③ 価格設定と配信 画面</div>
+        <ul class="cheat-list">
+          <li>
+            <div class="cheat-item-label">配信地域:</div>
+            <div class="cheat-item-val">全世界（または日本）</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">価格設定（税抜）:</div>
+            <div class="cheat-item-val">436円（税込480円）〜 618円（税込680円）</div>
+            <div class="cheat-item-desc">※299円以上で70%ロイヤリティ適用</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">Kobo Plus（読み放題プログラム）:</div>
+            <div class="cheat-item-val">登録を推奨（チェックを入れると読書時間等に応じて収益発生）</div>
+          </li>
+        </ul>
+      </div>
+      ` : `
+      <div class="cheat-box">
+        <div class="cheat-box-title">① Kindle 本の詳細 画面</div>
+        <ul class="cheat-list">
+          <li>
+            <div class="cheat-item-label">主な対象読者（成人向け）:</div>
+            <div class="cheat-item-val">「いいえ」</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">出版権（著作権）:</div>
+            <div class="cheat-item-val">「私は著作権者であり、出版に際して必要な権利を保有しています」</div>
+            <div class="cheat-warning">⚠️「パブリックドメイン」は絶対NG！（70%印税不可・Unlimited不可）</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">カテゴリー:</div>
+            <div class="cheat-item-val">「教育・参考書 ＞ 語学学習 ＞ 英語」</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">版（オプション）:</div>
+            <div class="cheat-item-val">【空欄（未記入）】でOK</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cheat-box">
+        <div class="cheat-box-title">② Kindle 本のコンテンツ 画面</div>
+        <ul class="cheat-list">
+          <li>
+            <div class="cheat-item-label">原稿のアップロード:</div>
+            <div class="cheat-item-val">「原稿をアップロード」➔ 原稿.zip を選択</div>
+            <div class="cheat-item-desc">💡ダイアログの「ファイル名」欄に下の【フルパス】を貼れば一発選択！</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">デジタル著作権管理 (DRM):</div>
+            <div class="cheat-item-val">「はい。デジタル著作権管理を適用します」</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">Kindle 本の表紙:</div>
+            <div class="cheat-item-val">「参照」➔ 表紙.jpg を選択</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">AI 生成コンテンツ:</div>
+            <div class="cheat-item-val">「はい」を選択</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cheat-box">
+        <div class="cheat-box-title">③ Kindle 本の価格設定 画面</div>
+        <ul class="cheat-list">
+          <li>
+            <div class="cheat-item-label">KDP セレクト:</div>
+            <div class="cheat-item-val">「KDP セレクトに本を登録する」にチェック ✅</div>
+            <div class="cheat-item-desc">※Kindle Unlimited読み放題対象になり読まれたページ数で収益発生</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">主なマーケットプレイス:</div>
+            <div class="cheat-item-val">Amazon.co.jp</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">ロイヤリティプラン:</div>
+            <div class="cheat-item-val">「70%」を選択</div>
+          </li>
+          <li>
+            <div class="cheat-item-label">設定価格（希望小売価格）:</div>
+            <div class="cheat-item-val">480円 〜 680円</div>
+          </li>
+        </ul>
+      </div>
+      `}
+    </div>
+  </div>
+
+  <div class="folder-info-card">
+    <div>
+      📁 <strong>${platformName} 出稿用ファイル格納先</strong>: <span class="folder-path">kindle/${isKobo ? 'kobo_upload_ready' : 'kdp_upload_ready'}/</span>
+      <div style="font-size:0.8rem; color:#94a3b8; margin-top:4px;">全24冊分の${isKobo ? '原稿EPUB' : '原稿ZIP'}と表紙JPGが、出稿順のフォルダ名で完全に整理されています。</div>
+    </div>
+    <button class="copy-btn" style="padding:6px 14px; font-size:0.85rem;" onclick="copyText('e:\\\\Dropbox\\\\■設計ｻﾎﾟｰﾄ\\\\■note\\\\antigravity\\\\kindle\\\\${isKobo ? 'kobo_upload_ready' : 'kdp_upload_ready'}', this)">フォルダパスをコピー</button>
+  </div>
+
+  <div class="stats-card">
+    <div class="stat-item">
+      <span class="stat-label">出版完了数</span>
+      <span class="stat-value" id="publishedCount" style="color:var(--success);">0 / 24 (0%)</span>
+      <div class="progress-bar">
+        <div class="progress-fill" id="overallProgressBar"></div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">申請中 / 審査中</span>
+      <span class="stat-value" id="pendingCount" style="color:var(--warning);">0 冊</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">未出稿</span>
+      <span class="stat-value" id="todoCount" style="color:var(--text-muted);">24 冊</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">最終出版完了日</span>
+      <span class="stat-value" id="lastPublishDateDisplay" style="font-size:1.3rem; color:var(--primary);">-</span>
+    </div>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="filterTab('all', this)">すべて表示 (24)</button>
+    <button class="filter-tab" onclick="filterTab('eiken3', this)">英検3級 (6)</button>
+    <button class="filter-tab" onclick="filterTab('eikenPre2', this)">英検準2級 (6)</button>
+    <button class="filter-tab" onclick="filterTab('eiken2', this)">英検2級 (6)</button>
+    <button class="filter-tab" onclick="filterTab('eikenPre1', this)">英検準1級 (6)</button>
+  </div>
+
+  <div class="books-grid" id="booksGrid"></div>
+
+  <script>
+    const booksData = ${booksJsonString};
+    const storageKey = '${storageKey}';
+
+    let booksState = JSON.parse(localStorage.getItem(storageKey) || '{}');
+
+    // 初期化：データがなければデフォルト作成
+    booksData.forEach(b => {
+      if (!booksState[b.step]) {
+        booksState[b.step] = {
+          status: 'todo',
+          applyDate: '',
+          publishedDate: ''
+        };
+      }
+    });
+
+    function saveState() {
+      localStorage.setItem(storageKey, JSON.stringify(booksState));
+      updateStats();
+      updateAlerts();
+    }
+
+    let currentFilter = 'all';
+
+    function filterTab(key, btn) {
+      currentFilter = key;
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderBooks();
+    }
+
+    function toggleAccordion(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = el.style.display === 'none' ? (id.includes('cheat') ? 'grid' : 'flex') : 'none';
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg || 'クリップボードにコピーしました！✓';
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2000);
+    }
+
+    function copyText(txt, btn) {
+      navigator.clipboard.writeText(txt).then(() => {
+        showToast('コピー完了: ' + txt.substring(0, 30) + (txt.length > 30 ? '...' : ''));
+        if (btn) {
+          const orig = btn.innerText;
+          btn.innerText = '済✓';
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.innerText = orig;
+            btn.classList.remove('copied');
+          }, 1500);
+        }
+      });
+    }
+
+    function renderBooks() {
+      const grid = document.getElementById('booksGrid');
+      grid.innerHTML = '';
+
+      const filtered = currentFilter === 'all' 
+        ? booksData 
+        : booksData.filter(b => b.gradeKey === currentFilter);
+
+      filtered.forEach(b => {
+        const state = booksState[b.step] || { status: 'todo', applyDate: '', publishedDate: '' };
+        const isPub = state.status === 'published';
+        const isPen = state.status === 'pending';
+
+        const card = document.createElement('div');
+        card.className = 'book-card ' + (isPub ? 'published' : (isPen ? 'pending' : ''));
+        card.id = 'book-card-' + b.step;
+
+        const kwChipsHtml = b.keywords.map((kw, i) => 
+          '<button class="kw-chip-btn" onclick="copyText(\\'' + kw.replace(/'/g, "\\\\'") + '\\', this)">' +
+            '<span class="kw-num">#' + (i + 1) + '</span> ' + kw +
+          '</button>'
+        ).join('');
+
+        card.innerHTML = 
+          '<div class="card-top">' +
+            '<div style="display:flex; align-items:center; gap:8px;">' +
+              '<span class="step-badge">出稿順 #' + b.step + '</span>' +
+              '<span class="badge ' + b.badgeClass + '">' + b.gradeName + ' 第' + b.gradeVol + '巻</span>' +
+            '</div>' +
+            '<div>' +
+              '<select class="status-select" onchange="onStatusChange(' + b.step + ', this.value)">' +
+                '<option value="todo" ' + (state.status === 'todo' ? 'selected' : '') + '>⏳ 未着手</option>' +
+                '<option value="pending" ' + (isPen ? 'selected' : '') + '>🔄 申請中 / 審査中</option>' +
+                '<option value="published" ' + (isPub ? 'selected' : '') + '>✅ 出版完了</option>' +
+              '</select>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="card-dates-container">' +
+            '<div class="date-badge-box">' +
+              '<span class="date-lbl">申請日:</span>' +
+              '<input type="date" class="date-input" value="' + (state.applyDate || '') + '" onchange="onDateChange(' + b.step + ', \\'applyDate\\', this.value)" />' +
+            '</div>' +
+            '<div class="date-badge-box">' +
+              '<span class="date-lbl">出版完了日:</span>' +
+              '<input type="date" class="date-input" value="' + (state.publishedDate || '') + '" onchange="onDateChange(' + b.step + ', \\'publishedDate\\', this.value)" />' +
+            '</div>' +
+          '</div>' +
+
+          '<div>' +
+            '<div class="book-title">' + b.bookTitle + '</div>' +
+            '<div class="book-subtitle">' + b.targetLevel + ' ｜ ' + b.range + '</div>' +
+          '</div>' +
+
+          '<div class="file-step-guide">' +
+            '<div style="font-weight:700; color:var(--primary); margin-bottom:4px;">📂 原稿・表紙ファイル（アップロード用）</div>' +
+            '<div style="font-size:0.75rem; color:#94a3b8;">【格納場所】:</div>' +
+            '<div class="file-tree-path">kindle ➔ ' + b.readyBaseDir + ' ➔ ' + b.readyFolderName + ' ➔</div>' +
+            
+            '<div style="margin-top:6px; border-top:1px dashed #233554; padding-top:6px;">' +
+              '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">' +
+                '<span style="font-size:0.78rem; font-weight:600; color:#cbd5e1;">📦 原稿' + b.extName + ': ' + b.msFileName + '</span>' +
+              '</div>' +
+              '<div class="file-action-buttons">' +
+                '<button class="copy-btn" onclick="copyText(\\'' + b.fullPathMs.replace(/\\\\/g, '\\\\\\\\') + '\\', this)" title="ファイル選択ダイアログの「ファイル名」欄に貼り付けると一発選択できます">フルパスをコピー（推奨）</button>' +
+                '<button class="copy-btn" onclick="copyText(\\'' + b.msFileName + '\\', this)">ファイル名コピー</button>' +
+              '</div>' +
+            '</div>' +
+
+            '<div style="margin-top:6px; border-top:1px dashed #233554; padding-top:6px;">' +
+              '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">' +
+                '<span style="font-size:0.78rem; font-weight:600; color:#cbd5e1;">🖼️ 表紙JPG: ' + b.coverFileName + '</span>' +
+              '</div>' +
+              '<div class="file-action-buttons">' +
+                '<button class="copy-btn" onclick="copyText(\\'' + b.fullPathCover.replace(/\\\\/g, '\\\\\\\\') + '\\', this)" title="ファイル選択ダイアログの「ファイル名」欄に貼り付けると一発選択できます">フルパスをコピー（推奨）</button>' +
+                '<button class="copy-btn" onclick="copyText(\\'' + b.coverFileName + '\\', this)">ファイル名コピー</button>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="slots-accordion">' +
+            '<div class="slots-header" onclick="toggleAccordion(\\'slots-body-' + b.step + '\\')">' +
+              '<span>📋 入力スロット個別コピペ一覧</span>' +
+              '<span style="font-size:0.75rem; color:var(--primary);">詳細を開く ▼</span>' +
+            '</div>' +
+            '<div class="slots-body" id="slots-body-' + b.step + '">' +
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【言語】※Koboは日本語必須！</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'日本語\\', this)">コピー</button>' +
+                '</div>' +
+                '<div class="slot-val">日本語 (Japanese)</div>' +
+              '</div>' +
+
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【本のタイトル】</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'' + b.bookTitle.replace(/'/g, "\\\\'") + '\\', this)">コピー</button>' +
+                '</div>' +
+                '<div class="slot-val">' + b.bookTitle + '</div>' +
+              '</div>' +
+
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【サブタイトル】</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'' + b.subtitle.replace(/'/g, "\\\\'") + '\\', this)">コピー</button>' +
+                '</div>' +
+                '<div class="slot-val">' + b.subtitle + '</div>' +
+              '</div>' +
+
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【シリーズ名】</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'' + b.seriesTitle.replace(/'/g, "\\\\'") + '\\', this)">コピー</button>' +
+                '</div>' +
+                '<div class="slot-val">' + b.seriesTitle + '</div>' +
+              '</div>' +
+
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【巻数】</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'' + b.seriesVolNum + '\\', this)">コピー</button>' +
+                '</div>' +
+                '<div class="slot-val">' + b.seriesVolNum + '</div>' +
+              '</div>' +
+
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【キーワード（7個：1つずつクリックでコピー）】</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'' + b.keywords.join(', ') + '\\', this)">一括コピー</button>' +
+                '</div>' +
+                '<div class="keywords-flex">' + kwChipsHtml + '</div>' +
+              '</div>' +
+
+              '<div class="slot-row">' +
+                '<div class="slot-label-bar">' +
+                  '<span class="slot-label">【内容紹介 (HTML)】</span>' +
+                  '<button class="copy-btn" onclick="copyText(\\'' + b.descriptionHtml.replace(/'/g, "\\\\'") + '\\', this)">HTMLコピー</button>' +
+                '</div>' +
+                '<div class="slot-val" style="height:60px; overflow-y:auto;">' + b.descriptionHtml.replace(/<[^>]+>/g, ' ').substring(0, 150) + '...</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+    }
+
+    function onStatusChange(step, newStatus) {
+      if (!booksState[step]) booksState[step] = {};
+      booksState[step].status = newStatus;
+      const todayStr = new Date().toISOString().split('T')[0];
+
+      if (newStatus === 'pending') {
+        if (!booksState[step].applyDate) {
+          booksState[step].applyDate = todayStr;
+        }
+      } else if (newStatus === 'published') {
+        if (!booksState[step].publishedDate) {
+          booksState[step].publishedDate = todayStr;
+        }
+        if (!booksState[step].applyDate) {
+          booksState[step].applyDate = todayStr;
+        }
+      }
+
+      saveState();
+      renderBooks();
+    }
+
+    function onDateChange(step, field, val) {
+      if (!booksState[step]) booksState[step] = {};
+      booksState[step][field] = val;
+      saveState();
+      renderBooks();
+    }
+
+    function updateStats() {
+      let pub = 0, pen = 0, todo = 0;
+      let lastPubDateStr = null;
+
+      Object.keys(booksState).forEach(k => {
+        const item = booksState[k];
+        if (item?.status === 'published') {
+          pub++;
+          if (item?.publishedDate) {
+            if (!lastPubDateStr || item.publishedDate > lastPubDateStr) {
+              lastPubDateStr = item.publishedDate;
+            }
+          }
+        } else if (item?.status === 'pending') {
+          pen++;
+        } else {
+          todo++;
+        }
+      });
+
+      document.getElementById('publishedCount').innerHTML = pub + ' / 24 <span style="font-size:1rem; font-weight:normal; color:#94a3b8;">(' + Math.round(pub/24*100) + '%)</span>';
+      document.getElementById('overallProgressBar').style.width = ((pub/24)*100) + '%';
+      document.getElementById('pendingCount').innerText = pen + ' 冊';
+      document.getElementById('todoCount').innerText = todo + ' 冊';
+
+      const lastDateEl = document.getElementById('lastPublishDateDisplay');
+      if (lastPubDateStr) {
+        lastDateEl.innerText = lastPubDateStr;
+      } else {
+        lastDateEl.innerText = '-';
+      }
+    }
+
+    function updateAlerts() {
+      let lastPubDate = null;
+      let lastApplyDate = null;
+
+      Object.keys(booksState).forEach(k => {
+        const item = booksState[k];
+        if (item?.status === 'published' && item?.publishedDate) {
+          const d = new Date(item.publishedDate);
+          if (!lastPubDate || d > lastPubDate) lastPubDate = d;
+        }
+        if (item?.applyDate) {
+          const d = new Date(item.applyDate);
+          if (!lastApplyDate || d > lastApplyDate) lastApplyDate = d;
+        }
+      });
+
+      const intervalDays = parseInt(document.getElementById('scheduleInterval').value, 10);
+      const titleEl = document.getElementById('alertTitle');
+      const descEl = document.getElementById('alertDesc');
+      const badgeEl = document.getElementById('scheduleDateBadge');
+      const nextBtn = document.getElementById('nextActionBtn');
+
+      // 未出版の最初の本を見つける
+      let nextBook = booksData.find(b => booksState[b.step]?.status !== 'published');
+
+      if (!nextBook) {
+        titleEl.innerText = '🎉 祝！全24冊の出版が完了しました！';
+        descEl.innerText = 'すべての書籍が出版ストアに並びました。素晴らしい快挙です！';
+        badgeEl.innerText = '全巻出版完了！✨';
+        nextBtn.style.display = 'none';
+        return;
+      }
+
+      nextBtn.style.display = 'block';
+
+      // 最終出版日（なければ最終申請日、それもなければ今日）を起算日とする
+      const baseDate = lastPubDate || lastApplyDate;
+
+      if (!baseDate) {
+        titleEl.innerText = '次に出版する本: 【出稿 #' + nextBook.step + '：' + nextBook.bookTitle + '】';
+        descEl.innerText = '第1巻の出稿手続きを開始しましょう！ファイルをアップロードして申請ボタンを押すだけです。';
+        badgeEl.innerText = '次回予定：第1巻を出稿開始！';
+        return;
+      }
+
+      // 起算日 + intervalDays = 予定日
+      const nextScheduleDate = new Date(baseDate.getTime());
+      nextScheduleDate.setDate(nextScheduleDate.getDate() + intervalDays);
+
+      const yyyy = nextScheduleDate.getFullYear();
+      const mm = String(nextScheduleDate.getMonth() + 1).padStart(2, '0');
+      const dd = String(nextScheduleDate.getDate()).padStart(2, '0');
+      const nextScheduleStr = yyyy + '-' + mm + '-' + dd;
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const targetMidnight = new Date(nextScheduleDate.getTime());
+      targetMidnight.setHours(0, 0, 0, 0);
+
+      const diffMs = targetMidnight - today;
+      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+      const baseLabel = lastPubDate ? '最終出版完了日' : '申請日';
+      const baseStr = (baseDate.getFullYear()) + '-' + String(baseDate.getMonth() + 1).padStart(2, '0') + '-' + String(baseDate.getDate()).padStart(2, '0');
+
+      if (diffDays <= 0) {
+        badgeEl.innerHTML = '次回出稿予定日: <strong>' + nextScheduleStr + ' (今すぐ出稿！)</strong>';
+        titleEl.innerText = '🔔 次巻の出稿推奨タイミングです！【出稿 #' + nextBook.step + '：' + nextBook.bookTitle + '】';
+        descEl.innerText = baseLabel + '（' + baseStr + '）から ' + (intervalDays - diffDays) + ' 日が経過しました。予定日（' + nextScheduleStr + '）を迎えています。テンポよく次巻を出稿しましょう！';
+      } else {
+        badgeEl.innerHTML = '次回出稿予定日: <strong>' + nextScheduleStr + ' (あと ' + diffDays + ' 日)</strong>';
+        titleEl.innerText = '📅 次回出稿の目安：あと ' + diffDays + ' 日後（予定日: ' + nextScheduleStr + '）';
+        descEl.innerText = baseLabel + '（' + baseStr + '）を起算日として、' + intervalDays + '日おきのペースで出稿予定です。対象: 【出稿 #' + nextBook.step + '：' + nextBook.bookTitle + '】';
+      }
+    }
+
+    function scrollToNextBook() {
+      let nextBook = booksData.find(b => booksState[b.step]?.status !== 'published');
+      if (nextBook) {
+        filterTab('all', document.querySelector('.filter-tab'));
+        setTimeout(() => {
+          const el = document.getElementById('book-card-' + nextBook.step);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.boxShadow = '0 0 25px var(--primary)';
+            setTimeout(() => { el.style.boxShadow = ''; }, 2000);
+          }
+        }, 100);
+      }
+    }
+
+    renderBooks();
+    updateStats();
+    updateAlerts();
+  </script>
+</body>
+</html>`;
+}
+
+// 1. KDPダッシュボード生成
+const kdpHtml = generateDashboardHtml('kdp');
+fs.writeFileSync(path.join(kindleDir, 'kdp_publishing_dashboard.html'), kdpHtml, 'utf8');
+console.log('SUCCESS: Generated kdp_publishing_dashboard.html');
+
+// 2. 楽天Koboダッシュボード生成
+const koboHtml = generateDashboardHtml('kobo');
+fs.writeFileSync(path.join(kindleDir, 'kobo_publishing_dashboard.html'), koboHtml, 'utf8');
+console.log('SUCCESS: Generated kobo_publishing_dashboard.html');

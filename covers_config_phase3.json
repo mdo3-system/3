@@ -1,0 +1,38 @@
+[
+  {
+    "OutName": "vol9_cover.jpg",
+    "KoboName": "kobo_vol9_cover.jpg",
+    "BgR": 10,
+    "BgG": 37,
+    "BgB": 64,
+    "Badge": "第9巻：英検3級受検者向け（第3集）",
+    "Subtitle": "4級 ➔ 3級対比学習で合格レベルの英文力を身につける！"
+  },
+  {
+    "OutName": "vol10_cover.jpg",
+    "KoboName": "kobo_vol10_cover.jpg",
+    "BgR": 5,
+    "BgG": 41,
+    "BgB": 30,
+    "Badge": "第10巻：英検準2級受検者向け（第3集）",
+    "Subtitle": "3級 ➔ 準2級対比学習で合格レベルの英文力を身につける！"
+  },
+  {
+    "OutName": "vol11_cover.jpg",
+    "KoboName": "kobo_vol11_cover.jpg",
+    "BgR": 45,
+    "BgG": 11,
+    "BgB": 63,
+    "Badge": "第11巻：英検2級受検者向け（第3集）",
+    "Subtitle": "準2級 ➔ 2級対比学習で合格レベルの英文力を身につける！"
+  },
+  {
+    "OutName": "vol12_cover.jpg",
+    "KoboName": "kobo_vol12_cover.jpg",
+    "BgR": 74,
+    "BgG": 14,
+    "BgB": 23,
+    "Badge": "第12巻：英検準1級受検者向け（第3集）",
+    "Subtitle": "2級 ➔ 準1級対比学習で最高峰のマスター英文力を極める！"
+  }
+]

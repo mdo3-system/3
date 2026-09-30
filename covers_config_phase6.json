@@ -1,0 +1,38 @@
+[
+  {
+    "OutName": "vol21_cover.jpg",
+    "KoboName": "kobo_vol21_cover.jpg",
+    "BgR": 10,
+    "BgG": 37,
+    "BgB": 64,
+    "Badge": "第21巻：英検3級受検者向け（第6集・完結巻）",
+    "Subtitle": "4級 ➔ 3級対比学習で合格レベルの英文力を身につける！"
+  },
+  {
+    "OutName": "vol22_cover.jpg",
+    "KoboName": "kobo_vol22_cover.jpg",
+    "BgR": 5,
+    "BgG": 41,
+    "BgB": 30,
+    "Badge": "第22巻：英検準2級受検者向け（第6集・完結巻）",
+    "Subtitle": "3級 ➔ 準2級対比学習で合格レベルの英文力を身につける！"
+  },
+  {
+    "OutName": "vol23_cover.jpg",
+    "KoboName": "kobo_vol23_cover.jpg",
+    "BgR": 45,
+    "BgG": 11,
+    "BgB": 63,
+    "Badge": "第23巻：英検2級受検者向け（第6集・完結巻）",
+    "Subtitle": "準2級 ➔ 2級対比学習で合格レベルの英文力を身につける！"
+  },
+  {
+    "OutName": "vol24_cover.jpg",
+    "KoboName": "kobo_vol24_cover.jpg",
+    "BgR": 74,
+    "BgG": 14,
+    "BgB": 23,
+    "Badge": "第24巻：英検準1級受検者向け（第6集・完結巻）",
+    "Subtitle": "2級 ➔ 準1級対比学習で最高峰のマスター英文力を極める！"
+  }
+]

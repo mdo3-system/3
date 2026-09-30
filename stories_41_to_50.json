@@ -1,0 +1,112 @@
+[
+  {
+    "Key": "old_hound",
+    "TitleEn": "The Old Hound",
+    "TitleJa": "猟犬と年老いた犬",
+    "Perry": "Perry 134",
+    "Moral": "Remember past services when age brings weakness",
+    "Symbol": "[ HOUND & BOAR ]",
+    "ColorTop": [35, 25, 20],
+    "ColorBottom": [75, 50, 40],
+    "Accent": [230, 126, 34]
+  },
+  {
+    "Key": "wall_and_nail",
+    "TitleEn": "The Wall and the Nail",
+    "TitleJa": "壁と釘",
+    "Perry": "Perry 239",
+    "Moral": "Blame the driving force, not the instrument",
+    "Symbol": "[ HAMMER & NAIL ]",
+    "ColorTop": [25, 25, 30],
+    "ColorBottom": [60, 60, 70],
+    "Accent": [189, 195, 199]
+  },
+  {
+    "Key": "fox_and_hedgehog",
+    "TitleEn": "The Fox and the Hedgehog",
+    "TitleJa": "虻とキツネ（ハリネズミの忠告）",
+    "Perry": "Perry 427",
+    "Moral": "Better endure known evils than court fresh plunderers",
+    "Symbol": "[ FLIES & QUILLS ]",
+    "ColorTop": [30, 35, 20],
+    "ColorBottom": [70, 80, 45],
+    "Accent": [46, 204, 113]
+  },
+  {
+    "Key": "wild_boar_and_fox",
+    "TitleEn": "The Wild Boar and the Fox",
+    "TitleJa": "イノシシとキツネ（平和時の牙研ぎ）",
+    "Perry": "Perry 224",
+    "Moral": "Prepare weapons in peace for the hour of war",
+    "Symbol": "[ TUSK & TREE ]",
+    "ColorTop": [30, 20, 15],
+    "ColorBottom": [70, 45, 30],
+    "Accent": [211, 84, 0]
+  },
+  {
+    "Key": "astronomer",
+    "TitleEn": "The Astronomer",
+    "TitleJa": "天文学者（井戸に落ちた学者）",
+    "Perry": "Perry 40",
+    "Moral": "Beware of stargazing while blind to common perils",
+    "Symbol": "[ STARS & WELL ]",
+    "ColorTop": [15, 20, 40],
+    "ColorBottom": [35, 50, 95],
+    "Accent": [52, 152, 219]
+  },
+  {
+    "Key": "thief_and_dog",
+    "TitleEn": "The Thief and the Dog",
+    "TitleJa": "泥棒と見張り番の犬（餌を拒否する犬）",
+    "Perry": "Perry 403",
+    "Moral": "Sudden bribes from strangers signal treachery",
+    "Symbol": "[ MEAT & WATCHDOG ]",
+    "ColorTop": [35, 30, 15],
+    "ColorBottom": [80, 70, 30],
+    "Accent": [241, 196, 15]
+  },
+  {
+    "Key": "lion_and_dolphin",
+    "TitleEn": "The Lion and the Dolphin",
+    "TitleJa": "獅子とイルカ（陸と海の同盟）",
+    "Perry": "Perry 145",
+    "Moral": "Allies outside their element cannot aid you",
+    "Symbol": "[ SHORE & WAVE ]",
+    "ColorTop": [15, 30, 40],
+    "ColorBottom": [30, 70, 90],
+    "Accent": [26, 188, 156]
+  },
+  {
+    "Key": "dog_and_wolf",
+    "TitleEn": "The Dog and the Wolf",
+    "TitleJa": "狼と痩せた犬（自由と隷属の首輪）",
+    "Perry": "Perry 135",
+    "Moral": "Better lean liberty than fat servitude",
+    "Symbol": "[ COLLAR & FOREST ]",
+    "ColorTop": [25, 25, 25],
+    "ColorBottom": [65, 65, 65],
+    "Accent": [231, 76, 60]
+  },
+  {
+    "Key": "thief_and_his_mother",
+    "TitleEn": "The Thief and His Mother",
+    "TitleJa": "盗賊と母（最後に耳を噛み切る息子）",
+    "Perry": "Perry 200",
+    "Moral": "Nip vice in the bud; unchecked folly breeds destruction",
+    "Symbol": "[ GALLOWS & TEARS ]",
+    "ColorTop": [35, 15, 25],
+    "ColorBottom": [80, 35, 55],
+    "Accent": [155, 89, 182]
+  },
+  {
+    "Key": "blind_man_and_whelp",
+    "TitleEn": "The Blind Man and the Whelp",
+    "TitleJa": "盲人と子鹿（触れて知る本性）",
+    "Perry": "Perry 242",
+    "Moral": "Innate nature betrays itself even in the dark",
+    "Symbol": "[ HANDS & CLAWS ]",
+    "ColorTop": [25, 30, 25],
+    "ColorBottom": [55, 75, 55],
+    "Accent": [244, 208, 111]
+  }
+]

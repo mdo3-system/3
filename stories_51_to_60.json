@@ -1,0 +1,112 @@
+[
+  {
+    "Key": "eagle_and_arrow",
+    "TitleEn": "The Eagle and the Arrow",
+    "TitleJa": "鷲と矢（自らの羽がついた矢）",
+    "Perry": "Perry 276",
+    "Moral": "We often supply the means of our own destruction",
+    "Symbol": "[ ARROW & EAGLE FEATHER ]",
+    "ColorTop": [20, 25, 40],
+    "ColorBottom": [50, 60, 85],
+    "Accent": [231, 76, 60]
+  },
+  {
+    "Key": "monkey_as_judge",
+    "TitleEn": "The Monkey as Judge",
+    "TitleJa": "猿の裁判長（二匹の猫とチーズ）",
+    "Perry": "Perry 614",
+    "Moral": "In petty disputes, the arbiter consumes the prize",
+    "Symbol": "[ SCALES & CHEESE ]",
+    "ColorTop": [35, 25, 15],
+    "ColorBottom": [80, 60, 35],
+    "Accent": [241, 196, 15]
+  },
+  {
+    "Key": "miller_son_and_donkey",
+    "TitleEn": "The Miller, His Son and the Donkey",
+    "TitleJa": "ロバを売る親子（他人の評価に惑わされる愚行）",
+    "Perry": "Perry 721",
+    "Moral": "Please all, and you will please none",
+    "Symbol": "[ BRIDGE & DONKEY ]",
+    "ColorTop": [30, 28, 20],
+    "ColorBottom": [70, 65, 45],
+    "Accent": [230, 126, 34]
+  },
+  {
+    "Key": "bee_and_zeus",
+    "TitleEn": "The Bee and Zeus",
+    "TitleJa": "蜜蜂とゼウス（針の代償）",
+    "Perry": "Perry 29",
+    "Moral": "Weapons forged in malice exact the ultimate price from the wielder",
+    "Symbol": "[ THUNDERBOLT & STINGER ]",
+    "ColorTop": [35, 30, 10],
+    "ColorBottom": [85, 70, 25],
+    "Accent": [243, 156, 18]
+  },
+  {
+    "Key": "pig_sheep_and_goat",
+    "TitleEn": "The Pig, the Sheep and the Goat",
+    "TitleJa": "豚と羊と山羊（屠殺場へ運ばれる豚）",
+    "Perry": "Perry 85",
+    "Moral": "Empathy falters when stakes of peril are unequal",
+    "Symbol": "[ FLOCK & BUTCHER CART ]",
+    "ColorTop": [30, 20, 25],
+    "ColorBottom": [70, 45, 55],
+    "Accent": [214, 48, 49]
+  },
+  {
+    "Key": "sick_raven",
+    "TitleEn": "The Sick Raven",
+    "TitleJa": "病気のカラスと母（困ったときだけの神頼み）",
+    "Perry": "Perry 398",
+    "Moral": "Vows made only in mortal crisis win no divine favor",
+    "Symbol": "[ SICKBED & ALTAR ]",
+    "ColorTop": [20, 20, 35],
+    "ColorBottom": [45, 45, 75],
+    "Accent": [155, 89, 182]
+  },
+  {
+    "Key": "spider_and_swallow",
+    "TitleEn": "The Spider and the Swallow",
+    "TitleJa": "クモとツバメ（弱小な罠が一撃で砕かれる無常）",
+    "Perry": "Perry 234",
+    "Moral": "Frail stratagems are shattered in an instant by superior forces",
+    "Symbol": "[ WEB & WINGS ]",
+    "ColorTop": [15, 30, 35],
+    "ColorBottom": [35, 70, 80],
+    "Accent": [26, 188, 156]
+  },
+  {
+    "Key": "fisherman_piping",
+    "TitleEn": "The Fisherman Piping",
+    "TitleJa": "笛を吹く漁師（踊らない魚）",
+    "Perry": "Perry 11",
+    "Moral": "Action out of season yields no fruit; timely vigor is everything",
+    "Symbol": "[ FLUTE & NET ]",
+    "ColorTop": [15, 30, 45],
+    "ColorBottom": [35, 75, 110],
+    "Accent": [52, 152, 219]
+  },
+  {
+    "Key": "bear_and_bees",
+    "TitleEn": "The Bear and the Bees",
+    "TitleJa": "蜂と熊（一匹の蜂に怒り巣を壊す熊）",
+    "Perry": "Perry 396",
+    "Moral": "Blind rage inflames a minor sting into catastrophic destruction",
+    "Symbol": "[ HOLLOW LOG & PAW ]",
+    "ColorTop": [35, 20, 15],
+    "ColorBottom": [85, 45, 30],
+    "Accent": [211, 84, 0]
+  },
+  {
+    "Key": "traveler_and_fortune",
+    "TitleEn": "The Traveler and Fortune",
+    "TitleJa": "旅人と運命の女神（成功は己の功、失敗は運のせい）",
+    "Perry": "Perry 174",
+    "Moral": "Men credit themselves with triumph, but curse Fortune for their own folly",
+    "Symbol": "[ DEEP WELL & WHEEL ]",
+    "ColorTop": [25, 20, 40],
+    "ColorBottom": [60, 45, 95],
+    "Accent": [241, 196, 15]
+  }
+]

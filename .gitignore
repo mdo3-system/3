@@ -1,0 +1,26 @@
+# Build outputs & heavy binary archives
+*.epub
+*.zip
+*.mp4
+*.ts
+*.webm
+
+# Temporary build folders
+epub_build/
+kdp_zip_build/
+kdp_upload_ready/
+kobo_upload_ready/
+vol*_epub_build/
+vol*_kdp_zip_build/
+__pycache__/
+*.pyc
+
+# Heavy video & raw generation folders
+video_output/
+veo3_clips/
+gemini_upload_images/
+gemini_veo3_images/
+
+# System files
+.DS_Store
+Thumbs.db

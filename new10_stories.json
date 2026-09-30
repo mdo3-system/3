@@ -1,0 +1,112 @@
+[
+  {
+    "Key": "honest_woodcutter",
+    "TitleEn": "The Honest Woodcutter",
+    "TitleJa": "金の斧と銀の斧",
+    "Perry": "Perry 173",
+    "Moral": "Honesty is the best policy",
+    "Symbol": "[ AXE & GOLD ]",
+    "ColorTop": [15, 32, 67],
+    "ColorBottom": [35, 75, 120],
+    "Accent": [241, 196, 15]
+  },
+  {
+    "Key": "goose_golden_eggs",
+    "TitleEn": "The Goose that Laid the Golden Eggs",
+    "TitleJa": "金の卵を産むガチョウ",
+    "Perry": "Perry 87",
+    "Moral": "Greed destroys the source of wealth",
+    "Symbol": "[ GOLDEN EGGS ]",
+    "ColorTop": [44, 30, 10],
+    "ColorBottom": [100, 75, 25],
+    "Accent": [243, 156, 18]
+  },
+  {
+    "Key": "wolf_in_sheeps_clothing",
+    "TitleEn": "The Wolf in Sheep's Clothing",
+    "TitleJa": "羊の皮をかぶった狼",
+    "Perry": "Perry 451",
+    "Moral": "Appearances can be deceptive",
+    "Symbol": "[ WOLF IN DISGUISE ]",
+    "ColorTop": [26, 26, 36],
+    "ColorBottom": [60, 60, 80],
+    "Accent": [231, 76, 60]
+  },
+  {
+    "Key": "fox_and_stork",
+    "TitleEn": "The Fox and the Stork",
+    "TitleJa": "キツネとツル",
+    "Perry": "Perry 426",
+    "Moral": "One bad turn deserves another",
+    "Symbol": "[ NARROW PITCHER ]",
+    "ColorTop": [40, 20, 10],
+    "ColorBottom": [90, 50, 25],
+    "Accent": [230, 126, 34]
+  },
+  {
+    "Key": "frog_and_ox",
+    "TitleEn": "The Frog and the Ox",
+    "TitleJa": "カエルと牛",
+    "Perry": "Perry 376",
+    "Moral": "Self-conceit leads to destruction",
+    "Symbol": "[ PUFFED FROG ]",
+    "ColorTop": [15, 35, 20],
+    "ColorBottom": [35, 80, 45],
+    "Accent": [46, 204, 113]
+  },
+  {
+    "Key": "bat_birds_beasts",
+    "TitleEn": "The Bat, Birds, and Beasts",
+    "TitleJa": "コウモリと鳥と獣",
+    "Perry": "Perry 566",
+    "Moral": "He that is friend to all is friend to none",
+    "Symbol": "[ SHIFTING ALLIANCE ]",
+    "ColorTop": [20, 15, 35],
+    "ColorBottom": [50, 40, 85],
+    "Accent": [155, 89, 182]
+  },
+  {
+    "Key": "belling_the_cat",
+    "TitleEn": "Belling the Cat",
+    "TitleJa": "ネズミの会議",
+    "Perry": "Perry 613",
+    "Moral": "Easy to propose, hard to execute",
+    "Symbol": "[ BELL & CAT ]",
+    "ColorTop": [25, 25, 30],
+    "ColorBottom": [65, 60, 65],
+    "Accent": [241, 196, 15]
+  },
+  {
+    "Key": "bear_and_two_travelers",
+    "TitleEn": "The Bear and the Travelers",
+    "TitleJa": "旅人とクマ",
+    "Perry": "Perry 65",
+    "Moral": "Misfortune tests true friendship",
+    "Symbol": "[ TEST OF LOYALTY ]",
+    "ColorTop": [30, 20, 15],
+    "ColorBottom": [75, 50, 35],
+    "Accent": [211, 84, 0]
+  },
+  {
+    "Key": "lions_share",
+    "TitleEn": "The Lion's Share",
+    "TitleJa": "獅子の分け前",
+    "Perry": "Perry 149",
+    "Moral": "Might makes right",
+    "Symbol": "[ ROYAL MONOPOLY ]",
+    "ColorTop": [45, 15, 15],
+    "ColorBottom": [105, 35, 30],
+    "Accent": [244, 208, 111]
+  },
+  {
+    "Key": "frog_and_mouse",
+    "TitleEn": "The Frog and the Mouse",
+    "TitleJa": "ネズミとカエル",
+    "Perry": "Perry 384",
+    "Moral": "Harm set, harm get",
+    "Symbol": "[ FATAL TIE ]",
+    "ColorTop": [10, 35, 40],
+    "ColorBottom": [25, 80, 90],
+    "Accent": [26, 188, 156]
+  }
+]
