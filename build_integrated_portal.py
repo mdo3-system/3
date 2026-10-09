@@ -603,7 +603,8 @@ html_template = f"""<!DOCTYPE html>
       <div class="social-channel-list">
         <div>🎬 <b>YouTube:</b> @mdo3_english</div>
         <div>🐦 <b>𝕏:</b> 上善如水出版 (@mdo3_english)</div>
-        <div>📸 <b>IG:</b> mdo3_english</div>
+        <div>🧵 <b>Threads:</b> @mdo3_english</div>
+        <div>📸 <b>IG:</b> @mdo3_english</div>
         <div>📝 <b>note:</b> mdo3_english</div>
       </div>
     </div>
@@ -648,7 +649,7 @@ html_template = f"""<!DOCTYPE html>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
           <div>
             <h3 style="font-size:1.15rem; font-weight:700;" id="veo3StoryTitleHeader">🎬 第1話: ウサギとカメ (The Tortoise and the Hare)</h3>
-            <span style="font-size:0.82rem; color:var(--text-muted);">Geminiに参照画像を添付し、以下の起・承・結プロンプトを順に送信してください（1日3クリップ）</span>
+            <span style="font-size:0.82rem; color:var(--text-muted);">✨ <b>Veo 3新仕様（1回最大10秒生成）対応</b>：10秒間で前半・後半のドラマチックな動きを展開する3クリップ（計約30秒）のプロンプトです。</span>
           </div>
           <a href="https://gemini.google.com" target="_blank" class="btn btn-secondary" style="padding:8px 16px; font-size:0.82rem;">
             <i data-lucide="external-link"></i> Geminiを開く
@@ -669,7 +670,7 @@ html_template = f"""<!DOCTYPE html>
 
           <div style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); border-radius:var(--radius-md); padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
             <div style="font-size:0.82rem; overflow:hidden;">
-              <div style="color:var(--accent-green); font-weight:700; margin-bottom:2px;"><i data-lucide="download"></i> ② 生成動画（mp4）の保存先フォルダ:</div> 
+              <div style="color:var(--accent-green); font-weight:700; margin-bottom:2px;"><i data-lucide="download"></i> ② 生成動画（mp4）の保存先:</div> 
               <code id="veo3_inbox_path_text" style="color:#fff; font-weight:700; font-family:'JetBrains Mono', monospace; font-size:0.75rem; word-break:break-all;">veo3_inbox/</code>
             </div>
             <button class="btn-copy" style="padding:4px 10px; font-size:0.72rem; margin-left:8px; white-space:nowrap;" onclick="copyPrompt('veo3_inbox_path_text', this)">
@@ -803,7 +804,7 @@ html_template = f"""<!DOCTYPE html>
     <!-- Tab 4: Social Hub -->
     <section id="tab-social" class="tab-content">
       <!-- Sub-tabs bar: YouTube FIRST workflow -->
-      <div style="display:flex; gap:12px; margin-bottom:20px; border-bottom:1px solid var(--card-border); padding-bottom:12px;">
+      <div style="display:flex; gap:12px; margin-bottom:20px; border-bottom:1px solid var(--card-border); padding-bottom:12px; flex-wrap:wrap;">
         <button class="grade-tab-btn active" id="btn-sub-yt" onclick="switchSocialSubTab('youtube')" style="font-size:0.88rem; display:flex; align-items:center; gap:8px;">
           <i data-lucide="youtube" style="color:#f43f5e;"></i> ① 🎬 YouTube (動画UP ＆ URL取得)
         </button>
@@ -815,6 +816,9 @@ html_template = f"""<!DOCTYPE html>
         </button>
         <button class="grade-tab-btn" id="btn-sub-ig" onclick="switchSocialSubTab('instagram')" style="font-size:0.88rem; display:flex; align-items:center; gap:8px;">
           <i data-lucide="instagram" style="color:#c084fc;"></i> ④ 📸 Instagram (リール・キャプション)
+        </button>
+        <button class="grade-tab-btn" id="btn-sub-threads" onclick="switchSocialSubTab('threads')" style="font-size:0.88rem; display:flex; align-items:center; gap:8px;">
+          <i data-lucide="at-sign" style="color:#f59e0b;"></i> ⑤ 🧵 Threads (500文字最適化 / ワンクリック直行)
         </button>
       </div>
 
@@ -1163,6 +1167,47 @@ html_template = f"""<!DOCTYPE html>
           </div>
         </div>
       </div>
+
+      <!-- 5. Threads Content Area -->
+      <div id="social-content-threads" class="social-sub-content" style="display:none;">
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius-lg); padding:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+            <div>
+              <h3 style="font-size:1.1rem; font-weight:700; color:#f59e0b; display:flex; align-items:center; gap:8px;">
+                <i data-lucide="at-sign"></i> ⑤ 🧵 Threads (スレッズ) 500文字最適化投稿パッケージ
+              </h3>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
+                Instagram/Threadsユーザー向けに500文字制限に完全最適化。ワンクリックでThreads投稿画面を開いてポストできます。
+              </p>
+            </div>
+            <a id="threadsDirectPostBtn" href="https://www.threads.net/intent/post" target="_blank" class="btn" style="background:#f59e0b; color:#0b0f19; font-weight:800; padding:8px 16px; font-size:0.82rem;">
+              <i data-lucide="send"></i> Threads で投稿画面を開く
+            </a>
+          </div>
+
+          <!-- Threads Pattern Selector Tabs -->
+          <div style="display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap;">
+            <button class="grade-tab-btn active" id="threads-pattern-btn-a" onclick="switchThreadsPattern('a')" style="font-size:0.82rem; padding:8px 16px;">
+              🅰️ パターンA (王道・動画＆シャドーイング紹介)
+            </button>
+            <button class="grade-tab-btn" id="threads-pattern-btn-b" onclick="switchThreadsPattern('b')" style="font-size:0.82rem; padding:8px 16px;">
+              🅱️ パターンB (英文法・表現対比解説)
+            </button>
+            <button class="grade-tab-btn" id="threads-pattern-btn-c" onclick="switchThreadsPattern('c')" style="font-size:0.82rem; padding:8px 16px;">
+              🅲 パターンC (教訓・大人の学び直し)
+            </button>
+          </div>
+
+          <!-- Threads Post Content Box -->
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <label style="font-weight:700; font-size:0.82rem; color:var(--text-muted); text-transform:uppercase;">Threads 投稿本文 (500文字以内・リンク＆ハッシュタグ完備)</label>
+              <button class="btn-copy" style="padding:4px 10px; font-size:0.75rem;" onclick="copyPrompt('threads_field_post', this)"><i data-lucide="copy"></i> 本文を全コピー</button>
+            </div>
+            <div class="clip-prompt-text" id="threads_field_post" style="height:250px; font-family:'JetBrains Mono', monospace; font-size:0.82rem; white-space:pre-wrap; line-height:1.6;"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Tab 5: Kindle Monitor -->
@@ -1301,11 +1346,17 @@ html_template = f"""<!DOCTYPE html>
           if (story.clips && story.clips.length > 0) {{
             story.clips.forEach((c, cIdx) => {{
               const div = document.createElement('div');
-              div.style = "background:rgba(11,15,25,0.6); border:1px solid var(--card-border); border-radius:var(--radius-md); padding:16px; display:flex; flex-direction:column;";
+              div.style = "background:rgba(11,15,25,0.7); border:1px solid rgba(56,189,248,0.3); border-radius:var(--radius-md); padding:16px; display:flex; flex-direction:column; justify-content:space-between;";
               div.innerHTML = `
-                <div style="font-size:0.75rem; font-weight:700; color:var(--accent-primary); margin-bottom:8px;">Clip ${{c.clipIndex}}: ${{c.sceneName}}</div>
-                <div class="clip-prompt-text" id="p_clip_${{cIdx}}" style="height:140px;">${{c.prompt}}</div>
-                <button class="btn-copy" onclick="copyPrompt('p_clip_${{cIdx}}', this)"><i data-lucide="copy"></i> プロンプトをコピー</button>
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                    <span style="font-size:0.8rem; font-weight:800; color:var(--accent-primary);">🎬 Clip ${{c.clipIndex}}</span>
+                    <span style="font-size:0.7rem; font-weight:700; background:rgba(56,189,248,0.2); color:var(--accent-primary); padding:2px 8px; border-radius:10px; border:1px solid rgba(56,189,248,0.3);">⏱️ 10秒尺</span>
+                  </div>
+                  <div style="font-size:0.75rem; font-weight:700; color:#fff; margin-bottom:8px;">${{c.sceneName}}</div>
+                  <div class="clip-prompt-text" id="p_clip_${{cIdx}}" style="height:150px; font-size:0.75rem; line-height:1.5;">${{c.prompt}}</div>
+                </div>
+                <button class="btn-copy" style="margin-top:12px; width:100%; justify-content:center;" onclick="copyPrompt('p_clip_${{cIdx}}', this)"><i data-lucide="copy"></i> プロンプトをコピー</button>
               `;
               clipsGrid.appendChild(div);
             }});
@@ -1491,6 +1542,25 @@ html_template = f"""<!DOCTYPE html>
           const igEl = document.getElementById('ig_field_caption');
           if (igEl) igEl.innerText = story.sns.instagram.caption || '';
         }}
+
+        // Threads with 3-Pattern support & dynamic YouTube URL & Direct Share link
+        if (story.sns && story.sns.threads) {{
+          const threadsEl = document.getElementById('threads_field_post');
+          const threadsBtn = document.getElementById('threadsDirectPostBtn');
+
+          let tObj = null;
+          if (story.sns.threads.patterns && story.sns.threads.patterns[currentThreadsPattern]) {{
+            tObj = story.sns.threads.patterns[currentThreadsPattern];
+          }}
+
+          let rawThreadsText = tObj ? tObj.text : (story.sns.threads.post || '');
+          if (bestYtUrl) {{
+            rawThreadsText = rawThreadsText.replace(/https:\\/\\/youtu\\.be\\/[^\\s)\\]]+/g, bestYtUrl);
+          }}
+
+          if (threadsEl) threadsEl.innerText = rawThreadsText;
+          if (threadsBtn) threadsBtn.href = `https://www.threads.net/intent/post?text=${{encodeURIComponent(rawThreadsText)}}`;
+        }}
       }} catch (e) {{ console.error("SNS render error:", e); }}
 
       try {{
@@ -1569,6 +1639,8 @@ html_template = f"""<!DOCTYPE html>
       lucide.createIcons();
     }}
 
+    let currentThreadsPattern = 'a';
+
     function switchSocialSubTab(platform) {{
       document.querySelectorAll('.social-sub-content').forEach(el => el.style.display = 'none');
       document.querySelectorAll('#tab-social .grade-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -1576,7 +1648,7 @@ html_template = f"""<!DOCTYPE html>
       const targetContent = document.getElementById('social-content-' + platform);
       if (targetContent) targetContent.style.display = 'block';
 
-      const btnMap = {{ note: 'btn-sub-note', youtube: 'btn-sub-yt', x: 'btn-sub-x', instagram: 'btn-sub-ig' }};
+      const btnMap = {{ note: 'btn-sub-note', youtube: 'btn-sub-yt', x: 'btn-sub-x', instagram: 'btn-sub-ig', threads: 'btn-sub-threads' }};
       if (btnMap[platform]) {{
         const btn = document.getElementById(btnMap[platform]);
         if (btn) btn.classList.add('active');
@@ -1744,6 +1816,17 @@ html_template = f"""<!DOCTYPE html>
       renderStory(currentStoryIndex);
       const names = {{ a: 'パターンA (王道・教育)', b: 'パターンB (文法・対比)', c: 'パターンC (教訓・大人)' }};
       showToast(`𝕏投稿を【${{names[patternKey] || patternKey}}】に切り替えました`);
+    }}
+
+    function switchThreadsPattern(patternKey) {{
+      currentThreadsPattern = patternKey;
+      document.querySelectorAll('#social-content-threads .grade-tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('threads-pattern-btn-' + patternKey);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      renderStory(currentStoryIndex);
+      const names = {{ a: 'パターンA (王道・動画紹介)', b: 'パターンB (文法・表現対比)', c: 'パターンC (教訓・大人の学び直し)' }};
+      showToast(`Threads投稿を【${{names[patternKey] || patternKey}}】に切り替えました`);
     }}
 
     function copyPrompt(elementId, btn) {{

@@ -76,7 +76,7 @@ STORIES_DB = [
      "char1": "a greedy farmer and his wife", "char2": "a magical white goose and shining golden eggs", "setting": "a rustic farm cottage barn bathed in morning sun",
      "action1": "A humble farmer discovers a heavy, radiant golden egg inside the nest of his plump white goose, beaming with astonishment.",
      "action2": "Golden coins and luxury fill the cottage as the couple stares with mounting, feverish greed at the precious goose.",
-     "action3": "The remorseful farmer stands empty-handed with an open knife in the barn, realizing his foolish greed has ended the golden miracle forever."},
+     "action3": "The remorseful farmer stands empty-handed with an empty hands in the barn, realizing his foolish greed has left him with an ordinary empty nest and no more golden eggs."},
 
     {"ch": 13, "key": "wolf_in_sheeps_clothing", "titleEn": "The Wolf in Sheep's Clothing", "titleJa": "羊の皮をかぶった狼",
      "char1": "a deceitful wolf wrapped in a white fleece", "char2": "a flock of grazing sheep and the shepherd", "setting": "a misty hilltop pasture at sunset",
@@ -106,7 +106,7 @@ STORIES_DB = [
      "char1": "a gathering of mouse elders and a young mouse", "char2": "a shiny golden bell and a prowling black cat", "setting": "a dimly lit cellar corner beneath wooden floorboards",
      "action1": "A council of concerned mice debate heatedly beneath the floorboards about how to detect the stealthy approaching cat.",
      "action2": "A proud young mouse proposes tying a bright brass bell around the cat's neck, receiving enthusiastic applause from the crowd.",
-     "action3": "An old, wise mouse stands up with folded arms and quietly asks who will volunteer to hang the bell, leaving the room in dead silence."},
+     "action3": "An old, wise mouse stands up with folded arms and quietly asks who will volunteer to hang the bell, leaving the room in fallen silence."},
 
     {"ch": 18, "key": "bear_and_two_travelers", "titleEn": "The Bear and the Travelers", "titleJa": "旅人とクマ",
      "char1": "two traveling companions", "char2": "a gigantic wild brown bear", "setting": "a dense ancient pine forest path",
@@ -117,7 +117,7 @@ STORIES_DB = [
     {"ch": 19, "key": "lions_share", "titleEn": "The Lion's Share", "titleJa": "獅子の分け前",
      "char1": "a dominant regal lion", "char2": "his hunting partners: a fox, a wolf, and a jackal", "setting": "a rocky hunting plateau overlooking the wild plains",
      "action1": "A lion, a wolf, a fox, and a jackal successfully bring down a large stag through a cooperative hunt on the rocky ridge.",
-     "action2": "The stag is divided into four equal portions, and the fierce lion places his heavy paw firmly over the entire carcass.",
+     "action2": "The stag is divided into four equal portions, and the fierce lion places his heavy paw firmly over the entire prize of the hunt.",
      "action3": "The regal lion claims all four portions through royal right, strength, and defiance, leaving the intimidated partners with nothing."},
 
     {"ch": 20, "key": "frog_and_mouse", "titleEn": "The Frog and the Mouse", "titleJa": "ネズミとカエル",
@@ -125,27 +125,105 @@ STORIES_DB = [
      "action1": "A playful frog ties his leg with a string to the foot of a curious field mouse to guide him across the marshland.",
      "action2": "The malicious frog dives into the deep pool, pulling the struggling, swimming mouse beneath the shimmering water surface.",
      "action3": "A sharp-eyed hawk swoops down from above, seizing the floating mouse in its talons and carrying both bound creatures into the sky."},
+
+    # 21-30 (Phase 3)
+    {"ch": 21, "key": "androcles_and_lion", "titleEn": "Androcles and the Lion", "titleJa": "アンドロクレスとライオン",
+     "char1": "a runaway slave named Androcles in ragged Roman tunic", "char2": "a massive wounded lion with a huge thorn in its paw", "setting": "a shadowy desert cave and a grand Roman colosseum arena",
+     "action1": "In a dark rocky cave, the frightened Androcles gently inspects the swollen paw of a giant roaring lion, carefully pulling out a large wooden thorn.",
+     "action2": "The grateful lion nuzzles and affectionately licks the hands of Androcles under the soft sunlight filtering through the cave entrance.",
+     "action3": "In the middle of a sunlit Roman amphitheater arena, the released fierce lion recognizes Androcles, joyfully leaping forward to purr and embrace him before the astonished emperor."},
+
+    {"ch": 22, "key": "fox_and_crow", "titleEn": "The Fox and the Crow", "titleJa": "キツネとカラス",
+     "char1": "a cunning red fox looking up with flattering smile", "char2": "a proud black crow perched on an oak branch holding cheese", "setting": "a peaceful woodland glade beneath an ancient oak tree",
+     "action1": "A glossy black crow proudly perches high on an oak tree branch, holding a delicious chunk of yellow cheese securely in her sharp beak.",
+     "action2": "A flattering red fox stands below on the grass, gesturing with dramatic praise and bowing as he begs the beautiful crow to sing her sweet song.",
+     "action3": "The vanity-filled crow opens her beak wide to caw aloud, causing the yellow cheese to plummet directly into the waiting, open jaws of the grinning fox."},
+
+    {"ch": 23, "key": "old_man_and_death", "titleEn": "The Old Man and the mysterious spirit", "titleJa": "木こりと死神",
+     "char1": "a frail, exhausted old woodcutter carrying heavy wood bundles", "char2": "a mysterious shadowy robed spirit holding a tall wooden staff", "setting": "a dusty uphill forest road under a somber twilight sky",
+     "action1": "An elderly, bent-backed woodcutter groans under a crushing bundle of faggots, collapsing onto the dusty forest path and despairingly calling upon the mysterious spirit.",
+     "action2": "A tall, eerie cloaked mysterious robed traveler suddenly materializes from the swirling mist, holding a wooden walking staff and asking why he was summoned.",
+     "action3": "Terrified by the grim specter, the trembling old man hastily stammers an apology, pleading only for help lifting the heavy bundle back onto his shoulders."},
+
+    {"ch": 24, "key": "eagle_and_jackdaw", "titleEn": "The Eagle and the Jackdaw", "titleJa": "鷲とカラス",
+     "char1": "a majestic golden eagle and an envious foolish jackdaw", "char2": "a flock of sheep with heavy curly wool and the shepherd", "setting": "a rugged alpine mountain crag and a green pasture below",
+     "action1": "A majestic golden eagle swoops gracefully from a high mountain cliff, cleanly lifting a small lamb in its powerful curved talons.",
+     "action2": "An ambitious little jackdaw tries to imitate the eagle, diving recklessly onto the back of a huge ram and hopelessly entangling its tiny claws in the thick curly fleece.",
+     "action3": "The grinning shepherd easily captures the flapping, trapped jackdaw by hand, clipping its wings to take home to his amused children."},
+
+    {"ch": 25, "key": "fox_and_mask", "titleEn": "The Fox and the Mask", "titleJa": "キツネと仮面",
+     "char1": "a curious inquisitive red fox", "char2": "a theatrical tragic mask with carved hollow eyes", "setting": "an artist's rustic workshop studio scattered with classical sculptures",
+     "action1": "A curious red fox sneaks into a sculptor's studio, inspecting marble busts, carved stones, and antique theater props.",
+     "action2": "The fox discovers a beautifully painted classical tragic theater mask, turning it over with his paw to examine the lifelike face.",
+     "action3": "The fox peers behind the empty hollow head with a smirk, tapping the hollow wood and remarking what a magnificent head with no brains inside."},
+
+    {"ch": 26, "key": "stag_at_pool", "titleEn": "The Stag at the Pool", "titleJa": "鹿と池の影",
+     "char1": "a graceful stag with majestic branched antlers and slender legs", "char2": "a pack of hunting hounds and archers in pursuit", "setting": "a crystal-clear forest pond and a dense thicket of tangled branches",
+     "action1": "A magnificent stag gazes proudly at his reflection in a calm mirror-like pool, admiring his branching antlers while despising his thin spindly legs.",
+     "action2": "The alarm of barking hounds rings out; the stag's swift legs carry him effortlessly across the open meadow, outrunning the hunters.",
+     "action3": "Entering the deep forest, his ornate antlers get firmly tangled in the low branches in low-hanging branches, realizing too late that his despised legs were his salvation."},
+
+    {"ch": 27, "key": "frogs_and_sun", "titleEn": "The Frogs and the Sun", "titleJa": "太陽とカエルたちの結婚",
+     "char1": "a chorus of rejoicing frogs and an old wise toad elder", "char2": "the blazing radiant Sun in the celestial heavens", "setting": "a lush summer marshland with lily pads under scorching heat",
+     "action1": "All the village animals and joyous frogs prepare feasts and dance in celebration upon hearing that the glorious Sun is to be married.",
+     "action2": "A wise old frog croaks solemnly from a mossy log, warning what will happen when the Sun has children to scorch the earth even hotter.",
+     "action3": "The cheering marsh falls into worried silence as the frogs gaze up at the blazing sky, realizing that extra suns would dry up all the rivers and ponds forever."},
+
+    {"ch": 28, "key": "ass_and_salt", "titleEn": "The Ass and the Load of Salt", "titleJa": "ロバと荷物",
+     "char1": "a cunning donkey carrying heavy woven saddlebags", "char2": "a wise country merchant driver", "setting": "a rocky river crossing stream in a sunny country valley",
+     "action1": "A heavy-laden donkey carrying bags of salt slips accidentally in a deep stream, rising with delight as the salt dissolves away and lightens the load.",
+     "action2": "On the next journey, the tricky donkey intentionally tumbles into the river again, braying happily as the salt once more washes away.",
+     "action3": "The clever merchant packs the bags with dry sponges next time; when the donkey plunges into the water, the sponges absorb massive weight, making him struggle under an immense load."},
+
+    {"ch": 29, "key": "fox_and_woodman", "titleEn": "The Fox and the Woodman", "titleJa": "キツネと木こり",
+     "char1": "a panting pursued red fox", "char2": "a double-dealing woodcutter and mounted royal huntsmen with hounds", "setting": "a rustic woodcutter's cottage yard and stacked log sheds",
+     "action1": "A panting, exhausted fox begs a passing woodcutter for a hiding place, swiftly crawling inside a hollow stack of firewood.",
+     "action2": "When huntsmen ride up asking for the fox, the woodcutter loudly denies seeing him while slyly pointing his finger toward the woodpile.",
+     "action3": "The hunters ride past without noticing the signal, and the disgusted fox slips away, reproaching the hypocritical man whose hand betrayed what his tongue spoke."},
+
+    {"ch": 30, "key": "wolf_and_lamb", "titleEn": "The Wolf and the Lamb", "titleJa": "オオカミと子羊",
+     "char1": "a fierce, menacing gray wolf", "char2": "a gentle innocent white lamb drinking downstream", "setting": "a winding woodland brook with stones and overhanging willow trees",
+     "action1": "A thirsty white lamb drinks peacefully from the lower stream, when a ferocious gray wolf appears higher up the bank, snarling with manufactured rage.",
+     "action2": "The cruel wolf falsely accuses the gentle lamb of muddying his drinking water, even though the water flows downward from wolf to lamb.",
+     "action3": "Refusing to accept the lamb's humble, logical defenses, the tyrannical wolf bares his sharp fangs, showing that any excuse serves an unjust ruler."},
 ]
 
 def build_veo3_prompt(story, clip_num, clip_type, action_desc):
     """
-    Veo 3 (Google Veo) の Image-to-Video に最適化されたプロンプトを構築する
+    Veo 3 (Google Veo) の新仕様（1回最大10秒出力）に最適化された
+    タイムライン連動型・ハイダイナミック動画生成プロンプトを構築する
     """
+    if clip_num == 1:
+        timeline = (
+            f"[10-Second Continuous Animation Timeline]: "
+            f"0-5s: The scene opens with {story['char1']} and {story['char2']} in {story['setting']}. Smooth cinematic camera dolly-in as characters begin expressive physical gestures, lively eye contact, and authentic interaction. "
+            f"5-10s: {action_desc} The movement accelerates with dynamic character posture shifts, flowing body motion, and shifting atmospheric sunlight."
+        )
+    elif clip_num == 2:
+        timeline = (
+            f"[10-Second Continuous Animation Timeline]: "
+            f"0-5s: High-energy action commences immediately. {action_desc} Camera tracks laterally with energetic motion blur and changing perspective. "
+            f"5-10s: The dramatic turning point unfolds with rapid character movement, swirling environmental elements (leaves, dust, wind), and intense dramatic lighting."
+        )
+    else:
+        timeline = (
+            f"[10-Second Continuous Animation Timeline]: "
+            f"0-5s: The pivotal climax and resolution occur. {action_desc} Characters show powerful emotional reactions with vivid, expressive bodily animation. "
+            f"5-10s: The action resolves smoothly as the camera gently dollies back to reveal a grand, atmospheric storybook tableau with warm golden light."
+        )
+
     prompt = (
-        f"Image-to-Video. "
-        f"Maintain the exact same vintage storybook engraving illustration style and classical woodcut etching texture as the reference image. "
-        f"Scene: {story['setting']}. Characters: {story['char1']}, {story['char2']}. "
-        f"Animation Action: {action_desc} "
-        f"Cinematic Details: Natural fluid character micro-movements, subtle facial expressions, breathing chest rises, gentle environmental breeze, "
-        f"and atmospheric light rays. Smooth slow camera movement. "
-        f"Preserve fine antique crosshatch lines, warm cream paper tone, and elegant classical color palette. No modern CGI or 3D look."
+        f"Image-to-Video. 10-second continuous cinematic animation (Part {clip_num}/3: {clip_type}). "
+        f"Maintain the exact same vintage storybook engraving illustration style, classical woodcut etching texture, and warm antique paper tone as the reference image. "
+        f"Setting: {story['setting']}. Characters: {story['char1']}, {story['char2']}. "
+        f"{timeline} "
+        f"[Cinematic & Motion Direction]: Continuous fluid character motion with zero static pausing across all 10 seconds. Rich physical dynamics, lively micro-expressions, authentic weight in motion, and cinematic depth of field. Preserve fine antique crosshatch lines and classical aesthetic."
     )
     return prompt
 
 def generate_master_schedule():
     """
-    全60話（今回はまず代表的な20話ベース、拡張可能）のプロンプトを生成し、
-    5アカウントの作業分担（1日15本 = 5×3本）を割り当てる。
+    全話のプロンプトを生成し、10秒尺×3クリップ（計30秒）の投入スケジュールを作成する。
     """
     master_data = []
     
@@ -158,24 +236,24 @@ def generate_master_schedule():
         clips = [
             {
                 "clipIndex": 1,
-                "sceneName": "Opening & Situation (起/導入)",
-                "durationSec": 20,
+                "sceneName": "Part 1: Opening & Setup (起/導入・対峙 0-10s)",
+                "durationSec": 10,
                 "action": s["action1"],
-                "prompt": build_veo3_prompt(s, 1, "Opening", s["action1"])
+                "prompt": build_veo3_prompt(s, 1, "Opening & Setup", s["action1"])
             },
             {
                 "clipIndex": 2,
-                "sceneName": "Development & Action (承/展開)",
-                "durationSec": 25,
+                "sceneName": "Part 2: Dynamic Action & Crisis (承/急展開・動的アクション 0-10s)",
+                "durationSec": 10,
                 "action": s["action2"],
-                "prompt": build_veo3_prompt(s, 2, "Development", s["action2"])
+                "prompt": build_veo3_prompt(s, 2, "Dynamic Action & Crisis", s["action2"])
             },
             {
                 "clipIndex": 3,
-                "sceneName": "Climax & Resolution (結/結末)",
-                "durationSec": 25,
+                "sceneName": "Part 3: Climax & Resolution (結/結末・大逆転 0-10s)",
+                "durationSec": 10,
                 "action": s["action3"],
-                "prompt": build_veo3_prompt(s, 3, "Climax", s["action3"])
+                "prompt": build_veo3_prompt(s, 3, "Climax & Resolution", s["action3"])
             }
         ]
         
