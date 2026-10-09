@@ -7,7 +7,7 @@ import sys
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
-BASE_DIR = r"d:\Dropbox\■設計ｻﾎﾟｰﾄ\■note\antigravity\kindle"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_HTML = os.path.join(BASE_DIR, "study_portal_for_son.html")
 MASTER_JSON = os.path.join(BASE_DIR, "veo3_production", "veo3_prompts_master.json")
 
@@ -102,15 +102,16 @@ def generate_portal_html():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>DAILY HERO & EIKEN STUDIO｜長男専用 学習＆日課ポータル</title>
+  <title>日々精進 ＆ EIKEN STUDIO｜長男専用 学習＆日課ポータル</title>
   
   <!-- PWA & Mobile Web App Meta Tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="DailyHero">
+  <meta name="apple-mobile-web-app-title" content="日々精進">
   <meta name="theme-color" content="#070b14">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="sns_brand_assets/profile_icon.jpg">
+  <link rel="icon" type="image/png" href="sns_brand_assets/profile_icon.jpg">
   
   <!-- Google Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,7 +170,7 @@ def generate_portal_html():
       background: rgba(11, 17, 32, 0.94);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--card-border);
-      padding: 16px 20px;
+      padding: 14px 20px;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -188,12 +189,14 @@ def generate_portal_html():
       width: 42px;
       height: 42px;
       border-radius: var(--radius-md);
-      background: var(--accent-gradient);
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #000;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+      color: #070b14;
+      font-size: 1.4rem;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+      flex-shrink: 0;
     }}
 
     .app-title h1 {{
@@ -212,14 +215,40 @@ def generate_portal_html():
       font-weight: 600;
     }}
 
-    .header-pwa-badge {{
+    .header-actions {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+
+    .btn-header-refresh {{
       background: rgba(56, 189, 248, 0.15);
       border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent-cyan);
       padding: 6px 12px;
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 800;
-      color: var(--accent-cyan);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }}
+
+    .btn-header-refresh:hover {{
+      background: var(--accent-cyan);
+      color: #070b14;
+    }}
+
+    .header-pwa-badge {{
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--accent-gold);
       display: flex;
       align-items: center;
       gap: 6px;
@@ -232,7 +261,7 @@ def generate_portal_html():
       background: rgba(7, 11, 20, 0.85);
       border-bottom: 1px solid var(--card-border);
       position: sticky;
-      top: 74px;
+      top: 70px;
       z-index: 90;
       backdrop-filter: blur(16px);
       overflow-x: auto;
@@ -248,39 +277,37 @@ def generate_portal_html():
 
     .nav-tab-btn {{
       padding: 9px 16px;
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
       border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.04);
       color: var(--text-muted);
-      font-weight: 700;
       font-size: 0.82rem;
+      font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
     }}
 
     .nav-tab-btn:hover {{
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       color: var(--text-main);
     }}
 
     .nav-tab-btn.active {{
       background: var(--accent-gradient);
-      border-color: transparent;
       color: #070b14;
-      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
+      border-color: transparent;
       font-weight: 800;
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
     }}
 
-    /* Main Container */
     .container {{
       max-width: 960px;
       width: 100%;
-      margin: 0 auto;
-      padding: 20px;
-      flex-grow: 1;
+      margin: 20px auto;
+      padding: 0 16px;
     }}
 
     .tab-pane {{
@@ -296,16 +323,14 @@ def generate_portal_html():
       to {{ opacity: 1; transform: translateY(0); }}
     }}
 
-    /* Card Box */
     .hero-card {{
       background: var(--bg-card);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-xl);
-      padding: 22px;
+      padding: 24px;
       margin-bottom: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      position: relative;
-      overflow: hidden;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }}
 
     .card-header {{
@@ -313,59 +338,78 @@ def generate_portal_html():
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--card-border);
-    }}
-
-    .card-title {{
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.12rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 10px;
     }}
 
-    /* Penalty & Multiplier Banner */
+    .card-title {{
+      font-size: 1.05rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+
+    .status-badge-chip {{
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      border: 1px solid var(--card-border);
+    }}
+
+    .status-badge-chip.pass {{
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-green);
+      border-color: rgba(16, 185, 129, 0.4);
+    }}
+
+    .status-badge-chip.pending {{
+      background: rgba(251, 191, 36, 0.2);
+      color: var(--accent-gold);
+      border-color: rgba(251, 191, 36, 0.4);
+    }}
+
+    /* Penalty Banner */
     .penalty-banner {{
-      background: rgba(18, 25, 43, 0.95);
       border-radius: var(--radius-lg);
       padding: 16px 20px;
       margin-bottom: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
     }}
 
     .penalty-banner.normal {{
-      border-color: var(--accent-green);
-      background: rgba(16, 185, 129, 0.1);
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
     }}
 
     .penalty-banner.warn1 {{
-      border-color: var(--accent-gold);
-      background: rgba(251, 191, 36, 0.12);
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
     }}
 
     .penalty-banner.warn2 {{
-      border-color: #f97316;
-      background: rgba(249, 115, 22, 0.15);
+      background: rgba(244, 63, 94, 0.2);
+      border: 1px solid rgba(244, 63, 94, 0.5);
     }}
 
     .penalty-banner.danger {{
-      border-color: var(--accent-red);
-      background: rgba(239, 68, 68, 0.2);
-      animation: pulseAlert 2s infinite;
+      background: rgba(239, 68, 68, 0.3);
+      border: 2px solid var(--accent-red);
+      animation: pulse 1.5s infinite;
     }}
 
-    @keyframes pulseAlert {{
-      0%, 100% {{ box-shadow: 0 0 15px rgba(239, 68, 68, 0.3); }}
-      50% {{ box-shadow: 0 0 30px rgba(239, 68, 68, 0.7); }}
+    @keyframes pulse {{
+      0%, 100% {{ box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }}
+      50% {{ box-shadow: 0 0 20px 4px rgba(239, 68, 68, 0.7); }}
     }}
 
-    /* Task Item Checkboxes & AI Test Trigger */
     .task-list {{
       display: flex;
       flex-direction: column;
@@ -373,128 +417,96 @@ def generate_portal_html():
     }}
 
     .task-item {{
-      background: rgba(11, 17, 32, 0.6);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
       padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: all 0.25s;
-    }}
-
-    .task-item.passed {{
-      background: rgba(16, 185, 129, 0.12);
-      border-color: rgba(16, 185, 129, 0.45);
+      transition: all 0.2s;
     }}
 
     .task-main-row {{
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 12px;
+      flex-wrap: wrap;
     }}
 
     .task-left {{
       display: flex;
       align-items: center;
       gap: 12px;
-      flex-grow: 1;
     }}
 
-    .status-badge-chip {{
-      padding: 4px 10px;
-      border-radius: var(--radius-sm);
-      font-size: 0.75rem;
-      font-weight: 800;
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text-muted);
-    }}
-
-    .status-badge-chip.pass {{
-      background: var(--accent-green);
-      color: #070b14;
-    }}
-
-    .status-badge-chip.pending {{
-      background: rgba(251, 191, 36, 0.2);
-      color: var(--accent-gold);
-      border: 1px solid rgba(251, 191, 36, 0.4);
-    }}
-
-    /* Gemini AI Test Modal / Box */
     .ai-test-box {{
-      background: rgba(7, 11, 20, 0.75);
-      border: 1px dashed rgba(56, 189, 248, 0.35);
+      margin-top: 12px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--card-border);
       border-radius: var(--radius-md);
       padding: 14px;
-      margin-top: 8px;
     }}
 
     .drive-upload-bar {{
       display: flex;
-      justify-content: space-between;
+      gap: 10px;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
       margin-bottom: 10px;
     }}
 
     .btn-drive {{
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--accent-cyan);
       color: var(--accent-cyan);
-      font-size: 0.78rem;
       font-weight: 700;
+      font-size: 0.78rem;
       padding: 6px 12px;
       border-radius: var(--radius-sm);
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      text-decoration: none;
-      cursor: pointer;
     }}
 
     .btn-ai-test {{
-      background: var(--accent-gradient);
-      color: #070b14;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
       font-weight: 800;
-      font-size: 0.8rem;
-      padding: 7px 14px;
-      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
       border: none;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
     }}
 
-    /* Quiz Modal / Question Box */
     .quiz-container {{
-      background: rgba(18, 25, 43, 0.98);
-      border: 1px solid var(--accent-cyan);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      margin-top: 14px;
       display: none;
+      margin-top: 14px;
+      background: rgba(11, 17, 32, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: var(--radius-md);
+      padding: 16px;
     }}
 
     .quiz-header {{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 10px;
     }}
 
     .quiz-q-text {{
       font-size: 0.95rem;
       font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 14px;
       color: #fff;
-      margin-bottom: 12px;
-      line-height: 1.5;
     }}
 
     .quiz-options-grid {{
@@ -535,7 +547,6 @@ def generate_portal_html():
       color: var(--accent-red);
     }}
 
-    /* Split Allocation Cards (50% Suica/Rakuten Cash + 50% Investment Trust) */
     .allocation-grid {{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -577,7 +588,6 @@ def generate_portal_html():
       color: #fff;
     }}
 
-    /* Audio Player in Reader */
     .audio-player-card {{
       background: rgba(11, 17, 32, 0.8);
       border: 1px solid var(--card-border);
@@ -601,21 +611,73 @@ def generate_portal_html():
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: var(--accent-cyan);
-      color: #070b14;
+      background: var(--accent-gradient);
       border: none;
+      color: #070b14;
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+      transition: transform 0.2s;
     }}
 
-    /* Big Submit Buttons */
+    .btn-audio-play:active {{
+      transform: scale(0.95);
+    }}
+
+    .btn-date-select {{
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      border-radius: var(--radius-md);
+      padding: 10px 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }}
+
+    .btn-date-select:hover {{
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-cyan);
+    }}
+
+    .btn-date-select.active {{
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(59, 130, 246, 0.35) 100%);
+      border: 1px solid var(--accent-cyan);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }}
+
+    .date-picker-field {{
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 9px 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: inherit;
+      color-scheme: dark;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+
+    .date-picker-field:hover, .date-picker-field.active {{
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, rgba(59, 130, 246, 0.3) 100%);
+      border-color: var(--accent-cyan);
+    }}
+
     .btn-line-submit {{
       background: #06c755;
       color: #fff;
-      font-family: 'Outfit', sans-serif;
       font-weight: 900;
       font-size: 1.05rem;
       padding: 16px 24px;
@@ -653,7 +715,6 @@ def generate_portal_html():
       transition: all 0.2s;
     }}
 
-    /* Custom Input & Select */
     .custom-select {{
       background: rgba(11, 17, 32, 0.9);
       border: 1px solid var(--card-border);
@@ -674,6 +735,31 @@ def generate_portal_html():
       font-size: 0.82rem;
       width: 180px;
       outline: none;
+    }}
+
+    /* Grade Selector Chips */
+    .grade-chip {{
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }}
+    .grade-chip:hover {{
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }}
+    .grade-chip.active {{
+      background: var(--accent-gradient);
+      color: #070b14;
+      font-weight: 900;
+      border-color: transparent;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
     }}
 
     /* Reader & Red Sheet Styles */
@@ -710,13 +796,39 @@ def generate_portal_html():
     }}
 
     .reader-text-body {{
-      font-size: 1.02rem;
-      line-height: 1.85;
+      font-size: 1.08rem;
+      line-height: 2.0;
       color: #1e293b;
       white-space: pre-wrap;
     }}
 
-    /* Blackout / Mask Mode on Vocab & Text */
+    /* Interactive Mask Words in Reading Text */
+    .mask-word {{
+      display: inline-block;
+      transition: all 0.15s ease;
+    }}
+    
+    .red-mask-active .mask-word.masked {{
+      background: #0f172a !important;
+      color: #0f172a !important;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 0 4px;
+      margin: 0 2px;
+      user-select: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }}
+
+    .red-mask-active .mask-word.revealed {{
+      background: rgba(56, 189, 248, 0.18) !important;
+      color: #0284c7 !important;
+      font-weight: 800;
+      border-radius: 4px;
+      padding: 0 4px;
+      cursor: pointer;
+    }}
+
+    /* Blackout / Mask Mode on Vocab Table */
     .vocab-table-container table {{
       width: 100%;
       border-collapse: collapse;
@@ -735,36 +847,35 @@ def generate_portal_html():
       font-weight: 700;
     }}
 
-    .red-mask-active .vocab-red, .red-mask-active td:nth-child(2) {{
+    .red-mask-active .vocab-table-container td:nth-child(2) {{
       background: #0f172a !important;
       color: #0f172a !important;
       user-select: none;
       border-radius: 4px;
       cursor: pointer;
       position: relative;
-      transition: all 0.15s ease;
     }}
 
-    .red-mask-active .vocab-red::after, .red-mask-active td:nth-child(2)::after {{
-      content: '⬛ 隠し中 (タップで表示)';
+    .red-mask-active .vocab-table-container td:nth-child(2)::after {{
+      content: '⬛ タップで表示';
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 0.72rem;
       font-weight: 700;
-      color: #64748b;
+      color: #94a3b8;
       pointer-events: none;
       white-space: nowrap;
     }}
 
-    .red-mask-active .vocab-red.revealed, .red-mask-active td:nth-child(2).revealed {{
+    .red-mask-active .vocab-table-container td:nth-child(2).revealed {{
       background: rgba(56, 189, 248, 0.12) !important;
       color: #0f172a !important;
       font-weight: 800;
     }}
 
-    .red-mask-active .vocab-red.revealed::after, .red-mask-active td:nth-child(2).revealed::after {{
+    .red-mask-active .vocab-table-container td:nth-child(2).revealed::after {{
       display: none;
     }}
 
@@ -786,12 +897,137 @@ def generate_portal_html():
     }}
     .toast.show {{ transform: translateY(0); opacity: 1; }}
 
-    @media (max-width: 600px) {{
-      .container {{ padding: 12px; }}
-      .hero-card {{ padding: 16px; }}
-      .allocation-grid {{ grid-template-columns: 1fr; }}
-      .task-main-row {{ flex-wrap: wrap; }}
-      .app-title h1 {{ font-size: 1rem; }}
+    /* Parent Monitoring & Photo Gallery Styles */
+    .parent-card {{
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      margin-bottom: 20px;
+    }}
+    .parent-header-bar {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }}
+    .date-control-group {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }}
+    .date-input-field {{
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 700;
+      outline: none;
+    }}
+    .btn-date-quick {{
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .btn-date-quick:hover, .btn-date-quick.active {{
+      background: var(--accent-cyan);
+      color: #070b14;
+      font-weight: 800;
+    }}
+    .quiz-review-card {{
+      background: rgba(11, 17, 32, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 14px;
+    }}
+    .wrong-answer-item {{
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid var(--accent-red);
+      padding: 10px 14px;
+      border-radius: 4px;
+      margin-top: 8px;
+      font-size: 0.85rem;
+    }}
+    .photo-gallery-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }}
+    .photo-thumb-card {{
+      background: rgba(11, 17, 32, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+    }}
+    .photo-thumb-card:hover {{
+      transform: translateY(-4px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+    }}
+    .photo-thumb-img {{
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      background: #0f172a;
+    }}
+    .photo-thumb-info {{
+      padding: 12px;
+    }}
+    /* Lightbox Modal */
+    .lightbox-modal {{
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(7, 11, 20, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }}
+    .lightbox-modal.active {{ display: flex; }}
+    .lightbox-img-container {{
+      max-width: 90vw;
+      max-height: 80vh;
+      position: relative;
+    }}
+    .lightbox-img {{
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }}
+    .btn-lightbox-close {{
+      position: absolute;
+      top: 20px; right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
     }}
   </style>
 </head>
@@ -801,15 +1037,22 @@ def generate_portal_html():
   <header class="app-header">
     <div class="app-brand">
       <div class="app-logo">
-        <i data-lucide="zap"></i>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+        </svg>
       </div>
       <div class="app-title">
-        <h1>DAILY HERO & EIKEN STUDIO <span id="appVerBadge" style="font-size:0.65rem; background:rgba(56,189,248,0.2); color:var(--accent-cyan); padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:6px;">v1.0.0</span></h1>
+        <h1>日々精進 ＆ EIKEN STUDIO <span id="appVerBadge" style="font-size:0.65rem; background:rgba(56,189,248,0.2); color:var(--accent-cyan); padding:2px 6px; border-radius:4px; vertical-align:middle; margin-left:6px;">v1.1.3</span></h1>
         <span>長男専用 毎日の学習＆日課ポータル</span>
       </div>
     </div>
-    <div class="header-pwa-badge" onclick="showPwaGuide()">
-      <i data-lucide="smartphone"></i> ホーム画面に追加
+    <div class="header-actions">
+      <button class="btn-header-refresh" onclick="forceRefreshAllData()">
+        <i data-lucide="refresh-cw"></i> <span>最新同期</span>
+      </button>
+      <div class="header-pwa-badge" onclick="showPwaGuide()">
+        <i data-lucide="smartphone"></i> <span>ホーム追加</span>
+      </div>
     </div>
   </header>
 
@@ -823,10 +1066,13 @@ def generate_portal_html():
         <i data-lucide="play-circle"></i> 2. 英語動画プレイヤー
       </button>
       <button class="nav-tab-btn" onclick="switchMainTab('reader')">
-        <i data-lucide="book-open"></i> 3. 英語リーダー (赤シート＆音声)
+        <i data-lucide="book-open"></i> 3. 英語リーダー
       </button>
       <button class="nav-tab-btn" onclick="switchMainTab('asset')">
-        <i data-lucide="pie-chart"></i> 4. お小遣い＆投資配分
+        <i data-lucide="pie-chart"></i> 4. お小遣い＆投資
+      </button>
+      <button class="nav-tab-btn" onclick="switchMainTab('parent')" style="background:rgba(251,191,36,0.15); border-color:rgba(251,191,36,0.4); color:var(--accent-gold);">
+        <i data-lucide="heart-handshake"></i> 5. 👩‍👧 保護者カルテ
       </button>
     </div>
   </div>
@@ -1098,9 +1344,42 @@ def generate_portal_html():
           </div>
         </div>
 
+        <!-- 実施日選択（今日・昨日・カレンダー）＆重複警告 -->
+        <div style="margin-bottom:16px; background:rgba(0,0,0,0.4); border:1px solid rgba(56,189,248,0.3); border-radius:var(--radius-lg); padding:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:6px;">
+            <span style="font-size:0.82rem; font-weight:800; color:#fff; display:flex; align-items:center; gap:6px;">
+              <i data-lucide="calendar" style="color:var(--accent-cyan);"></i> 📅 実施日（報告対象日）を選択:
+            </span>
+            <span id="selectedDateBadge" style="font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:12px; background:rgba(56,189,248,0.2); color:var(--accent-cyan); border:1px solid rgba(56,189,248,0.4);">
+              ☀️ 今日
+            </span>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1.2fr; gap:8px;">
+            <button type="button" class="btn-date-select active" id="btnDateToday" onclick="selectReportDate('today')">
+              ☀️ 今日
+            </button>
+            <button type="button" class="btn-date-select" id="btnDateYesterday" onclick="selectReportDate('yesterday')">
+              🌙 昨日
+            </button>
+            <div style="position:relative;">
+              <input type="date" id="customDateInput" class="date-picker-field" onchange="selectReportDate('custom', this.value)">
+            </div>
+          </div>
+
+          <!-- 過去報告済み・重複警告バナー -->
+          <div id="duplicateDateWarning" style="display:none; margin-top:10px; padding:10px 12px; border-radius:var(--radius-md); background:rgba(244,63,94,0.18); border:1px solid rgba(244,63,94,0.5); font-size:0.75rem; color:#fca5a5; align-items:center; gap:8px;">
+            <i data-lucide="alert-triangle" style="color:#f43f5e; flex-shrink:0;"></i>
+            <div>
+              <span style="font-weight:800;">⚠️ この日付は既に報告記録が存在します。</span><br>
+              再報告すると、最新の内容で【再報告・上書き】としてLINE送信されます。
+            </div>
+          </div>
+        </div>
+
         <!-- LINE送信ボタン -->
         <a id="lineSubmitBtn" href="#" target="_blank" class="btn-line-submit" onclick="submitToLine()">
-          <i data-lucide="send"></i> 🟢 LINEでお父さんに完了報告する
+          <i data-lucide="send"></i> 🟢 LINEで父と母に報告する
         </a>
       </div>
 
@@ -1154,9 +1433,30 @@ def generate_portal_html():
           </div>
         </div>
 
-        <div style="display:flex; gap:12px; align-items:center; margin-bottom:14px; flex-wrap:wrap;">
+        <div style="display:flex; gap:10px; align-items:center; margin-bottom:14px; flex-wrap:wrap;">
           <label style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">📖 お話を選択:</label>
+          <button class="btn-secondary" style="padding:8px 12px; font-size:0.8rem;" onclick="prevStory('video')">⏮️ 前の話</button>
           <select id="videoStorySelect" class="custom-select" style="flex-grow:1;" onchange="changeStory(this.value)"></select>
+          <button class="btn-secondary" style="padding:8px 12px; font-size:0.8rem;" onclick="nextStory('video')">⏭️ 次の話</button>
+        </div>
+
+        <!-- Video Play Mode Switcher (Repeat / Autoplay / Single) -->
+        <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.35); border:1px solid var(--card-border); border-radius:var(--radius-md); padding:10px 14px; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+          <div style="font-size:0.82rem; font-weight:700; color:var(--text-muted); display:flex; align-items:center; gap:6px;">
+            <i data-lucide="repeat" style="color:var(--accent-cyan);"></i>
+            <span>動画 再生モード:</span>
+          </div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <button class="btn-secondary active" id="btnVidMode_autoplay" style="font-size:0.75rem; padding:6px 10px;" onclick="setVideoPlayMode('autoplay')">
+              ⏭️ 次話へ自動連続再生
+            </button>
+            <button class="btn-secondary" id="btnVidMode_repeat" style="font-size:0.75rem; padding:6px 10px;" onclick="setVideoPlayMode('repeat')">
+              🔁 1曲リピート (シャドーイング)
+            </button>
+            <button class="btn-secondary" id="btnVidMode_single" style="font-size:0.75rem; padding:6px 10px;" onclick="setVideoPlayMode('single')">
+              ⏹️ 1回で停止
+            </button>
+          </div>
         </div>
 
         <div class="grade-tabs-bar" id="videoGradeTabsBar" style="display:flex; gap:8px; margin-bottom:14px; overflow-x:auto;">
@@ -1169,7 +1469,7 @@ def generate_portal_html():
         </div>
 
         <div style="width:100%; aspect-ratio:16/9; background:#000; border-radius:var(--radius-lg); overflow:hidden; margin-bottom:14px; border:1px solid var(--card-border);">
-          <video id="sonVideoPlayer" controls playsinline poster="video_output/preview_v2.jpg" style="width:100%; height:100%; object-fit:contain;">
+          <video id="sonVideoPlayer" controls playsinline poster="video_output/preview_v2.jpg" style="width:100%; height:100%; object-fit:contain;" onended="onVideoEnded()">
             <source id="sonVideoSource" src="video_output/chapter01_tortoise_and_hare/chapter01_Grade_Pre2.mp4" type="video/mp4">
           </video>
         </div>
@@ -1179,7 +1479,7 @@ def generate_portal_html():
             <h3 id="currentPlayingTitle" style="font-size:1.05rem; font-weight:800;">Chapter 01: ウサギとカメ 【英検準2級】</h3>
             <p id="currentPlayingDesc" style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">高校初級・分詞構文・フォーマル構文 × 光るカラオケ字幕</p>
           </div>
-          <a id="shortsLinkBtn" href="video_output/shorts_reels/chapter01_shorts_Grade4_9x16.mp4" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding:6px 12px; color:var(--accent-rose); border-color:rgba(244,63,94,0.4);">
+          <a id="shortsLinkBtn" href="video_output/shorts_reels/chapter01_shorts_Grade3_9x16.mp4" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding:6px 12px; color:var(--accent-rose); border-color:rgba(244,63,94,0.4);">
             <i data-lucide="smartphone"></i> 1分ショート (9:16)
           </a>
         </div>
@@ -1191,7 +1491,17 @@ def generate_portal_html():
     <!-- ============================================================ -->
     <div id="tab-reader" class="tab-pane">
       
-      <!-- Audio Reading Player Box -->
+      <!-- Story Selector in Reader -->
+      <div class="hero-card" style="padding:14px 20px; margin-bottom:16px;">
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <label style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">📖 お話を選択:</label>
+          <button class="btn-secondary" style="padding:8px 12px; font-size:0.8rem;" onclick="prevStory('reader')">⏮️ 前の話</button>
+          <select id="readerStorySelect" class="custom-select" style="flex-grow:1;" onchange="changeStory(this.value)"></select>
+          <button class="btn-secondary" style="padding:8px 12px; font-size:0.8rem;" onclick="nextStory('reader')">⏭️ 次の話</button>
+        </div>
+      </div>
+
+      <!-- Audio Reading Player Box with Repeat/Autoplay controls -->
       <div class="audio-player-card">
         <div class="audio-controls-group">
           <button class="btn-audio-play" id="audioPlayPauseBtn" onclick="toggleAudioNarration()">
@@ -1202,10 +1512,24 @@ def generate_portal_html():
             <div style="font-size:0.72rem; color:var(--text-muted);">本を見ながらネイティブの朗読音声を聴く（シャドーイング）</div>
           </div>
         </div>
-        <audio id="readerAudioElement" src="video_output/chapter01_tortoise_and_hare/narration_Grade_Pre2.mp3"></audio>
+
+        <!-- Audio Play Mode Switcher -->
+        <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+          <button class="btn-secondary active" id="btnAudioMode_autoplay" style="font-size:0.75rem; padding:6px 10px;" onclick="setAudioPlayMode('autoplay')">
+            ⏭️ 次話へ自動連続
+          </button>
+          <button class="btn-secondary" id="btnAudioMode_repeat" style="font-size:0.75rem; padding:6px 10px;" onclick="setAudioPlayMode('repeat')">
+            🔁 1曲リピート
+          </button>
+          <button class="btn-secondary" id="btnAudioMode_single" style="font-size:0.75rem; padding:6px 10px;" onclick="setAudioPlayMode('single')">
+            ⏹️ 停止
+          </button>
+        </div>
+
+        <audio id="readerAudioElement" src="video_output/chapter01_tortoise_and_hare/narration_Grade_Pre2.mp3" onended="onAudioEnded()"></audio>
       </div>
 
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
         <div class="grade-tabs-bar" id="readerGradeTabsBar" style="display:flex; gap:8px; overflow-x:auto;">
           <button class="grade-chip" onclick="switchReaderGrade('Grade_4', this)">🥉 4級</button>
           <button class="grade-chip" onclick="switchReaderGrade('Grade_3', this)">🥈 3級</button>
@@ -1218,7 +1542,7 @@ def generate_portal_html():
           </button>
         </div>
         <button class="btn-red-sheet" id="redSheetButton" onclick="toggleRedSheetMode()">
-          <i data-lucide="eye-off"></i> 🕶️ 暗記マスク (黒塗り)
+          <i data-lucide="eye-off"></i> <span>🕶️ 暗記マスク (黒塗り)</span>
         </button>
       </div>
 
@@ -1228,7 +1552,7 @@ def generate_portal_html():
             <h3 class="reader-story-title" id="readerTitleText" style="font-size:1.2rem; font-weight:800; color:#0f172a;">Chapter 01: The Tortoise and the Hare</h3>
             <span style="font-size:0.8rem; color:#64748b;" id="readerGradeBadge">英検準2級 レベル</span>
           </div>
-          <span style="font-size:0.75rem; color:var(--accent-cyan); font-weight:700;">※暗記マスクON時は各単語をタップで答えを表示/非表示できます</span>
+          <span style="font-size:0.75rem; color:var(--accent-cyan); font-weight:700;">※暗記マスクON時は黒塗りをタップで答えを表示/非表示できます</span>
         </div>
 
         <div class="reader-text-body" id="readerTextContent"></div>
@@ -1265,7 +1589,84 @@ def generate_portal_html():
       </div>
     </div>
 
+    <!-- ============================================================ -->
+    <!-- TAB 5: 👩‍👧 保護者カルテ (写真・テスト・学習確認ビュー) -->
+    <!-- ============================================================ -->
+    <div id="tab-parent" class="tab-pane">
+      <div class="parent-card">
+        <div class="parent-header-bar">
+          <div>
+            <h3 style="font-size:1.25rem; font-weight:900; color:#fff; display:flex; align-items:center; gap:8px;">
+              <span style="color:var(--accent-gold);"><i data-lucide="heart-handshake"></i></span>
+              <span>保護者カルテ ＆ 学習モニタリング</span>
+            </h3>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">
+              提出写真の確認・10問テストの診断結果・過去ログの日付検索
+            </p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn-secondary" onclick="openParentDriveFolder(event)" style="background:var(--accent-cyan); color:#070b14; font-weight:800; font-size:0.85rem; padding:8px 16px;">
+              <i data-lucide="folder"></i> 📁 Google Drive (daikiフォルダ) を開く
+            </button>
+            <button class="btn-secondary" onclick="refreshParentRecords()" style="font-size:0.85rem; padding:8px 14px;">
+              <i data-lucide="refresh-cw"></i> 最新取得
+            </button>
+          </div>
+        </div>
+
+        <!-- Date Filter & Quick Switch -->
+        <div style="background:rgba(0,0,0,0.35); border:1px solid var(--card-border); border-radius:var(--radius-lg); padding:16px; margin-bottom:20px;">
+          <div style="font-size:0.82rem; font-weight:700; color:var(--text-muted); margin-bottom:10px; display:flex; align-items:center; gap:6px;">
+            <i data-lucide="calendar"></i> <span>確認したい日付を選択:</span>
+          </div>
+          <div class="date-control-group">
+            <input type="date" id="parentDatePicker" class="date-input-field" onchange="onParentDateChange(this.value)">
+            <button class="btn-date-quick" id="btnDateToday" onclick="selectQuickDate('today')">今日</button>
+            <button class="btn-date-quick" id="btnDateYesterday" onclick="selectQuickDate('yesterday')">昨日</button>
+            <select id="parentHistoryDateSelect" class="date-input-field" style="font-size:0.8rem;" onchange="onParentDateChange(this.value)">
+              <option value="">過去の履歴から選択...</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 1. Daily Test Diagnosis & Review Card -->
+        <div style="margin-bottom:24px;">
+          <h4 style="font-size:1.05rem; font-weight:800; margin-bottom:14px; display:flex; align-items:center; gap:8px;">
+            <span style="color:var(--accent-green);"><i data-lucide="clipboard-check"></i></span>
+            <span>📝 10問テスト診断カルテ (スコア＆間違えた単語の復習)</span>
+          </h4>
+          <div id="parentQuizContainer">
+            <div style="text-align:center; padding:20px; color:var(--text-muted);">データを読み込み中...</div>
+          </div>
+        </div>
+
+        <!-- 2. Photo & Screenshot Submissions Gallery (Speed View) -->
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <h4 style="font-size:1.05rem; font-weight:800; display:flex; align-items:center; gap:8px;">
+              <span style="color:var(--accent-cyan);"><i data-lucide="camera"></i></span>
+              <span>📸 提出写真・スクショギャラリー (<span id="parentPhotoCount">0</span>件)</span>
+            </h4>
+            <span style="font-size:0.75rem; color:var(--text-muted);">※画像をタップすると大画面で即座に拡大確認できます</span>
+          </div>
+          <div id="parentPhotoGallery" class="photo-gallery-grid">
+            <div style="text-align:center; padding:20px; color:var(--text-muted); grid-column:1/-1;">写真を読み込み中...</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </main>
+
+  <!-- Fullscreen Lightbox Modal for High-Speed Photo Preview -->
+  <div class="lightbox-modal" id="photoLightboxModal" onclick="closePhotoLightbox(event)">
+    <button class="btn-lightbox-close" onclick="closePhotoLightbox(event)">✕</button>
+    <div class="lightbox-img-container" onclick="event.stopPropagation()">
+      <img id="lightboxImg" class="lightbox-img" src="" alt="拡大プレビュー">
+      <div id="lightboxCaption" style="margin-top:12px; font-size:0.9rem; font-weight:700; color:#fff; text-align:center;"></div>
+    </div>
+  </div>
 
   <div class="toast" id="toastBox">メッセージ</div>
 
@@ -1276,6 +1677,8 @@ def generate_portal_html():
     let currentReaderGrade = 'Grade_Pre2';
     let isRedSheetOn = false;
     let slackingDays = 0;
+    let videoPlayMode = 'autoplay'; // 'autoplay' | 'repeat' | 'single'
+    let audioPlayMode = 'autoplay'; // 'autoplay' | 'repeat' | 'single'
 
     // Task Pass State (All must be true for base mission)
     let taskState = {{
@@ -1351,37 +1754,9 @@ def generate_portal_html():
     let quizState = {{
       currentSubject: '',
       currentIdx: 0,
-      score: 0
+      score: 0,
+      wrongAnswers: []
     }};
-
-    function initApp() {{
-      // Set Date
-      const now = new Date();
-      const dStr = `${{now.getFullYear()}}/${{now.getMonth() + 1}}/${{now.getDate()}} (${{['日','月','火','水','木','金','土'][now.getDay()]}})`;
-      
-      // Populate Story Select
-      const vSelect = document.getElementById('videoStorySelect');
-      vSelect.innerHTML = '';
-      ALL_STORIES.forEach((s, idx) => {{
-        const opt = document.createElement('option');
-        opt.value = idx;
-        opt.innerText = `第${{s.chapter}}話: ${{s.titleJa}} (${{s.titleEn}})`;
-        vSelect.appendChild(opt);
-      }});
-
-      // Load Saved State
-      loadSavedState();
-
-      // Video Event
-      const player = document.getElementById('sonVideoPlayer');
-      player.onended = () => {{
-        incrementPlayCount(currentStoryIdx);
-      }};
-
-      updateStoryView();
-      calculateDailyReward();
-      lucide.createIcons();
-    }}
 
     function switchMainTab(tabId) {{
       document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
@@ -1390,12 +1765,14 @@ def generate_portal_html():
       const target = document.getElementById('tab-' + tabId);
       if (target) target.classList.add('active');
 
-      const btnIdx = ['quest', 'video', 'reader', 'asset'].indexOf(tabId);
+      const tabs = ['quest', 'video', 'reader', 'asset', 'parent'];
+      const btnIdx = tabs.indexOf(tabId);
       if (btnIdx >= 0) {{
         document.querySelectorAll('.nav-tab-btn')[btnIdx].classList.add('active');
       }}
 
       if (tabId === 'asset') renderHistoryList();
+      if (tabId === 'parent') initParentDashboard();
       lucide.createIcons();
     }}
 
@@ -1443,12 +1820,13 @@ def generate_portal_html():
     }}
 
     /* ============================================================
-       Quiz AI Test Logic (Gemini 10問テスト)
+       Quiz AI Test Logic (Gemini 10問テスト & 診断カルテ記録)
     ============================================================ */
     function startAiQuiz(subject) {{
       quizState.currentSubject = subject;
       quizState.currentIdx = 0;
       quizState.score = 0;
+      quizState.wrongAnswers = [];
 
       const quizBox = document.getElementById(`quiz_box_${{subject}}`);
       quizBox.style.display = 'block';
@@ -1479,35 +1857,52 @@ def generate_portal_html():
 
     function handleQuizAnswer(selectedIdx, correctIdx, btn) {{
       const sub = quizState.currentSubject;
-      const opts = document.querySelectorAll(`#quiz_opts_${{sub}} .quiz-opt-btn`);
-      opts.forEach(b => b.disabled = true);
+      const bank = QUIZ_BANKS[sub] || QUIZ_BANKS['kanji'];
+      const qObj = bank[quizState.currentIdx];
+      const isCorrect = (selectedIdx === correctIdx);
 
-      if (selectedIdx === correctIdx) {{
+      const allBtns = document.querySelectorAll(`#quiz_opts_${{sub}} .quiz-opt-btn`);
+      allBtns.forEach(b => b.disabled = true);
+
+      if (isCorrect) {{
         btn.classList.add('selected-correct');
         quizState.score++;
-        showToast('正解！ ⭕');
       }} else {{
         btn.classList.add('selected-wrong');
-        opts[correctIdx].classList.add('selected-correct');
-        showToast('不正解... ❌');
+        allBtns[correctIdx].classList.add('selected-correct');
+        quizState.wrongAnswers.push({{
+          qNum: quizState.currentIdx + 1,
+          question: qObj.q,
+          selected: qObj.opts[selectedIdx],
+          correct: qObj.opts[correctIdx]
+        }});
       }}
 
       setTimeout(() => {{
         quizState.currentIdx++;
-        const bank = QUIZ_BANKS[sub] || QUIZ_BANKS['kanji'];
         if (quizState.currentIdx < bank.length) {{
           renderQuizQuestion();
         }} else {{
           finishQuiz();
         }}
-      }}, 1200);
+      }}, 700);
     }}
 
     function finishQuiz() {{
       const sub = quizState.currentSubject;
       const quizBox = document.getElementById(`quiz_box_${{sub}}`);
       const badge = document.getElementById(`badge_${{sub}}`);
-      const isPassed = (quizState.score >= 8); // 8問以上で合格
+      const isPassed = (quizState.score >= 8);
+
+      const testDetail = {{
+        subject: sub,
+        score: quizState.score,
+        total: 10,
+        passed: isPassed,
+        wrongList: quizState.wrongAnswers,
+        testedAt: new Date().toLocaleTimeString('ja-JP', {{ hour: '2-digit', minute: '2-digit' }})
+      }};
+      taskState[sub + '_test_detail'] = testDetail;
 
       if (isPassed) {{
         taskState[sub] = true;
@@ -1598,17 +1993,125 @@ def generate_portal_html():
       return {{ raw: rawTotal, final: finalTotal, cash: cashPart, invest: investPart }};
     }}
 
+    /* ============================================================
+       Report Date Selection & Duplicate Detection
+    ============================================================ */
+    let selectedReportDateStr = '';
+    let selectedReportDateType = 'today'; // 'today' | 'yesterday' | 'custom'
+
+    function formatDateKey(d) {{
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${{y}}-${{m}}-${{day}}`;
+    }}
+
+    function initReportDate() {{
+      selectReportDate('today');
+    }}
+
+    function selectReportDate(type, customVal) {{
+      selectedReportDateType = type;
+      const today = new Date();
+      let targetDate = new Date();
+
+      const btnToday = document.getElementById('btnDateToday');
+      const btnYesterday = document.getElementById('btnDateYesterday');
+      const inputCustom = document.getElementById('customDateInput');
+      const badge = document.getElementById('selectedDateBadge');
+
+      if (btnToday) btnToday.classList.remove('active');
+      if (btnYesterday) btnYesterday.classList.remove('active');
+      if (inputCustom) inputCustom.classList.remove('active');
+
+      let labelText = '';
+      if (type === 'today') {{
+        targetDate = today;
+        selectedReportDateStr = formatDateKey(targetDate);
+        if (btnToday) btnToday.classList.add('active');
+        if (inputCustom) inputCustom.value = selectedReportDateStr;
+        labelText = `☀️ 今日 (${{targetDate.getMonth() + 1}}/${{targetDate.getDate()}})`;
+      }} else if (type === 'yesterday') {{
+        targetDate = new Date(today.getTime() - 24 * 60 * 60 * 1000);
+        selectedReportDateStr = formatDateKey(targetDate);
+        if (btnYesterday) btnYesterday.classList.add('active');
+        if (inputCustom) inputCustom.value = selectedReportDateStr;
+        labelText = `🌙 昨日 (${{targetDate.getMonth() + 1}}/${{targetDate.getDate()}})`;
+      }} else {{
+        if (customVal) {{
+          const parts = customVal.split('-');
+          targetDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+          selectedReportDateStr = customVal;
+        }} else {{
+          selectedReportDateStr = formatDateKey(today);
+        }}
+        if (inputCustom) {{
+          inputCustom.classList.add('active');
+          inputCustom.value = selectedReportDateStr;
+        }}
+        labelText = `📅 指定日 (${{targetDate.getMonth() + 1}}/${{targetDate.getDate()}})`;
+      }}
+
+      if (badge) {{
+        badge.innerText = labelText;
+      }}
+
+      checkDuplicateReportDate(selectedReportDateStr);
+    }}
+
+    function checkDuplicateReportDate(dateKey) {{
+      const warnBox = document.getElementById('duplicateDateWarning');
+      if (!warnBox || !dateKey) return false;
+
+      const history = JSON.parse(localStorage.getItem('son_reward_history') || '[]');
+      const formattedSlash = dateKey.replace(/-/g, '/');
+      const parts = dateKey.split('-');
+      const simpleSlash = `${{parseInt(parts[0])}}/${{parseInt(parts[1])}}/${{parseInt(parts[2])}}`;
+
+      const isDup = history.some(item => {{
+        if (!item.date) return false;
+        return item.date === dateKey || item.date === formattedSlash || item.date === simpleSlash;
+      }});
+
+      if (isDup) {{
+        warnBox.style.display = 'flex';
+      }} else {{
+        warnBox.style.display = 'none';
+      }}
+      lucide.createIcons();
+      return isDup;
+    }}
+
     function generateLineReportText() {{
-      const now = new Date();
-      const dStr = `${{now.getFullYear()}}/${{now.getMonth() + 1}}/${{now.getDate()}}`;
       const calc = calculateDailyReward();
       const isBaseDone = (taskState.wake && taskState.swing && taskState.kanji && taskState.english);
+
+      const parts = (selectedReportDateStr || formatDateKey(new Date())).split('-');
+      const dYear = parseInt(parts[0]);
+      const dMonth = parseInt(parts[1]);
+      const dDay = parseInt(parts[2]);
+      const dStr = `${{dYear}}/${{dMonth}}/${{dDay}}`;
+
+      let dayTag = '';
+      if (selectedReportDateType === 'today') {{
+        dayTag = ' (今日分)';
+      }} else if (selectedReportDateType === 'yesterday') {{
+        dayTag = ' (昨日分)';
+      }} else {{
+        dayTag = ` (${{dMonth}}/${{dDay}} 実施分)`;
+      }}
+
+      const isDup = checkDuplicateReportDate(selectedReportDateStr);
 
       const swingText = document.getElementById('swing_count_input').value || '100回';
       const specialReason = document.getElementById('special_reason_input').value || '';
       const specialAmt = parseInt(document.getElementById('special_amount_input').value) || 0;
 
-      let msg = `【今日の学習＆日課 完了報告】📅 ${{dStr}}\\n\\n`;
+      let msg = '';
+      if (isDup) {{
+        msg += `【⚠️ 再報告・上書き】\\n`;
+      }}
+      msg += `【日々精進】学習＆日課 完了報告 📅 ${{dStr}}${{dayTag}}\\n\\n`;
       msg += `⚡ サボり判定: ${{slackingDays === 0 ? 'サボりなし (100% 満額)' : `${{slackingDays}}日サボり (${{getMultiplier() * 100}}% 適用)`}}\\n\\n`;
       msg += `👑 義務ミッション: ${{isBaseDone ? '【完全合格】(￥350)' : '【未完了】'}}\\n`;
       msg += `・⏰ 朝5時起床: ${{taskState.wake ? '達成 ⭕' : '未達 ❌'}}\\n`;
@@ -1634,22 +2137,33 @@ def generate_portal_html():
       msg += `・📱 Suica/楽天Cash: ￥${{calc.cash.toLocaleString()}} (50%)\\n`;
       msg += `・📈 投資信託積立: ￥${{calc.invest.toLocaleString()}} (50%)\\n`;
       msg += `━━━━━━━━━━━━━━━━\\n`;
-      msg += `明日も朝5時起きでがんばります！`;
+      msg += `明日も朝5時起きで日々精進します！`;
 
       return msg;
     }}
 
     function submitToLine() {{
+      const isDup = checkDuplicateReportDate(selectedReportDateStr);
+      if (isDup) {{
+        const conf = confirm(`⚠️ 日付「${{selectedReportDateStr}}」は既に報告記録が存在します。\\n\\n最新の内容で再報告（上書き）してよろしいですか？`);
+        if (!conf) return;
+      }}
+
       const text = generateLineReportText();
       const lineUrl = `https://line.me/R/msg/text/?${{encodeURIComponent(text.replace(/\\\\n/g, '\\n'))}}`;
       
       // Save entry to ledger
       const calc = calculateDailyReward();
       if (calc.final > 0) {{
-        const history = JSON.parse(localStorage.getItem('son_reward_history') || '[]');
-        const now = new Date();
+        let history = JSON.parse(localStorage.getItem('son_reward_history') || '[]');
+        const parts = (selectedReportDateStr || formatDateKey(new Date())).split('-');
+        const recordDateStr = `${{parseInt(parts[0])}}/${{parseInt(parts[1])}}/${{parseInt(parts[2])}}`;
+        
+        // Remove previous entry for same date if exists (overwrite)
+        history = history.filter(item => item.date !== recordDateStr && item.date !== selectedReportDateStr);
+
         history.unshift({{
-          date: `${{now.getFullYear()}}/${{now.getMonth() + 1}}/${{now.getDate()}}`,
+          date: recordDateStr,
           amount: calc.final,
           cash: calc.cash,
           invest: calc.invest,
@@ -1660,36 +2174,87 @@ def generate_portal_html():
 
       window.open(lineUrl, '_blank');
       showToast('LINEアプリを起動します！');
+      checkDuplicateReportDate(selectedReportDateStr);
     }}
 
     /* ============================================================
        Video & Audio Reader Logic
     ============================================================ */
+    function populateStorySelects() {{
+      const vSelect = document.getElementById('videoStorySelect');
+      const rSelect = document.getElementById('readerStorySelect');
+      
+      if (vSelect) vSelect.innerHTML = '';
+      if (rSelect) rSelect.innerHTML = '';
+
+      ALL_STORIES.forEach((story, idx) => {{
+        const chStr = story.chapter < 10 ? '0' + story.chapter : story.chapter;
+        const optText = `第${{chStr}}話: ${{story.titleJa}} (${{story.titleEn}})`;
+
+        if (vSelect) {{
+          const opt = document.createElement('option');
+          opt.value = idx;
+          opt.innerText = optText;
+          if (idx === currentStoryIdx) opt.selected = true;
+          vSelect.appendChild(opt);
+        }}
+
+        if (rSelect) {{
+          const opt = document.createElement('option');
+          opt.value = idx;
+          opt.innerText = optText;
+          if (idx === currentStoryIdx) opt.selected = true;
+          rSelect.appendChild(opt);
+        }}
+      }});
+    }}
+
     function changeStory(idx) {{
       currentStoryIdx = parseInt(idx);
+      const vSelect = document.getElementById('videoStorySelect');
+      const rSelect = document.getElementById('readerStorySelect');
+      if (vSelect) vSelect.value = currentStoryIdx;
+      if (rSelect) rSelect.value = currentStoryIdx;
       updateStoryView();
     }}
 
     function updateStoryView() {{
       const story = ALL_STORIES[currentStoryIdx];
+      if (!story) return;
       const chStr = story.chapter < 10 ? '0' + story.chapter : story.chapter;
       
-      // Video
+      // 1. Video
       const videoSrc = `video_output/chapter${{chStr}}_${{story.key}}/chapter${{chStr}}_${{currentVideoGrade}}.mp4`;
       const player = document.getElementById('sonVideoPlayer');
       const source = document.getElementById('sonVideoSource');
-      source.src = videoSrc;
-      player.load();
+      if (source && player) {{
+        source.src = videoSrc;
+        player.load();
+      }}
 
       document.getElementById('currentPlayingTitle').innerText = `Chapter ${{chStr}}: ${{story.titleJa}} 【${{GRADE_NAMES[currentVideoGrade] || currentVideoGrade}}】`;
       
-      // Play Count
+      // 2. Play Count
       const count = getPlayCount(currentStoryIdx);
       document.getElementById('videoPlayCountBadge').innerText = `再生回数: ${{count}}回`;
 
-      // Audio in Reader
+      // 3. Shorts Link (準2級学習時は3級のShorts動画を紐付け！)
+      const shortsBtn = document.getElementById('shortsLinkBtn');
+      if (shortsBtn) {{
+        let shortsGrade = 'Grade4';
+        if (currentVideoGrade === 'Grade_Pre2' || currentVideoGrade === 'Grade_3') {{
+          shortsGrade = 'Grade3';
+        }} else if (currentVideoGrade === 'Classic_Original') {{
+          shortsGrade = 'Classic';
+        }}
+        shortsBtn.href = `video_output/shorts_reels/chapter${{chStr}}_shorts_${{shortsGrade}}_9x16.mp4`;
+      }}
+
+      // 4. Audio in Reader
       const audioEl = document.getElementById('readerAudioElement');
-      audioEl.src = `video_output/chapter${{chStr}}_${{story.key}}/narration_${{currentReaderGrade === 'vocab' ? 'Grade_Pre2' : currentReaderGrade}}.mp3`;
+      if (audioEl) {{
+        audioEl.src = `video_output/chapter${{chStr}}_${{story.key}}/narration_${{currentReaderGrade === 'vocab' ? 'Grade_Pre2' : currentReaderGrade}}.mp3`;
+      }}
       document.getElementById('audioTrackTitle').innerText = `朗読音声: Chapter ${{chStr}} (${{GRADE_NAMES[currentReaderGrade] || '準2級'}})`;
 
       updateReaderContent();
@@ -1701,7 +2266,8 @@ def generate_portal_html():
       if (btn) btn.classList.add('active');
       updateStoryView();
       checkOfflineStatus();
-      document.getElementById('sonVideoPlayer').play();
+      const player = document.getElementById('sonVideoPlayer');
+      if (player) player.play().catch(() => {{}});
     }}
 
     function switchReaderGrade(gradeKey, btn) {{
@@ -1710,9 +2276,12 @@ def generate_portal_html():
       if (btn) btn.classList.add('active');
 
       const story = ALL_STORIES[currentStoryIdx];
+      if (!story) return;
       const chStr = story.chapter < 10 ? '0' + story.chapter : story.chapter;
       const audioEl = document.getElementById('readerAudioElement');
-      audioEl.src = `video_output/chapter${{chStr}}_${{story.key}}/narration_${{gradeKey === 'vocab' ? 'Grade_Pre2' : gradeKey}}.mp3`;
+      if (audioEl) {{
+        audioEl.src = `video_output/chapter${{chStr}}_${{story.key}}/narration_${{gradeKey === 'vocab' ? 'Grade_Pre2' : gradeKey}}.mp3`;
+      }}
       document.getElementById('audioTrackTitle').innerText = `朗読音声: Chapter ${{chStr}} (${{GRADE_NAMES[gradeKey] || '準2級'}})`;
 
       updateReaderContent();
@@ -1720,6 +2289,7 @@ def generate_portal_html():
 
     function updateReaderContent() {{
       const story = ALL_STORIES[currentStoryIdx];
+      if (!story) return;
       const chStr = story.chapter < 10 ? '0' + story.chapter : story.chapter;
       
       document.getElementById('readerTitleText').innerText = `Chapter ${{chStr}}: ${{story.titleJa}} (${{story.titleEn}})`;
@@ -1730,8 +2300,35 @@ def generate_portal_html():
         const rawVocab = story.texts.vocab || '';
         contentBox.innerHTML = `<div class="vocab-table-container">${{renderMarkdownTable(rawVocab)}}</div>`;
       }} else {{
-        contentBox.innerText = story.texts[currentReaderGrade] || '本文データを読み込み中...';
+        const rawText = story.texts[currentReaderGrade] || '本文データを読み込み中...';
+        contentBox.innerHTML = formatMaskableText(rawText);
       }}
+    }}
+
+    function formatMaskableText(text) {{
+      if (!text) return '';
+      // 各行を段落として整形し、単語ごとにタップで開閉できる span.mask-word を付与
+      const paragraphs = text.split('\\n\\n');
+      return paragraphs.map(p => {{
+        const lines = p.split('\\n');
+        return lines.map(line => {{
+          const words = line.split(/(\\s+)/);
+          return words.map(w => {{
+            if (!w.trim()) return w;
+            // 記号を取り除いた長さが3文字以上の英単語をマスク対象にする
+            const clean = w.replace(/[^a-zA-Z]/g, '');
+            if (clean.length >= 3) {{
+              return `<span class="mask-word masked" onclick="toggleWordMask(this)">${{w}}</span>`;
+            }}
+            return w;
+          }}).join('');
+        }}).join('<br>');
+      }}).join('<br><br>');
+    }}
+
+    function toggleWordMask(el) {{
+      if (!isRedSheetOn) return;
+      el.classList.toggle('revealed');
     }}
 
     function toggleAudioNarration() {{
@@ -1740,13 +2337,139 @@ def generate_portal_html():
       if (audioEl.paused) {{
         audioEl.play();
         icon.setAttribute('data-lucide', 'pause');
-        showToast('朗読音声を再生中');
       }} else {{
         audioEl.pause();
         icon.setAttribute('data-lucide', 'play');
         showToast('朗読音声を一時停止');
       }}
       lucide.createIcons();
+    }}
+
+    /* ============================================================
+       Playback Mode & Auto-Play / Repeat Logic
+    ============================================================ */
+    function setVideoPlayMode(mode) {{
+      videoPlayMode = mode;
+      ['autoplay', 'repeat', 'single'].forEach(m => {{
+        const btn = document.getElementById(`btnVidMode_${{m}}`);
+        if (btn) {{
+          if (m === mode) btn.classList.add('active');
+          else btn.classList.remove('active');
+        }}
+      }});
+      const labels = {{
+        autoplay: '⏭️ 次話へ自動連続再生 ON',
+        repeat: '🔁 1曲リピート再生 ON',
+        single: '⏹️ 1回で停止 ON'
+      }};
+      showToast(labels[mode] || mode);
+    }}
+
+    function setAudioPlayMode(mode) {{
+      audioPlayMode = mode;
+      ['autoplay', 'repeat', 'single'].forEach(m => {{
+        const btn = document.getElementById(`btnAudioMode_${{m}}`);
+        if (btn) {{
+          if (m === mode) btn.classList.add('active');
+          else btn.classList.remove('active');
+        }}
+      }});
+      const labels = {{
+        autoplay: '⏭️ 朗読: 次話へ自動連続 ON',
+        repeat: '🔁 朗読: 1曲リピート ON',
+        single: '⏹️ 朗読: 1回で停止 ON'
+      }};
+      showToast(labels[mode] || mode);
+    }}
+
+    function prevStory(sourceTab) {{
+      if (currentStoryIdx > 0) {{
+        changeStory(currentStoryIdx - 1);
+        if (sourceTab === 'video') {{
+          const p = document.getElementById('sonVideoPlayer');
+          if (p) p.play().catch(() => {{}});
+        }} else if (sourceTab === 'reader') {{
+          const a = document.getElementById('readerAudioElement');
+          if (a) {{
+            a.play().catch(() => {{}});
+            const icon = document.getElementById('audioIcon');
+            if (icon) icon.setAttribute('data-lucide', 'pause');
+            lucide.createIcons();
+          }}
+        }}
+      }} else {{
+        showToast('これより前の話はありません（第1話です）');
+      }}
+    }}
+
+    function nextStory(sourceTab) {{
+      if (currentStoryIdx < ALL_STORIES.length - 1) {{
+        changeStory(currentStoryIdx + 1);
+        if (sourceTab === 'video') {{
+          const p = document.getElementById('sonVideoPlayer');
+          if (p) p.play().catch(() => {{}});
+        }} else if (sourceTab === 'reader') {{
+          const a = document.getElementById('readerAudioElement');
+          if (a) {{
+            a.play().catch(() => {{}});
+            const icon = document.getElementById('audioIcon');
+            if (icon) icon.setAttribute('data-lucide', 'pause');
+            lucide.createIcons();
+          }}
+        }}
+      }} else {{
+        showToast('最終話（第60話）に到達しました！');
+      }}
+    }}
+
+    function onVideoEnded() {{
+      incrementPlayCount(currentStoryIdx);
+      if (videoPlayMode === 'repeat') {{
+        showToast('🔁 1曲リピート再生中...');
+        const p = document.getElementById('sonVideoPlayer');
+        if (p) {{
+          p.currentTime = 0;
+          p.play().catch(() => {{}});
+        }}
+      }} else if (videoPlayMode === 'autoplay') {{
+        if (currentStoryIdx < ALL_STORIES.length - 1) {{
+          showToast('⏭️ 次の話へ自動で進みます...');
+          setTimeout(() => {{
+            nextStory('video');
+          }}, 800);
+        }} else {{
+          showToast('🎉 全話の再生が完了しました！');
+        }}
+      }} else {{
+        showToast('🎉 動画視聴完了！再生回数をカウントしました');
+      }}
+    }}
+
+    function onAudioEnded() {{
+      const icon = document.getElementById('audioIcon');
+      if (audioPlayMode === 'repeat') {{
+        showToast('🔁 朗読音声をリピート再生中...');
+        const a = document.getElementById('readerAudioElement');
+        if (a) {{
+          a.currentTime = 0;
+          a.play().catch(() => {{}});
+        }}
+      }} else if (audioPlayMode === 'autoplay') {{
+        if (currentStoryIdx < ALL_STORIES.length - 1) {{
+          showToast('⏭️ 次の話の朗読音声を連続再生します...');
+          setTimeout(() => {{
+            nextStory('reader');
+          }}, 800);
+        }} else {{
+          if (icon) icon.setAttribute('data-lucide', 'play');
+          lucide.createIcons();
+          showToast('🎉 全話の朗読が完了しました！');
+        }}
+      }} else {{
+        if (icon) icon.setAttribute('data-lucide', 'play');
+        lucide.createIcons();
+        showToast('朗読音声の再生が終了しました');
+      }}
     }}
 
     function toggleRedSheetMode() {{
@@ -1756,12 +2479,12 @@ def generate_portal_html():
       if (isRedSheetOn) {{
         container.classList.add('red-mask-active');
         btn.classList.add('active');
-        btn.innerHTML = '<i data-lucide="eye"></i> 🕶️ 暗記マスク ON中';
-        showToast('🕶️ 暗記マスクON！タップで個別確認できます');
+        btn.innerHTML = '<i data-lucide="eye"></i> <span>🕶️ 暗記マスク ON中</span>';
+        showToast('🕶️ 暗記マスクON！黒塗りをタップで確認できます');
       }} else {{
         container.classList.remove('red-mask-active');
         btn.classList.remove('active');
-        btn.innerHTML = '<i data-lucide="eye-off"></i> 🕶️ 暗記マスク (黒塗り)';
+        btn.innerHTML = '<i data-lucide="eye-off"></i> <span>🕶️ 暗記マスク (黒塗り)</span>';
         showToast('暗記マスクを解除しました');
       }}
       lucide.createIcons();
@@ -2051,6 +2774,277 @@ def generate_portal_html():
       }});
     }}
 
+    /* ============================================================
+       Parent Dashboard & Monitoring System (保護者カルテ)
+    ============================================================ */
+    let currentParentDate = '';
+    let parentRecordsCache = {{}};
+
+    function initParentDashboard() {{
+      const todayStr = getTodayDateStr();
+      currentParentDate = todayStr;
+      
+      const datePicker = document.getElementById('parentDatePicker');
+      if (datePicker) {{
+        datePicker.value = todayStr;
+      }}
+      selectQuickDateBtn('today');
+      loadParentRecords(todayStr);
+    }}
+
+    function getTodayDateStr() {{
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, '0');
+      const d = String(now.getDate()).padStart(2, '0');
+      return `${{y}}-${{m}}-${{d}}`;
+    }}
+
+    function selectQuickDate(type) {{
+      let d = new Date();
+      if (type === 'yesterday') {{
+        d.setDate(d.getDate() - 1);
+      }}
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const dateStr = `${{y}}-${{m}}-${{day}}`;
+      
+      currentParentDate = dateStr;
+      const datePicker = document.getElementById('parentDatePicker');
+      if (datePicker) datePicker.value = dateStr;
+      
+      selectQuickDateBtn(type);
+      loadParentRecords(dateStr);
+    }}
+
+    function selectQuickDateBtn(type) {{
+      const btnT = document.getElementById('btnDateToday');
+      const btnY = document.getElementById('btnDateYesterday');
+      if (btnT && btnY) {{
+        btnT.classList.remove('active');
+        btnY.classList.remove('active');
+        if (type === 'today') btnT.classList.add('active');
+        if (type === 'yesterday') btnY.classList.add('active');
+      }}
+    }}
+
+    function onParentDateChange(val) {{
+      if (!val) return;
+      currentParentDate = val;
+      const todayStr = getTodayDateStr();
+      const yest = new Date(); yest.setDate(yest.getDate() - 1);
+      const yestStr = `${{yest.getFullYear()}}-${{String(yest.getMonth() + 1).padStart(2, '0')}}-${{String(yest.getDate()).padStart(2, '0')}}`;
+      
+      if (val === todayStr) selectQuickDateBtn('today');
+      else if (val === yestStr) selectQuickDateBtn('yesterday');
+      else selectQuickDateBtn('');
+
+      loadParentRecords(val);
+    }}
+
+    function refreshParentRecords() {{
+      showToast('🔄 最新の提出データを取得中...');
+      loadParentRecords(currentParentDate || getTodayDateStr(), true);
+    }}
+
+    async function loadParentRecords(dateStr, forceRefresh = false) {{
+      const quizContainer = document.getElementById('parentQuizContainer');
+      const photoGallery = document.getElementById('parentPhotoGallery');
+      const photoCountEl = document.getElementById('parentPhotoCount');
+
+      if (!forceRefresh && parentRecordsCache[dateStr]) {{
+        renderParentDashboardUI(parentRecordsCache[dateStr], dateStr);
+        return;
+      }}
+
+      quizContainer.innerHTML = '<div style="text-align:center; padding:20px; color:var(--text-muted);">データを取得中...</div>';
+      photoGallery.innerHTML = '<div style="text-align:center; padding:20px; color:var(--text-muted); grid-column:1/-1;">写真を読み込み中...</div>';
+
+      try {{
+        const res = await fetch(`api/parent_records.php?date=${{dateStr}}`);
+        const data = await res.json();
+        parentRecordsCache[dateStr] = data;
+
+        // 過去日付一覧セレクトボックスの更新
+        if (data.availableDates && data.availableDates.length > 0) {{
+          const select = document.getElementById('parentHistoryDateSelect');
+          if (select) {{
+            select.innerHTML = '<option value="">過去の履歴から選択...</option>';
+            data.availableDates.forEach(d => {{
+              const opt = document.createElement('option');
+              opt.value = d;
+              opt.innerText = `📅 ${{d}} ${{d === getTodayDateStr() ? '(今日)' : ''}}`;
+              if (d === dateStr) opt.selected = true;
+              select.appendChild(opt);
+            }});
+          }}
+        }}
+
+        renderParentDashboardUI(data, dateStr);
+      }} catch (err) {{
+        console.error('Failed to load parent records:', err);
+        quizContainer.innerHTML = '<div style="color:var(--accent-red); padding:16px;">⚠️ サーバーからデータを取得できませんでした。ローカルデータを確認中...</div>';
+        // Fallback local render
+        renderParentLocalFallback(dateStr);
+      }}
+    }}
+
+    function renderParentDashboardUI(data, dateStr) {{
+      const quizContainer = document.getElementById('parentQuizContainer');
+      const photoGallery = document.getElementById('parentPhotoGallery');
+      const photoCountEl = document.getElementById('parentPhotoCount');
+
+      // 1. テスト結果・診断カルテの描画
+      const pState = (data.progress && data.progress.taskState) ? data.progress.taskState : taskState;
+      const subjects = [
+        {{ key: 'kanji', name: '漢検準2級 (見開き2P)', icon: '✍️' }},
+        {{ key: 'english', name: '英検準2級 単語帳', icon: '🎧' }},
+        {{ key: 'extra1', name: '追加教科①', icon: '📐' }},
+        {{ key: 'extra2', name: '追加教科②', icon: '🔬' }}
+      ];
+
+      let quizHtml = '';
+      let hasQuiz = false;
+
+      subjects.forEach(sub => {{
+        const detail = pState[sub.key + '_test_detail'];
+        const isPassed = pState[sub.key];
+        
+        if (detail || isPassed !== undefined) {{
+          hasQuiz = true;
+          const score = detail ? detail.score : (isPassed ? 10 : 0);
+          const total = detail ? detail.total : 10;
+          const wrongList = (detail && detail.wrongList) ? detail.wrongList : [];
+          const testedAt = detail ? ` (受検: ${{detail.testedAt}})` : '';
+
+          quizHtml += `
+            <div class="quiz-review-card">
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                <div style="font-weight:800; font-size:0.95rem; color:#fff;">
+                  ${{sub.icon}} ${{sub.name}} <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">${{testedAt}}</span>
+                </div>
+                <div>
+                  <span class="status-badge-chip ${{isPassed ? 'pass' : 'pending'}}" style="font-size:0.85rem;">
+                    ${{isPassed ? '合格 ⭕' : '不合格 ❌'}} (${{score}}/${{total}}問)
+                  </span>
+                </div>
+              </div>
+          `;
+
+          if (wrongList.length > 0) {{
+            quizHtml += `<div style="margin-top:10px; font-size:0.8rem; font-weight:700; color:var(--accent-red);">🚨 間違えた問題 (${{wrongList.length}}問) - 復習ポイント:</div>`;
+            wrongList.forEach(w => {{
+              quizHtml += `
+                <div class="wrong-answer-item">
+                  <div style="font-weight:700; color:#fff;">問 ${{w.qNum}}: ${{w.question}}</div>
+                  <div style="margin-top:4px; display:flex; gap:14px; flex-wrap:wrap;">
+                    <span style="color:var(--accent-red);">大樹の回答: <strong>${{w.selected}}</strong> ❌</span>
+                    <span style="color:var(--accent-green);">正解: <strong>${{w.correct}}</strong> ⭕</span>
+                  </div>
+                </div>
+              `;
+            }});
+          }} else if (isPassed) {{
+            quizHtml += `
+              <div style="margin-top:8px; font-size:0.8rem; color:var(--accent-green); font-weight:700;">
+                ✨ 全問正解または合格ラインをクリアしています！
+              </div>
+            `;
+          }}
+
+          quizHtml += `</div>`;
+        }}
+      }});
+
+      if (!hasQuiz) {{
+        quizHtml = '<div style="color:var(--text-muted); text-align:center; padding:16px;">この日の10問テストの受験記録はまだありません</div>';
+      }}
+      quizContainer.innerHTML = quizHtml;
+
+      // 2. 提出写真・スクショギャラリーの描画
+      const photos = data.photos || [];
+      photoCountEl.innerText = photos.length;
+
+      if (photos.length === 0) {{
+        let localPhotos = [];
+        ['kanji', 'english', 'extra1', 'extra2'].forEach(k => {{
+          if (pState[k + '_screenshot']) {{
+            localPhotos.push({{
+              subject: k,
+              viewUrl: pState[k + '_screenshot'],
+              thumbnailUrl: pState[k + '_screenshot'],
+              timestamp: '本日'
+            }});
+          }}
+        }});
+
+        if (localPhotos.length > 0) {{
+          renderPhotoCards(localPhotos, photoGallery);
+          photoCountEl.innerText = localPhotos.length;
+        }} else {{
+          photoGallery.innerHTML = '<div style="color:var(--text-muted); text-align:center; padding:24px; grid-column:1/-1;">この日に提出された写真・スクショはありません</div>';
+        }}
+      }} else {{
+        renderPhotoCards(photos, photoGallery);
+      }}
+
+      lucide.createIcons();
+    }}
+
+    function renderPhotoCards(photos, container) {{
+      const subjectNames = {{
+        kanji: '✍️ 漢検準2級',
+        english: '🎧 英検準2級',
+        extra1: '📐 追加教科①',
+        extra2: '🔬 追加教科②',
+        general: '📸 日課・提出写真'
+      }};
+
+      container.innerHTML = '';
+      photos.forEach(p => {{
+        const subName = subjectNames[p.subject] || p.subject;
+        const card = document.createElement('div');
+        card.className = 'photo-thumb-card';
+        card.onclick = () => openPhotoLightbox(p.viewUrl, `${{subName}} (${{p.timestamp || ''}})`);
+        
+        card.innerHTML = `
+          <img src="${{p.thumbnailUrl || p.viewUrl}}" class="photo-thumb-img" alt="${{subName}}" loading="lazy" onerror="this.src='ass_and_salt.png'">
+          <div class="photo-thumb-info">
+            <div style="font-size:0.85rem; font-weight:800; color:#fff; display:flex; justify-content:space-between; align-items:center;">
+              <span>${{subName}}</span>
+              ${{p.gdriveSynced ? '<span style="font-size:0.68rem; color:var(--accent-cyan); background:rgba(56,189,248,0.15); padding:2px 6px; border-radius:4px;">☁️ Drive保存</span>' : ''}}
+            </div>
+            <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;">
+              🕒 ${{p.timestamp || '提出済'}}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      }});
+    }}
+
+    function renderParentLocalFallback(dateStr) {{
+      renderParentDashboardUI({{ progress: {{ taskState: taskState }}, photos: [] }}, dateStr);
+    }}
+
+    /* Lightbox Modal */
+    function openPhotoLightbox(imgUrl, caption) {{
+      const modal = document.getElementById('photoLightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+
+      img.src = imgUrl;
+      cap.innerHTML = `${{caption}} <a href="${{imgUrl}}" target="_blank" style="color:var(--accent-cyan); margin-left:10px; font-size:0.85rem;">[別タブで開く]</a>`;
+      modal.classList.add('active');
+    }}
+
+    function closePhotoLightbox(e) {{
+      if (e) e.stopPropagation();
+      const modal = document.getElementById('photoLightboxModal');
+      modal.classList.remove('active');
+    }}
+
     function showPwaGuide() {{
       alert('【📱 全端末対応：アプリ化（ホーム画面追加）方法】\\n\\n' +
         '■ iPhone / iPad (Safari):\\n' +
@@ -2060,6 +3054,21 @@ def generate_portal_html():
         '■ Amazon Fireタブレット (Silkブラウザ):\\n' +
         '画面右上の「︙（メニュー）」をタップ ➔「ホーム画面に追加」または「ブックマーク」から追加。\\n\\n' +
         '※追加後は全画面の専用アプリとして高速起動します！');
+    }}
+
+    function forceRefreshAllData() {{
+      showToast('🔄 サーバーと最新同期中...');
+      loadSavedState();
+      if (window.caches) {{
+        caches.keys().then(keys => {{
+          keys.forEach(k => {{
+            if (k.includes('runtime') || k.includes('dynamic')) caches.delete(k);
+          }});
+        }});
+      }}
+      setTimeout(() => {{
+        window.location.reload(true);
+      }}, 500);
     }}
 
     function showToast(msg) {{
@@ -2074,7 +3083,10 @@ def generate_portal_html():
         const badge = document.getElementById('appVerBadge');
         if (badge) badge.innerText = `v${{APP_VERSION}}`;
       }}
+      populateStorySelects();
       loadSavedState();
+      initReportDate();
+      updateStoryView();
       calculateDailyReward();
       checkOfflineStatus();
       lucide.createIcons();
@@ -2100,4 +3112,3 @@ def generate_portal_html():
 
 if __name__ == "__main__":
     generate_portal_html()
-
